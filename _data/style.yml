@@ -1,0 +1,28 @@
+#Color Customization
+#highlight: "#54bfff"
+#white: "#FF0000"
+#black: "#000"
+
+header:
+  navheader-image: "/assets/img/header-bg.jpg"
+  nav-colour: "#003e79"
+
+hydroflux:
+  navheader-image: "/assets/img/hydroflux.jpg"
+  nav-colour: "#003e79"
+
+mountainevo:
+  navheader-image: "/assets/img/tienshan.jpg"
+  nav-colour: "#003e79"
+
+landslide-evo:
+  navheader-image: "/assets/img/landslide_bg.jpg"
+  nav-colour: "#003e79"
+
+#Image Customization
+header-image: "/assets/img/header-bg.jpg"
+hydroflux-image: "/assets/img/hydroflux.jpg"
+contact-image: "/assets/img/contact.png"
+
+#Font Awesome icon for portfolio grid when an item is hovered over
+#portfolio-icon: fas fa-expand-arrows-alt fa-3x #default: fas fa-plus fa-3x
