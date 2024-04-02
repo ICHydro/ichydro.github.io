@@ -6,12 +6,14 @@ style: header
 
 ### Active projects
 
+- 2024 - 2025: [FLOODTWIN](https://gotw.nerc.ac.uk/list_full.asp?pcode=NE%2FZ50340X%2F1). UK NERC (£675k). Co-PI. (Led by Tom Coulthard, University of Hull),
 - 2023 - 2028: SMARTWATER: Diagnosing controls of pollution hot spots and hot moments and their impact on catchment water quality (£3.7M). Co-PI (led by Stefan Krause, University of Birmingham). 
 - 2022 - 2027: [Deplete and Retreat: The Future of Andean Water Towers](https://www.antarcticglaciers.org/andes-water-towers/) (£2M). Co-PI. (Led by Jeremy Ely, University of Sheffield) 
-- 2018 - 2022: [Pathways to equitable cities](https://equitablehealthycities.org/). Wellcome Trust (£4M). Co-I (led by Majid Ezzati, Imperial College London).
+- 2020 - 2028: [A Floods and Droughts Research Infrastructure (FDRI)](https://www.ceh.ac.uk/our-science/projects/floods-and-droughts-research-infrastructure-fdri). UK NERC (£38.0M). Co-PI (led by Gareth Old, UKCEH).
 
 ### Past projects
 
+- 2018 - 2022: [Pathways to equitable cities](https://equitablehealthycities.org/). Wellcome Trust (£4M). Co-I (led by Majid Ezzati, Imperial College London).
 - 2019 - 2022: Water security and climate change adaptation in Peruvian glacier-fed river basins (RAHU). NERC / CONCYTEC Peru (£950k). Lead PI (jointly with Dr Pedro Rau, UTEC Peru).
 - 2019 - 2021: Understanding and managing the risk of water related diseases under hydrometeorological extremes. NERC / Malaysian Ministry of Education (£500k). Lead PI (jointly with Dr Zed Zulkafli, Universiti Putra Malaysia).
 - 2019 - 2021: Philippines Groundwater Outlook (PhiGO). NERC / Philippine Council for Industry, Energy & Emerging Technology Research & Development. (£500k). Co-I (Led by Dr Andrew Barkwith, BGS).
