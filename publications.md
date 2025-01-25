@@ -10,6 +10,8 @@ Note: nearly all publications are available as open access. Wherever we can affo
 
 #### 2024
 
+<!-- {% bibliography %} -->
+
 - Alemie, T.C., Buytaert, W., Tilahun, S.A., Steenhuis, T.S., 2024. A Distributed Catchment—Scale Evaluation of the Potential of Soil and Water Conservation Interventions to Reduce Storm Flow and Soil Loss. Water (Switzerland), 16, 1225.
 - Bhusal, J.K., Nayava, J.L., Baidya, S.K., Nepal, B., Buytaert, W., Neupane, B., 2024. [Rainfall threshold for landslide awareness – Focusing on the case study in the landslide EVO pilot area region in western Nepal](https://mausamjournal.imd.gov.in/index.php/MAUSAM/article/view/6058). Mausam, 75, 461–478
 - Lalonde, M., Drenkhan, F., Rau, P., Baiker, J.R., Buytaert, W., 2024. [Scientific evidence of the hydrological impacts of nature-based solutions at the catchment scale](https://doi.org/10.1002/wat2.1744). Wiley Interdisciplinary Reviews: Water, e1744.
