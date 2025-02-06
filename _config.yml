@@ -39,4 +39,6 @@ markdown: kramdown
 # formspree_form_path: "f/a_form_id"
 
 scholar:
-  style: modern-language-association
+  style: _bibliography/myapa.csl
+  order: descending
+  bibliography_template: bib

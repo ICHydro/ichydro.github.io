@@ -8,14 +8,13 @@ style: header
 
 Note: nearly all publications are available as open access. Wherever we can afford it, we have purchased open access through the publisher (so-called [gold open access](https://en.wikipedia.org/wiki/Open_access#Models). If an article is not available on the publisher's website, then please look in our <a href="https://spiral.imperial.ac.uk/handle/10044/1/10205/simple-search?filtername=composite&amp;filterquery=Buytaert&amp;filter_field_1=author&amp;filter_type_1=equals&amp;filter_value_1=Buytaert%2C+W&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=5&amp;start=0">university repository</a> (<a href="https://en.wikipedia.org/wiki/Self-archiving"><i>green open access</i></a>) or follow the <i>pdf</i> link next to the reference.
 
+#### 2025
+
+{% bibliography --bibliography_list_tag ul --query @*[year=2025]%}
+
 #### 2024
 
-<!-- {% bibliography %} -->
-
-- Alemie, T.C., Buytaert, W., Tilahun, S.A., Steenhuis, T.S., 2024. A Distributed Catchment—Scale Evaluation of the Potential of Soil and Water Conservation Interventions to Reduce Storm Flow and Soil Loss. Water (Switzerland), 16, 1225.
-- Bhusal, J.K., Nayava, J.L., Baidya, S.K., Nepal, B., Buytaert, W., Neupane, B., 2024. [Rainfall threshold for landslide awareness – Focusing on the case study in the landslide EVO pilot area region in western Nepal](https://mausamjournal.imd.gov.in/index.php/MAUSAM/article/view/6058). Mausam, 75, 461–478
-- Lalonde, M., Drenkhan, F., Rau, P., Baiker, J.R., Buytaert, W., 2024. [Scientific evidence of the hydrological impacts of nature-based solutions at the catchment scale](https://doi.org/10.1002/wat2.1744). Wiley Interdisciplinary Reviews: Water, e1744.
-- Rahmat, F., Zulkafli, Z., Ishak, A.J., Abdul Rahman, R.Z., De Stercke, S., Buytaert, W., Tahir, W., Ab Rahman, J., Ibrahim, S., Ismail, M. (2023) [Supervised feature selection using principal component analysis. Knowledge and Information Systems](https://link.springer.com/article/10.1007/s10115-023-01993-5). Knowledge and Information Systems 66, 1955–1995.
+{% bibliography --bibliography_list_tag ul --query @*[year=2024]%}
 
 #### 2023
 
