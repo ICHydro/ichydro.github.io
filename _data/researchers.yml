@@ -1,0 +1,89 @@
+staff:
+  - name: "Dr Wouter Buytaert"
+    title: "Group Lead"
+    image: "Wouter.jpg"
+    bio: "Dr Wouter Buytaert is a Professor of Hydrology at Imperial College London and the lead of the ICHydro research group. His research focuses on water resources in mountain environments, particularly in the Andes, with interests in climate change impacts, ecosystem services, and water security."
+    social:
+      researchgate: "https://www.researchgate.net/profile/Wouter_Buytaert"
+      linkedin: "https://www.linkedin.com/in/wouter-buytaert/"
+      twitter: "https://twitter.com/WouterBuytaert"
+      website: "https://www.imperial.ac.uk/people/w.buytaert"
+  
+  - name: "Dr Ana Mijic"
+    title: "Associate Staff"
+    image: "placeholder.jpg"  # Add actual image file
+    bio: "Dr Ana Mijic is a Lecturer in Water Systems Integration at Imperial College London. Her research focuses on understanding the complex interactions between urban infrastructure, society and the environment."
+    social:
+      researchgate: "https://www.researchgate.net/profile/Ana_Mijic"
+      linkedin: "https://www.linkedin.com/in/ana-mijic/"
+      website: "https://www.imperial.ac.uk/people/ana.mijic"
+
+researchers:
+  - name: "Dr Simon De Stercke"
+    title: "Researcher"
+    image: "placeholder.jpg"  # Add actual image file
+    bio: "Dr Simon De Stercke's research focuses on hydrological modeling and water resources management, with particular expertise in uncertainty quantification and decision support systems."
+    social:
+      researchgate: "https://www.researchgate.net/profile/Simon_De_Stercke"
+      linkedin: "https://www.linkedin.com/in/simon-de-stercke/"
+
+  - name: "Dr Charles Zogheib"
+    title: "Researcher"
+    image: "placeholder.jpg"  # Add actual image file
+    bio: "Dr Charles Zogheib specializes in hydrological modeling and water resources assessment, with extensive experience in mountain hydrology and climate change impacts."
+    social:
+      researchgate: "https://www.researchgate.net/profile/Charles_Zogheib"
+
+  - name: "Dr Boris Ochoa-Tocachi"
+    title: "Researcher"
+    image: "placeholder.jpg"  # Add actual image file
+    bio: "Dr Boris Ochoa-Tocachi is an expert in ecohydrology and ecosystem services, focusing on the role of natural infrastructure in water regulation and conservation."
+    social:
+      researchgate: "https://www.researchgate.net/profile/Boris_Ochoa-Tocachi"
+      twitter: "https://twitter.com/BorisOchoa"
+
+  - name: "Dr Simon Moulds"
+    title: "Researcher"
+    image: "placeholder.jpg"  # Add actual image file
+    bio: "Dr Simon Moulds works on hydrological modeling and remote sensing applications, with a focus on understanding water resources in data-sparse environments."
+    social:
+      researchgate: "https://www.researchgate.net/profile/Simon_Moulds"
+
+  - name: "Dr Fabian Drenkhan"
+    title: "Researcher"
+    image: "placeholder.jpg"  # Add actual image file
+    bio: "Dr Fabian Drenkhan specializes in climate change impacts on mountain hydrology, with extensive fieldwork experience in the Andes and expertise in glacier-fed watersheds."
+    social:
+      researchgate: "https://www.researchgate.net/profile/Fabian_Drenkhan"
+      linkedin: "https://www.linkedin.com/in/fabian-drenkhan/"
+
+phd_students:
+  - name: "Clara Gimeno"
+    title: "PhD Student"
+    image: "placeholder.jpg"  # Add actual image file
+    bio: "Clara Gimeno is pursuing research in water resources management and hydrological modeling, with a focus on innovative approaches to water security challenges."
+    social:
+      linkedin: "https://www.linkedin.com/in/clara-gimeno/"
+      twitter: "https://twitter.com/clara_gimeno"
+
+  - name: "Alison Prior"
+    title: "PhD Student"
+    supervisor: "Colin Prentice (main supervisor)"
+    image: "placeholder.jpg"  # Add actual image file
+    bio: "Alison Prior is conducting research at the intersection of hydrology and ecosystem dynamics, under the main supervision of Colin Prentice."
+    social:
+      researchgate: "https://www.researchgate.net/profile/Alison_Prior"
+
+  - name: "Neeraj Sah"
+    title: "PhD Student"
+    image: "placeholder.jpg"  # Add actual image file
+    bio: "Neeraj Sah is working on hydrological research with applications to water management and environmental sustainability."
+    social:
+      linkedin: "https://www.linkedin.com/in/neeraj-sah/"
+
+  - name: "Will Veness"
+    title: "PhD Student"
+    image: "placeholder.jpg"  # Add actual image file
+    bio: "Will Veness is pursuing doctoral research in hydrology and water resources, contributing to the understanding of complex hydrological systems."
+    social:
+      linkedin: "https://www.linkedin.com/in/will-veness/"
