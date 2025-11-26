@@ -10,11 +10,11 @@ Note: nearly all publications are available as open access. Wherever we can affo
 
 #### 2025
 
-{% bibliography --bibliography_list_tag ul --query @*[year=2025]%}
+{% bibliography --bibliography_list_tag ul --query @*[year=2025] %}
 
 #### 2024
 
-{% bibliography --bibliography_list_tag ul --query @*[year=2024]%}
+{% bibliography --bibliography_list_tag ul --query @*[year=2024] %}
 
 #### 2023
 
