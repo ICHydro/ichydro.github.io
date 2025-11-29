@@ -1,0 +1,103 @@
+{
+  "thingsboard": {
+    "host": "riverflow.io",
+    "port": 8883,
+    "remoteShell": false,
+    "remoteConfiguration": true,
+    "checkConnectorsConfigurationInSeconds": 60,
+    "statistics": {
+      "enable": true,
+      "statsSendPeriodInSeconds": 3600,
+      "customStatsSendPeriodInSeconds": 3600,
+      "commands": []
+    },
+    "maxPayloadSizeBytes": 8196,
+    "minPackSendDelayMS": 50,
+    "minPackSizeToSend": 500,
+    "handleDeviceRenaming": true,
+    "checkingDeviceActivity": {
+      "checkDeviceInactivity": false,
+      "inactivityTimeoutSeconds": 300,
+      "inactivityCheckPeriodSeconds": 10
+    },
+    "security": {
+      "type": "accessToken",
+      "accessToken": "0dsv18d8c41rfwi8bms2"
+    },
+    "qos": 1
+  },
+  "storage": {
+    "type": "memory",
+    "read_records_count": 100,
+    "max_records_count": 100000,
+    "data_folder_path": "./data/",
+    "max_file_count": 10,
+    "max_read_records_count": 10,
+    "max_records_per_file": 10000,
+    "data_file_path": "./data/data.db",
+    "messages_ttl_check_in_hours": 1,
+    "messages_ttl_in_days": 7,
+    "ts": 1764026668352
+  },
+  "grpc": {
+    "enabled": false,
+    "serverPort": 9595,
+    "keepAliveTimeMs": 10000,
+    "keepAliveTimeoutMs": 5000,
+    "keepalivePermitWithoutCalls": true,
+    "maxPingsWithoutData": 0,
+    "minTimeBetweenPingsMs": 10000,
+    "minPingIntervalWithoutDataMs": 5000,
+    "ts": 1764026668352
+  },
+  "connectors": [],
+  "logs": {
+    "local": {
+      "service": {
+        "logLevel": "INFO",
+        "filePath": "./logs",
+        "backupCount": 7,
+        "savingTime": 3,
+        "savingPeriod": "D"
+      },
+      "connector": {
+        "logLevel": "INFO",
+        "filePath": "./logs",
+        "backupCount": 7,
+        "savingTime": 3,
+        "savingPeriod": "D"
+      },
+      "converter": {
+        "logLevel": "INFO",
+        "filePath": "./logs",
+        "backupCount": 7,
+        "savingTime": 3,
+        "savingPeriod": "D"
+      },
+      "tb_connection": {
+        "logLevel": "INFO",
+        "filePath": "./logs",
+        "backupCount": 7,
+        "savingTime": 3,
+        "savingPeriod": "D"
+      },
+      "storage": {
+        "logLevel": "INFO",
+        "filePath": "./logs",
+        "backupCount": 7,
+        "savingTime": 3,
+        "savingPeriod": "D"
+      },
+      "extension": {
+        "logLevel": "INFO",
+        "filePath": "./logs",
+        "backupCount": 7,
+        "savingTime": 3,
+        "savingPeriod": "D"
+      }
+    },
+    "logFormat": "%(asctime)s.%(msecs)03d - |%(levelname)s| - [%(filename)s] - %(module)s - %(funcName)s - %(lineno)d - %(message)s",
+    "dateFormat": "%Y-%m-%d %H:%M:%S",
+    "logLevel": "NONE"
+  }
+}
