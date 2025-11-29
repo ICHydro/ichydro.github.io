@@ -143,6 +143,20 @@ style: header
       <h3>{{ person.name }}</h3>
       <p class="title">{{ person.title }}</p>
       <p class="bio">{{ person.bio }}</p>
+      {% if person.keywords %}
+      <div class="badges keywords">
+        {% for keyword in person.keywords %}
+          <span class="badge keyword-badge">{{ keyword }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if person.locations %}
+      <div class="badges locations">
+        {% for location in person.locations %}
+          <span class="badge location-badge">{{ location }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
       <div class="social-links">
         {% if person.social.researchgate %}
           <a href="{{ person.social.researchgate }}" target="_blank" class="researchgate">
@@ -181,6 +195,20 @@ style: header
       <h3>{{ person.name }}</h3>
       <p class="title">{{ person.title }}</p>
       <p class="bio">{{ person.bio }}</p>
+      {% if person.keywords %}
+      <div class="badges keywords">
+        {% for keyword in person.keywords %}
+          <span class="badge keyword-badge">{{ keyword }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if person.locations %}
+      <div class="badges locations">
+        {% for location in person.locations %}
+          <span class="badge location-badge">{{ location }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
       <div class="social-links">
         {% if person.social.researchgate %}
           <a href="{{ person.social.researchgate }}" target="_blank" class="researchgate">
@@ -219,6 +247,20 @@ style: header
       <h3>{{ person.name }}</h3>
       <p class="title">{{ person.title }}{% if person.supervisor %}<br><small>{{ person.supervisor }}</small>{% endif %}</p>
       <p class="bio">{{ person.bio }}</p>
+      {% if person.keywords %}
+      <div class="badges keywords">
+        {% for keyword in person.keywords %}
+          <span class="badge keyword-badge">{{ keyword }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if person.locations %}
+      <div class="badges locations">
+        {% for location in person.locations %}
+          <span class="badge location-badge">{{ location }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
       <div class="social-links">
         {% if person.social.researchgate %}
           <a href="{{ person.social.researchgate }}" target="_blank" class="researchgate">
