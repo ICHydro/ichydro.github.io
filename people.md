@@ -4,11 +4,6 @@ permalink: people.html
 style: header
 ---
 
-<div class="section-title">
-  <h3>Staff</h3>
-  <div class="divider"></div>
-</div>
-
 <div class="researcher-gallery">
   {% for person in site.data.researchers.staff %}
   <div class="researcher-card" onclick="openModal('{{ person.name | slugify }}')">
@@ -48,9 +43,8 @@ style: header
   {% endfor %}
 </div>
 
-<div class="section-title">
-  <h3>Researchers</h3>
-  <div class="divider"></div>
+<div class="section-title small">
+  <h4>Researchers</h4>
 </div>
 
 <div class="researcher-gallery">
