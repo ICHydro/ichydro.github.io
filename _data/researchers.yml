@@ -14,6 +14,14 @@ researchers:
     title: "Researcher"
     image: "Rike - Rike Becker.jpg"
     bio: "Rike is a Research Associate and Marie-Sklodowska-Curie Fellowship holder at Imperial. She is studying climate change impacts on future water availability, particularly in mountain regions which are experiencing drastic changes in water availability due to accelerated snow and glacier melt. To study and to better understand the rapidly changing hydrodynamics, she combines the use of hydrological and land surface models with the collection and analysis of in-situ and remote sensing data."
+    keywords:
+      - "Mountain Hydrology"
+      - "Climate Change"
+      - "Digital Twin"
+      - "Tipping-Points"
+      - "Wetlands"
+    locations:
+      - "Andes"
     social:
       researchgate: "https://www.researchgate.net/profile/Rike-Becker"
       linkedin: "https://www.linkedin.com/in/rike-becker-27475280/"
@@ -22,6 +30,15 @@ researchers:
     title: "Researcher"
     image: "Ben.png"
     bio: "Ben is an environmental scientist with interdisciplinary research interests focussing on water, climate, and society. His research seeks to understand how socioenvironmental systems function and how they are changing, and ultimately what this means for the services, opportunities and risks they represent to society. Innovative technologies, such as Internet of Things sensors, and participatory methodologies are at the centre of Ben's research, enabling equitable data collection and sharing in challenging environmental and social settings."
+    keywords:
+      - "Climate Change Adaptation"
+      - "Co-creation"
+      - "Flood risk"
+      - "Water quality"
+    locations:
+      - "Ghana"
+      - "Rwanda"
+      - "Africa"
     social:
       researchgate: "https://www.researchgate.net/profile/Ben-Howard-4?ev=hdr_xprf"
       linkedin: "https://www.linkedin.com/in/benchoward/"
@@ -31,6 +48,14 @@ researchers:
     title: "Researcher"
     image: "Estefania.png"
     bio: "Estefania Quenta is a Postdoctoral Fellow at Imperial College London, broadly interested in how freshwater ecosystems respond to environmental changes to inform water conservation measures. She is currently investigating how climate change is reshaping water quality in the Andes through systematic assessments and numerical analyses. She is also examining the potential effects of glacier retreat on water quality and ecosystem health."
+    keywords:
+      - "Mountains"
+      - "Climate Change"
+      - "Freshwater Ecosystems"
+      - "Water Quality"
+      - "Biogeochemistry"
+    locations:
+      - "Andes"
     social:
       linkedin: "https://www.linkedin.com/in/estefaniaquentaherrera"
       website: "https://estefaniaquenta.weebly.com/"
@@ -47,6 +72,16 @@ researchers:
     title: "Innovation Manager"
     image: "Luke.png"
     bio: "Luke is an Innovation Manager at Imperial College London where he works full time on the Floods and Droughts Research Infrastructure (FDRI) project: a 5-year capital investment by the UK Government, enabling essential science and innovation to improve the UK's resilience to hydrological extremes. He is responsible for the day-to-day operations of the Innovation Work Package of FDRI which includes the scoping and identification of relevant new technologies for flood and drought monitoring and analysis."
+    keywords:
+      - "Project Management"
+      - "Innovation"
+      - "Climate Resilience"
+      - "Research Infrastructure"
+      - "Floods and Droughts"
+    locations:
+      - "Tweed Catchment (Scotland)"
+      - "Chess Catchment (England)"
+      - "Upper Severn (Wales)"
     social:
       researchgate: "https://www.researchgate.net/profile/Luke-Tumelty-2?ev=hdr_xprf"
       linkedin: "https://www.linkedin.com/in/luke-tumelty-a9949a1a1"
@@ -56,6 +91,14 @@ phd_students:
     title: "PhD Student"
     image: "Olivia.png"
     bio: "Olivia is a PhD student at Imperial College London, where she researches the drivers and impacts of drought and associated wildfire in the Peruvian Andes. She aims to localise the sub-seasonal to seasonal prediction of flash drought and wildfire risk by combining machine learning and the assimilation of novel datasets, including in-situ sensors."
+    keywords:
+      - "Droughts"
+      - "Machine learning"
+      - "Forecasting"
+      - "Mountain hydrology"
+    locations:
+      - "Peru"
+      - "Andes"
     social:
       linkedin: "https://www.linkedin.com/in/olivia-atkins-5618a1202/"
 
@@ -69,6 +112,13 @@ phd_students:
     title: "PhD Student"
     image: "Jose.png"
     bio: "Jose is a PhD candidate at Imperial College London studying how mountain catchments buffer hydrological variability and how catchment interventions can increase water security. Focusing on the tropical Andes, he investigates how management strategies can improve dry-season water availability by combining distributed groundwater modelling with tailored representations of catchment interventions, driven by hydrology and glacier-melt simulations in coupled workflows."
+    keywords:
+      - "Mountain hydrology"
+      - "Hydrogeology"
+    locations:
+      - "Peru"
+      - "Bolivia"
+      - "Andes"
     social:
       linkedin: "https://www.linkedin.com/in/jcuadrosadriazola/"
 
@@ -76,21 +126,49 @@ phd_students:
     title: "PhD Student"
     image: "Martha.png"
     bio: "Martha's PhD explores the hydrological implications of fire in tropical mountains, studying the Rwenzori Mountains, Uganda, and the Ecuadorean Andes. Her research bridges field monitoring, GIS analysis, and participatory methods to understand environmental change and water security in high-mountain environments. In the Rwenzori, her research characterises the Nyamwamba River's post-wildfire hazard cascade including flooding, debris flows, landslides, erosion and widespread water pollution."
+    keywords:
+      - "Mountain Water Security"
+      - "Hazard Cascade"
+      - "Wildfire"
+      - "Environmental Disturbance"
+    locations:
+      - "Uganda"
+      - "Ecuador"
+      - "Cameroon"
     social:
       linkedin: "https://www.linkedin.com/in/martha-day-91318718b"
 
-  - name: "Clara Gimeno"
-    title: "PhD Student"
-    image: "placeholder.jpg"
-    bio: "Clara Gimeno is pursuing research in water resources management and hydrological modeling, with a focus on innovative approaches to water security challenges."
+  - name: "Clara Gimeno Jésus"
+    title: "Research Assistant"
+    image: "Clara.png"
+    bio: "Clara is a Research Assistant at Imperial College London, where she investigates the impacts of nature-based solutions on water security, with a particular focus on the Peruvian Andes. Her work combines hydrological modelling with systems thinking approaches to evaluate intervention impacts and develop decision-support tools for practitioners. She collaborates closely with policy-makers, water utilities, local communities and academic partners in Peru to co-produce knowledge and ensure that research insights are grounded in local evidence, ultimately informing sustainable, inclusive and resilient water management strategies."
+    keywords:
+      - "nature-based solutions"
+      - "water security"
+      - "mountain hydrology"
+      - "climate adaptation"
+      - "systems thinking"
+    locations:
+      - "Peru"
+      - "Lima"
+      - "Vilcanota"
     social:
-      linkedin: "https://www.linkedin.com/in/clara-gimeno/"
-      twitter: "https://twitter.com/clara_gimeno"
+      researchgate: "https://www.researchgate.net/profile/Clara_Gimeno_Jesus?ev=hdr_xprf"
+      linkedin: "https://www.linkedin.com/in/clara-gimeno-jésus/"
 
   - name: "Anthony C. Ross"
     title: "PhD Student"
     image: "Anthony.png"
     bio: "Anthony is PhD student at Imperial College London studying high mountain hydrology and water resources. His research employs data from low-cost monitoring networks and field experiments, such as fluorescent tracing, to understand the movement and timing of water through mountain wetlands and their contributions to streamflow. He combines field observations with conceptual and regional modelling to advance knowledge of local wetland processes and their impact on catchment-scale hydrology and water resources."
+    keywords:
+      - "Mountain hydrology"
+      - "Wetlands"
+      - "Nature-based solutions"
+      - "Natural infrastructure"
+    locations:
+      - "Ecuador"
+      - "Peru"
+      - "Uganda"
     social:
       researchgate: "https://www.researchgate.net/profile/Anthony-Ross-12"
       linkedin: "https://www.linkedin.com/in/anthony-c-ross-3935a6244/"
@@ -99,6 +177,12 @@ phd_students:
     title: "PhD Student"
     image: "Dee Sadq.png"
     bio: "She is a PhD student at Imperial College London who works in association with Kuwait Institute for Scientific Research. Her research focuses on the challenges and performance of aquifer storage and recovery (ASR) systems in arid environments. Her research comprehensively includes the quality and quantity of recovered groundwater. She works on developing local numerical models to simulate the dynamic ASR processes, to understand the challenges of these systems and enhance their performance."
+    keywords:
+      - "Aquifer storage and recovery"
+      - "Arid regions"
+      - "Water Management"
+    locations:
+      - "Kuwait"
     social:
 
 past_phd_students:
