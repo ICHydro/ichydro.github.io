@@ -20,9 +20,11 @@
 // Styling for the researcher gallery
 .researcher-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
   margin: 40px 0;
+  max-width: 1200px;
+  justify-items: start;
 }
 
 .researcher-card {
@@ -33,6 +35,8 @@
   transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
+  width: 100%;
+  max-width: 350px;
 
   &:hover {
     transform: translateY(-5px);
