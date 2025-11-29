@@ -43,8 +43,9 @@ style: header
   {% endfor %}
 </div>
 
-<div class="section-title small">
-  <h4>Researchers</h4>
+<div class="section-title">
+  <h3>Researchers</h3>
+  <div class="divider"></div>
 </div>
 
 <div class="researcher-gallery">
@@ -245,8 +246,9 @@ style: header
 </div>
 {% endfor %}
 
-<div class="section-title small">
-  <h4>Former PhD Students</h4>
+<div class="section-title">
+  <h3>Former PhD Students</h3>
+  <div class="divider"></div>
 </div>
 
 <div class="researcher-gallery">
