@@ -33,7 +33,7 @@
   <!-- End Navigation -->
   
   <!-- Header -->
-  <header class="masthead"  style="background-image:url({{ site.data.style.[page.style].navheader-image }});">
+  <header class="masthead"  style="background-image:url({{ site.data.style.[page.style].navheader-image | relative_url }});">
     <div class="container">
       <div class="intro-text">
 	  {%- if site.data.sitetext[site.locale].[page.style].title -%}

@@ -7,6 +7,10 @@ header:
   navheader-image: "/assets/img/header-bg.jpg"
   nav-colour: "#003e79"
 
+main:
+  navheader-image: "/assets/img/header-bg.jpg"
+  nav-colour: "#003e79"
+
 hydroflux:
   navheader-image: "/assets/img/hydroflux.jpg"
   nav-colour: "#003e79"
