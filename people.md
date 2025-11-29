@@ -6,7 +6,7 @@ style: header
 
 <div class="researcher-gallery">
   {% for person in site.data.researchers.staff %}
-  <div class="researcher-card" onclick="openModal('{{ person.name | slugify }}')">
+  <div class="researcher-card staff-card" onclick="openModal('{{ person.name | slugify }}')">
     <div class="researcher-image">
       <img src="{{ '/assets/img/' | append: person.image | relative_url }}" alt="{{ person.name }}">
       <div class="hover-overlay">
