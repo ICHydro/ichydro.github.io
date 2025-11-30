@@ -10,7 +10,7 @@ style: header
     <div class="researcher-image">
       <img src="{{ '/assets/img/' | append: person.image | relative_url }}" alt="{{ person.name }}">
       <div class="hover-overlay">
-        More info<br>{{ person.name }}
+        More info<br>{{ person.short_name | default: person.name }}
       </div>
     </div>
     <div class="researcher-info">
@@ -54,7 +54,7 @@ style: header
     <div class="researcher-image">
       <img src="{{ '/assets/img/' | append: person.image | relative_url }}" alt="{{ person.name }}">
       <div class="hover-overlay">
-        More info<br>{{ person.name }}
+        More info<br>{{ person.short_name | default: person.name }}
       </div>
     </div>
     <div class="researcher-info">
@@ -98,7 +98,7 @@ style: header
     <div class="researcher-image">
       <img src="{{ '/assets/img/' | append: person.image | relative_url }}" alt="{{ person.name }}">
       <div class="hover-overlay">
-        More info<br>{{ person.name }}
+        More info<br>{{ person.short_name | default: person.name }}
       </div>
     </div>
     <div class="researcher-info">

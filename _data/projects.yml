@@ -7,6 +7,14 @@ active:
     logo: "placeholder.jpg"
     website: "https://gotw.nerc.ac.uk/list_full.asp?pcode=NE%2FZ50340X%2F1"
     description: "FLOODTWIN develops digital twin technology for flood forecasting and management, integrating real-time data and advanced modeling to improve flood prediction and response capabilities."
+    keywords:
+      - "Digital Twin"
+      - "Flood risk"
+      - "Forecasting"
+      - "Real-time monitoring"
+    locations:
+      - "UK"
+    icon: "fas fa-project-diagram"
 
   - name: "SMARTWATER"
     period: "2023 - 2028"
@@ -16,6 +24,13 @@ active:
     logo: "SMARTWATER+Logo.webp"
     website: "https://www.smart-water.org.uk/"
     description: "Diagnosing controls of pollution hot spots and hot moments and their impact on catchment water quality. SMARTWATER uses cutting-edge sensor technology and data analytics to understand and predict water quality dynamics in river systems."
+    keywords:
+      - "Water quality"
+      - "Sensor networks"
+      - "Data analytics"
+      - "Pollution monitoring"
+    locations:
+      - "UK"
 
   - name: "Deplete and Retreat"
     period: "2022 - 2027"
@@ -25,6 +40,14 @@ active:
     logo: "DepleteandRetreat_logo.png"
     website: "https://www.antarcticglaciers.org/andes-water-towers/"
     description: "Investigating the future of Andean water towers as glaciers retreat due to climate change. This project examines the impacts of glacier loss on water security for millions of people dependent on mountain water resources."
+    keywords:
+      - "Climate Change"
+      - "Glacier retreat"
+      - "Water security"
+      - "Mountain hydrology"
+    locations:
+      - "Andes"
+      - "South America"
 
   - name: "FDRI"
     period: "2020 - 2028"
@@ -34,6 +57,16 @@ active:
     logo: "FDRI_Logo.png"
     website: "https://www.ceh.ac.uk/our-science/projects/floods-and-droughts-research-infrastructure-fdri"
     description: "A Floods and Droughts Research Infrastructure providing the UK research community with access to state-of-the-art facilities, data, and expertise to advance understanding of hydrological extremes and build national resilience."
+    keywords:
+      - "Research Infrastructure"
+      - "Floods"
+      - "Droughts"
+      - "Climate Resilience"
+    locations:
+      - "UK"
+      - "Scotland"
+      - "England"
+      - "Wales"
 
 past:
   - name: "Pathways to Equitable Cities"
