@@ -7,6 +7,7 @@ style: header
 ## Press coverage
 
 <ul>
+<li>Science Media Center Germany, 2024. <a href="https://sciencemediacenter.de/angebote/25171">Expert statement on climate change impacts in mountain regions</a></li>
 <li>Global Water Forum, November 2024. <a href="https://www.globalwaterforum.org/2024/11/28/chiefs-and-floods-hybrid-governance-and-flood-risk-adaptation-in-tamale-ghana/">Chiefs and floods: Hybrid governance and flood risk adaptation in Tamale, Ghana</a></li>
 <li>Modern Ghana, December 2024. <a href="https://www.modernghana.com/news/1333325/community-flood-risk-and-adaptation-project-unveil.html">Community flood risk and adaptation project unveiled in Tamale</a></li>
 <li>Diamond FM Online, July 2024. <a href="https://diamondfmonline.com/six-communities-in-tamale-including-nalung-fong-benefit-from-flood-risk-and-adaption-project/">Six communities in Tamale including Nalung, Fong benefit from flood risk and adaption project</a></li>

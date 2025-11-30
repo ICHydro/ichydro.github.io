@@ -55,7 +55,7 @@ active:
     role: "Co-PI"
     lead: "Gareth Old, UKCEH"
     logo: "FDRI_Logo.png"
-    website: "https://www.ceh.ac.uk/our-science/projects/floods-and-droughts-research-infrastructure-fdri"
+    website: "https://fdri.org.uk/"
     description: "A Floods and Droughts Research Infrastructure providing the UK research community with access to state-of-the-art facilities, data, and expertise to advance understanding of hydrological extremes and build national resilience."
     keywords:
       - "Research Infrastructure"
