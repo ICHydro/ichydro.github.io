@@ -7,11 +7,12 @@ staff:
       researchgate: "https://www.researchgate.net/profile/Wouter_Buytaert"
       linkedin: "https://www.linkedin.com/in/wouter-buytaert/"
       twitter: "https://twitter.com/WouterBuytaert"
+      orcid: "https://orcid.org/0000-0001-6994-4454"
       website: "https://www.imperial.ac.uk/people/w.buytaert"
 
 researchers:
   - name: "Dr Rike Becker"
-    title: "Researcher"
+    title: "Research Associate"
     image: "Rike - Rike Becker.jpg"
     bio: "Rike is a Research Associate and Marie-Sklodowska-Curie Fellowship holder at Imperial. She is studying climate change impacts on future water availability, particularly in mountain regions which are experiencing drastic changes in water availability due to accelerated snow and glacier melt. To study and to better understand the rapidly changing hydrodynamics, she combines the use of hydrological and land surface models with the collection and analysis of in-situ and remote sensing data."
     keywords:
@@ -26,8 +27,26 @@ researchers:
       researchgate: "https://www.researchgate.net/profile/Rike-Becker"
       linkedin: "https://www.linkedin.com/in/rike-becker-27475280/"
 
+  - name: "Clara Gimeno Jésus"
+    title: "Research Assistant"
+    image: "Clara.png"
+    bio: "Clara is a Research Assistant at Imperial College London, where she investigates the impacts of nature-based solutions on water security, with a particular focus on the Peruvian Andes. Her work combines hydrological modelling with systems thinking approaches to evaluate intervention impacts and develop decision-support tools for practitioners. She collaborates closely with policy-makers, water utilities, local communities and academic partners in Peru to co-produce knowledge and ensure that research insights are grounded in local evidence, ultimately informing sustainable, inclusive and resilient water management strategies."
+    keywords:
+      - "nature-based solutions"
+      - "water security"
+      - "mountain hydrology"
+      - "climate adaptation"
+      - "systems thinking"
+    locations:
+      - "Peru"
+      - "Lima"
+      - "Vilcanota"
+    social:
+      researchgate: "https://www.researchgate.net/profile/Clara_Gimeno_Jesus?ev=hdr_xprf"
+      linkedin: "https://www.linkedin.com/in/clara-gimeno-jésus/"
+
   - name: "Dr Ben Howard"
-    title: "Researcher"
+    title: "Research Associate"
     image: "Ben.png"
     bio: "Ben is an environmental scientist with interdisciplinary research interests focussing on water, climate, and society. His research seeks to understand how socioenvironmental systems function and how they are changing, and ultimately what this means for the services, opportunities and risks they represent to society. Innovative technologies, such as Internet of Things sensors, and participatory methodologies are at the centre of Ben's research, enabling equitable data collection and sharing in challenging environmental and social settings."
     keywords:
@@ -45,7 +64,7 @@ researchers:
       website: "https://www.benchoward.co.uk/"
 
   - name: "Dr Estefania Quenta Herrera"
-    title: "Researcher"
+    title: "Sponsored Researcher"
     image: "Estefania.png"
     bio: "Estefania Quenta is a Postdoctoral Fellow at Imperial College London, broadly interested in how freshwater ecosystems respond to environmental changes to inform water conservation measures. She is currently investigating how climate change is reshaping water quality in the Andes through systematic assessments and numerical analyses. She is also examining the potential effects of glacier retreat on water quality and ecosystem health."
     keywords:
@@ -61,7 +80,7 @@ researchers:
       website: "https://estefaniaquenta.weebly.com/"
 
   - name: "Dr Tom Rowan"
-    title: "Researcher"
+    title: "Research Fellow"
     image: "Rowan.jpg"
     bio: "Tom is a Research Fellow at Imperial College London, where he researches hydrological processes and contamination problems through the development of innovative instrumentation. His research advances environmental monitoring through AI-enhanced sensor networks that replace expensive traditional equipment with affordable, reliable alternatives. By combining expertise in machine learning, embedded systems, and IoT technology, he develops intelligent monitoring solutions deployed across UK waterways in collaboration with water utilities, environmental organizations, and government agencies."
     social:
@@ -138,23 +157,6 @@ phd_students:
     social:
       linkedin: "https://www.linkedin.com/in/martha-day-91318718b"
 
-  - name: "Clara Gimeno Jésus"
-    title: "Research Assistant"
-    image: "Clara.png"
-    bio: "Clara is a Research Assistant at Imperial College London, where she investigates the impacts of nature-based solutions on water security, with a particular focus on the Peruvian Andes. Her work combines hydrological modelling with systems thinking approaches to evaluate intervention impacts and develop decision-support tools for practitioners. She collaborates closely with policy-makers, water utilities, local communities and academic partners in Peru to co-produce knowledge and ensure that research insights are grounded in local evidence, ultimately informing sustainable, inclusive and resilient water management strategies."
-    keywords:
-      - "nature-based solutions"
-      - "water security"
-      - "mountain hydrology"
-      - "climate adaptation"
-      - "systems thinking"
-    locations:
-      - "Peru"
-      - "Lima"
-      - "Vilcanota"
-    social:
-      researchgate: "https://www.researchgate.net/profile/Clara_Gimeno_Jesus?ev=hdr_xprf"
-      linkedin: "https://www.linkedin.com/in/clara-gimeno-jésus/"
 
   - name: "Anthony C. Ross"
     title: "PhD Student"
