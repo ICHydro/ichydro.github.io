@@ -13,7 +13,13 @@ style: header
   {% for project in site.data.projects.active %}
   <div class="project-card" onclick="openProjectModal('{{ project.name | slugify }}')">
     <div class="project-logo" {% if project.logo_background %}style="background-color: {{ project.logo_background }};"{% endif %}>
+      {% if project.icon %}
+      <div style="font-size: 80px; color: #fed136; text-align: center; padding: 20px;">
+        <i class="{{ project.icon }}"></i>
+      </div>
+      {% else %}
       <img src="{{ '/assets/img/' | append: project.logo | relative_url }}" alt="{{ project.name }}">
+      {% endif %}
     </div>
     <div class="project-info">
       <h4>{{ project.name }}</h4>
@@ -75,7 +81,13 @@ style: header
   <div class="modal-content">
     <span class="close">&times;</span>
     <div class="modal-project-logo" {% if project.logo_background %}style="background-color: {{ project.logo_background }};"{% endif %}>
+      {% if project.icon %}
+      <div style="font-size: 100px; color: #fed136; text-align: center; padding: 30px;">
+        <i class="{{ project.icon }}"></i>
+      </div>
+      {% else %}
       <img src="{{ '/assets/img/' | append: project.logo | relative_url }}" alt="{{ project.name }}">
+      {% endif %}
     </div>
     <div class="modal-project-info">
       <h3>{{ project.name }}</h3>
