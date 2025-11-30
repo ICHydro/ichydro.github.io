@@ -1,5 +1,6 @@
 staff:
   - name: "Professor Wouter Buytaert"
+    short_name: "Wouter"
     title: "Group Lead"
     image: "Wouter.jpg"
     bio: "Professor Wouter Buytaert is a Professor of Hydrology at Imperial College London and the lead of the ICHydro research group. His research focuses on water resources in mountain environments, particularly in the Andes, with interests in climate change impacts, ecosystem services, and water security."
@@ -29,7 +30,8 @@ researchers:
       linkedin: "https://www.linkedin.com/in/rike-becker-27475280/"
       orcid: "https://orcid.org/0000-0002-9040-1355"
 
-  - name: "Clara Gimeno Jésus"
+  - name: "Clara Gimeno Jésus"  
+    short_name: "Clara"
     title: "Research Assistant"
     image: "Clara.png"
     bio: "Clara is a Research Assistant at Imperial College London, where she investigates the impacts of nature-based solutions on water security, with a particular focus on the Peruvian Andes. Her work combines hydrological modelling with systems thinking approaches to evaluate intervention impacts and develop decision-support tools for practitioners. She collaborates closely with policy-makers, water utilities, local communities and academic partners in Peru to co-produce knowledge and ensure that research insights are grounded in local evidence, ultimately informing sustainable, inclusive and resilient water management strategies."
@@ -71,7 +73,7 @@ researchers:
     short_name: "Estefania"
     title: "Sponsored Researcher"
     image: "Estefania.png"
-    bio: "Estefania Quenta is a Postdoctoral Fellow at Imperial College London, broadly interested in how freshwater ecosystems respond to environmental changes to inform water conservation measures. She is currently investigating how climate change is reshaping water quality in the Andes through systematic assessments and numerical analyses. She is also examining the potential effects of glacier retreat on water quality and ecosystem health."
+    bio: "Estefania Quenta is a Postdoctoral Fellow at Imperial College London, broadly interested in how freshwater ecosystems respond to environmental changes to inform water conservation measures. She is currently investigating how climate change is reshaping water quality in the Andes through systematic assessments and numerical analyses. She is also examining the potential effects of glacier retreat on water quality and ecosystem health, including the analysis of diatoms, algae, cyanobacteria, and trace metals in glacier-fed streams that may pose risks to both human and ecological health by performing intensive fieldwork and laboratory analyses. She has collaborated with international students and scientific experts working in the Andes from both Andean and UK universities."
     keywords:
       - "Mountains"
       - "Climate Change"
@@ -86,15 +88,21 @@ researchers:
       orcid: "https://orcid.org/0000-0002-2724-5804"
 
   - name: "Dr Tom Rowan"
+    short_name: "Tom"
     title: "Research Fellow"
     image: "Rowan.jpg"
     bio: "Tom is a Research Fellow at Imperial College London, where he researches hydrological processes and contamination problems through the development of innovative instrumentation. His research advances environmental monitoring through AI-enhanced sensor networks that replace expensive traditional equipment with affordable, reliable alternatives. By combining expertise in machine learning, embedded systems, and IoT technology, he develops intelligent monitoring solutions deployed across UK waterways in collaboration with water utilities, environmental organizations, and government agencies."
     keywords:
-      - "Water Sensing"
+      - "Machine Learning"
       - "Catchment Modelling"
       - "Pollution Monitoring"
       - "Water Quality"
       - "Floods and Droughts"
+    locations:
+      - "UK"
+      - "Tweed"
+      - "Chess"
+      - "Upper Severn"
     social:
       researchgate: "https://www.researchgate.net/profile/Thomas-Rowan"
       linkedin: "https://www.linkedin.com/in/tom-rowan-289b26102/"
@@ -104,7 +112,7 @@ researchers:
     short_name: "Luke"
     title: "Innovation Manager"
     image: "Luke.png"
-    bio: "Luke is an Innovation Manager at Imperial College London where he works full time on the Floods and Droughts Research Infrastructure (FDRI) project: a 5-year capital investment by the UK Government, enabling essential science and innovation to improve the UK's resilience to hydrological extremes. He is responsible for the day-to-day operations of the Innovation Work Package of FDRI which includes the scoping and identification of relevant new technologies for flood and drought monitoring and analysis."
+    bio: "Luke is an Innovation Manager at Imperial College London where he works full time on the Floods and Droughts Research Infrastructure (FDRI) project: a 5-year capital investment by the UK Government, enabling essential science and innovation to improve the UK's resilience to hydrological extremes. He is responsible for the day-to-day operations of the Innovation Work Package of FDRI which includes the scoping and identification of relevant new technologies for flood and drought monitoring and analysis, the development and implementation of an innovation testbed programme, and the development and delivery of training, community engagement, and innovation activities."
     keywords:
       - "Project Management"
       - "Innovation"
@@ -139,6 +147,7 @@ phd_students:
       orcid: "https://orcid.org/0009-0003-3988-6275"
 
   - name: "Dan Bartley"
+    short_name: "Dan"
     title: "PhD Student"
     image: "placeholder.jpg"
     bio: "PhD student at Imperial College London."
