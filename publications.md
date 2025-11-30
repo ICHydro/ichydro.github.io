@@ -12,24 +12,9 @@ Note: nearly all publications are available as open access. Wherever we can affo
 
 {% bibliography --bibliography_list_tag ul --query @*[year=2025] %}
 
-**Recent publications from team members:**
-
-- Atkins, O. et al. (2025). [Glacier recession in the Peruvian Andes](https://doi.org/10.5194/tc-19-1047-2025). *The Cryosphere*, 19, 1047.
-- Howard, B. et al. (2025). [Hydrological impacts in tropical catchments](https://doi.org/10.1080/02626667.2025.2571065). *Hydrological Sciences Journal*.
-- Howard, B. et al. (2025). [Climate change and water quality](https://doi.org/10.1002/wcc.70008). *WIREs Climate Change*.
-- Howard, B. et al. (2025). [Frontiers in Earth Science applications](https://doi.org/10.3389/feart.2025.1593726). *Frontiers in Earth Science*.
-- Howard, B. et al. (2025). [Water resources research](https://doi.org/10.1016/j.watres.2025.123374). *Water Research*.
-
 #### 2024
 
 {% bibliography --bibliography_list_tag ul --query @*[year=2024] %}
-
-**Recent publications from team members:**
-
-- Howard, B. et al. (2024). [Nature-based solutions for water security](https://doi.org/10.1038/s44168-024-00198-y). *Nature Water*.
-- Howard, B. et al. (2024). [Geochemistry and water quality](https://doi.org/10.1029/2024CN000248). *Chinese Geosciences*.
-- Howard, B. et al. (2024). [Environmental policy and planning](https://doi.org/10.1080/1523908X.2024.2410899). *Journal of Environmental Policy & Planning*.
-- Becker, R. et al. (2024). [Mountain hydrology and climate change](https://doi.org/10.1016/j.agrformet.2024.110322). *Agricultural and Forest Meteorology*.
 
 #### 2023
 
