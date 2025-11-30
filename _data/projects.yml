@@ -22,6 +22,7 @@ active:
     role: "Co-PI"
     lead: "Stefan Krause, University of Birmingham"
     logo: "SMARTWATER+Logo.webp"
+    logo_background: "#ecf3f4"
     website: "https://www.smart-water.org.uk/"
     description: "Diagnosing controls of pollution hot spots and hot moments and their impact on catchment water quality. SMARTWATER uses cutting-edge sensor technology and data analytics to understand and predict water quality dynamics in river systems."
     keywords:
@@ -38,6 +39,7 @@ active:
     role: "Co-PI"
     lead: "Jeremy Ely, University of Sheffield"
     logo: "DepleteandRetreat_logo.png"
+    logo_background: "#ffffff"
     website: "https://www.antarcticglaciers.org/andes-water-towers/"
     description: "Investigating the future of Andean water towers as glaciers retreat due to climate change. This project examines the impacts of glacier loss on water security for millions of people dependent on mountain water resources."
     keywords:
@@ -55,7 +57,8 @@ active:
     role: "Co-PI"
     lead: "Gareth Old, UKCEH"
     logo: "FDRI_Logo.png"
-    website: "https://fdri.org.uk/"
+    logo_background: "#ffffff"
+    website: "https://www.ceh.ac.uk/our-science/projects/floods-and-droughts-research-infrastructure-fdri"
     description: "A Floods and Droughts Research Infrastructure providing the UK research community with access to state-of-the-art facilities, data, and expertise to advance understanding of hydrological extremes and build national resilience."
     keywords:
       - "Research Infrastructure"

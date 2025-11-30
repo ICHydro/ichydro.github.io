@@ -12,14 +12,8 @@ style: header
 <div class="project-gallery">
   {% for project in site.data.projects.active %}
   <div class="project-card" onclick="openProjectModal('{{ project.name | slugify }}')">
-    <div class="project-logo">
-      {% if project.icon %}
-      <div style="font-size: 80px; color: #fed136; text-align: center; padding: 20px;">
-        <i class="{{ project.icon }}"></i>
-      </div>
-      {% else %}
+    <div class="project-logo" {% if project.logo_background %}style="background-color: {{ project.logo_background }};"{% endif %}>
       <img src="{{ '/assets/img/' | append: project.logo | relative_url }}" alt="{{ project.name }}">
-      {% endif %}
     </div>
     <div class="project-info">
       <h4>{{ project.name }}</h4>
@@ -80,14 +74,8 @@ style: header
 <div id="{{ project.name | slugify }}-modal" class="project-modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <div class="modal-project-logo">
-      {% if project.icon %}
-      <div style="font-size: 100px; color: #fed136; text-align: center; padding: 30px;">
-        <i class="{{ project.icon }}"></i>
-      </div>
-      {% else %}
+    <div class="modal-project-logo" {% if project.logo_background %}style="background-color: {{ project.logo_background }};"{% endif %}>
       <img src="{{ '/assets/img/' | append: project.logo | relative_url }}" alt="{{ project.name }}">
-      {% endif %}
     </div>
     <div class="modal-project-info">
       <h3>{{ project.name }}</h3>
@@ -95,32 +83,6 @@ style: header
       <p class="funding"><strong>Funding:</strong> {{ project.funding }}</p>
       <p class="role"><strong>Role:</strong> {{ project.role }}{% if project.lead %} (led by {{ project.lead }}){% endif %}</p>
       <p class="description">{{ project.description }}</p>
-      {% if project.keywords %}
-      <div class="badges-container" style="margin: 15px 0;">
-        {% for keyword in project.keywords %}
-        <span class="badge" data-keyword="{{ keyword }}">{{ keyword }}</span>
-        {% endfor %}
-      </div>
-      {% endif %}
-      {% if project.locations %}
-      <div class="badges-container" style="margin: 15px 0;">
-        {% for location in project.locations %}
-        {% assign loc_lower = location | downcase %}
-        <span class="badge location-badge">
-          {% if loc_lower contains 'andes' or loc_lower contains 'himalaya' or loc_lower contains 'mountain' %}
-          <i class="fas fa-mountain"></i>
-          {% elsif loc_lower contains 'uk' or loc_lower contains 'peru' or loc_lower contains 'chile' or loc_lower contains 'scotland' or loc_lower contains 'england' or loc_lower contains 'wales' %}
-          <i class="fas fa-flag"></i>
-          {% elsif loc_lower contains 'south america' or loc_lower contains 'europe' or loc_lower contains 'asia' or loc_lower contains 'africa' %}
-          <i class="fas fa-globe-americas"></i>
-          {% else %}
-          <i class="fas fa-map-marker-alt"></i>
-          {% endif %}
-          {{ location }}
-        </span>
-        {% endfor %}
-      </div>
-      {% endif %}
       {% if project.website %}
       <p class="website">
         <a href="{{ project.website }}" target="_blank" class="btn-link">
