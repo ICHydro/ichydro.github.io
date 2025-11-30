@@ -10,7 +10,7 @@ style: header
     <div class="researcher-image">
       <img src="{{ '/assets/img/' | append: person.image | relative_url }}" alt="{{ person.name }}">
       <div class="hover-overlay">
-        More info on {{ person.name }}
+        More info<br>{{ person.name }}
       </div>
     </div>
     <div class="researcher-info">
@@ -59,7 +59,7 @@ style: header
     <div class="researcher-image">
       <img src="{{ '/assets/img/' | append: person.image | relative_url }}" alt="{{ person.name }}">
       <div class="hover-overlay">
-        More info on {{ person.name }}
+        More info<br>{{ person.name }}
       </div>
     </div>
     <div class="researcher-info">
@@ -103,7 +103,7 @@ style: header
     <div class="researcher-image">
       <img src="{{ '/assets/img/' | append: person.image | relative_url }}" alt="{{ person.name }}">
       <div class="hover-overlay">
-        More info on {{ person.name }}
+        More info<br>{{ person.name }}
       </div>
     </div>
     <div class="researcher-info">
@@ -321,8 +321,8 @@ style: header
 <div style="max-width: 800px; margin: 0 auto 60px;">
   <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
     <li>Alison Prior (main supervisor: Colin Prentice)</li>
-    <li>Neeraj Sah</li>
-    <li>Will Veness</li>
+    <li>Neeraj Sah (2022) - Now at CEH, UK</li>
+    <li>Will Veness (2023) - Research Consultant</li>
     <li>Anna Twomlow (2021)</li>
     <li>Charles Zogheib (2021)</li>
     <li>Simon De Stercke (2020)</li>
