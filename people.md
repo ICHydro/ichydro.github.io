@@ -146,14 +146,26 @@ style: header
       {% if person.keywords %}
       <div class="badges keywords">
         {% for keyword in person.keywords %}
-          <span class="badge keyword-badge">{{ keyword }}</span>
+          <span class="badge keyword-badge" data-keyword="{{ keyword }}">{{ keyword }}</span>
         {% endfor %}
       </div>
       {% endif %}
       {% if person.locations %}
       <div class="badges locations">
         {% for location in person.locations %}
-          <span class="badge location-badge">{{ location }}</span>
+          <span class="badge location-badge">
+            {% assign loc_lower = location | downcase %}
+            {% if loc_lower contains 'andes' or loc_lower contains 'rwenzori' or loc_lower contains 'mountain' %}
+              <i class="fas fa-mountain"></i>
+            {% elsif loc_lower == 'africa' or loc_lower == 'south america' or loc_lower == 'asia' or loc_lower == 'europe' %}
+              <i class="fas fa-globe-americas"></i>
+            {% elsif loc_lower == 'peru' or loc_lower == 'bolivia' or loc_lower == 'ecuador' or loc_lower == 'uganda' or loc_lower == 'ghana' or loc_lower == 'rwanda' or loc_lower == 'kuwait' or loc_lower == 'cameroon' or loc_lower == 'uk' or loc_lower == 'scotland' or loc_lower == 'england' or loc_lower == 'wales' %}
+              <i class="fas fa-flag"></i>
+            {% else %}
+              <i class="fas fa-map-marker-alt"></i>
+            {% endif %}
+            {{ location }}
+          </span>
         {% endfor %}
       </div>
       {% endif %}
@@ -203,14 +215,26 @@ style: header
       {% if person.keywords %}
       <div class="badges keywords">
         {% for keyword in person.keywords %}
-          <span class="badge keyword-badge">{{ keyword }}</span>
+          <span class="badge keyword-badge" data-keyword="{{ keyword }}">{{ keyword }}</span>
         {% endfor %}
       </div>
       {% endif %}
       {% if person.locations %}
       <div class="badges locations">
         {% for location in person.locations %}
-          <span class="badge location-badge">{{ location }}</span>
+          <span class="badge location-badge">
+            {% assign loc_lower = location | downcase %}
+            {% if loc_lower contains 'andes' or loc_lower contains 'rwenzori' or loc_lower contains 'mountain' %}
+              <i class="fas fa-mountain"></i>
+            {% elsif loc_lower == 'africa' or loc_lower == 'south america' or loc_lower == 'asia' or loc_lower == 'europe' %}
+              <i class="fas fa-globe-americas"></i>
+            {% elsif loc_lower == 'peru' or loc_lower == 'bolivia' or loc_lower == 'ecuador' or loc_lower == 'uganda' or loc_lower == 'ghana' or loc_lower == 'rwanda' or loc_lower == 'kuwait' or loc_lower == 'cameroon' or loc_lower == 'uk' or loc_lower == 'scotland' or loc_lower == 'england' or loc_lower == 'wales' %}
+              <i class="fas fa-flag"></i>
+            {% else %}
+              <i class="fas fa-map-marker-alt"></i>
+            {% endif %}
+            {{ location }}
+          </span>
         {% endfor %}
       </div>
       {% endif %}
@@ -260,14 +284,26 @@ style: header
       {% if person.keywords %}
       <div class="badges keywords">
         {% for keyword in person.keywords %}
-          <span class="badge keyword-badge">{{ keyword }}</span>
+          <span class="badge keyword-badge" data-keyword="{{ keyword }}">{{ keyword }}</span>
         {% endfor %}
       </div>
       {% endif %}
       {% if person.locations %}
       <div class="badges locations">
         {% for location in person.locations %}
-          <span class="badge location-badge">{{ location }}</span>
+          <span class="badge location-badge">
+            {% assign loc_lower = location | downcase %}
+            {% if loc_lower contains 'andes' or loc_lower contains 'rwenzori' or loc_lower contains 'mountain' %}
+              <i class="fas fa-mountain"></i>
+            {% elsif loc_lower == 'africa' or loc_lower == 'south america' or loc_lower == 'asia' or loc_lower == 'europe' %}
+              <i class="fas fa-globe-americas"></i>
+            {% elsif loc_lower == 'peru' or loc_lower == 'bolivia' or loc_lower == 'ecuador' or loc_lower == 'uganda' or loc_lower == 'ghana' or loc_lower == 'rwanda' or loc_lower == 'kuwait' or loc_lower == 'cameroon' or loc_lower == 'uk' or loc_lower == 'scotland' or loc_lower == 'england' or loc_lower == 'wales' %}
+              <i class="fas fa-flag"></i>
+            {% else %}
+              <i class="fas fa-map-marker-alt"></i>
+            {% endif %}
+            {{ location }}
+          </span>
         {% endfor %}
       </div>
       {% endif %}
