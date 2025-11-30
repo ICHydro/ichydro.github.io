@@ -4,7 +4,6 @@ active:
     funding: "UK NERC (£675k)"
     role: "Co-PI"
     lead: "Tom Coulthard, University of Hull"
-    logo: "placeholder.jpg"
     icon: "fas fa-project-diagram"
     website: "https://gotw.nerc.ac.uk/list_full.asp?pcode=NE%2FZ50340X%2F1"
     description: "FLOODTWIN develops digital twin technology for flood forecasting and management, integrating real-time data and advanced modeling to improve flood prediction and response capabilities."
