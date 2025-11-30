@@ -14,7 +14,6 @@ active:
       - "Real-time monitoring"
     locations:
       - "UK"
-    icon: "fas fa-project-diagram"
 
   - name: "SMARTWATER"
     period: "2023 - 2028"
