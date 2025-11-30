@@ -18,22 +18,22 @@ style: header
       <p class="title">{{ person.title }}</p>
       <div class="social-links">
         {% if person.social.researchgate %}
-          <a href="{{ person.social.researchgate }}" target="_blank" class="researchgate" title="ResearchGate">
+          <a href="{{ person.social.researchgate }}" target="_blank" class="researchgate" title="ResearchGate" onclick="event.stopPropagation()">
             <i class="fab fa-researchgate"></i>
           </a>
         {% endif %}
         {% if person.social.linkedin %}
-          <a href="{{ person.social.linkedin }}" target="_blank" class="linkedin" title="LinkedIn">
+          <a href="{{ person.social.linkedin }}" target="_blank" class="linkedin" title="LinkedIn" onclick="event.stopPropagation()">
             <i class="fab fa-linkedin-in"></i>
           </a>
         {% endif %}
         {% if person.social.twitter %}
-          <a href="{{ person.social.twitter }}" target="_blank" class="twitter" title="Twitter">
+          <a href="{{ person.social.twitter }}" target="_blank" class="twitter" title="Twitter" onclick="event.stopPropagation()">
             <i class="fab fa-twitter"></i>
           </a>
         {% endif %}
         {% if person.social.website %}
-          <a href="{{ person.social.website }}" target="_blank" class="website" title="Website">
+          <a href="{{ person.social.website }}" target="_blank" class="website" title="Website" onclick="event.stopPropagation()">
             <i class="fas fa-globe"></i>
           </a>
         {% endif %}
@@ -62,22 +62,22 @@ style: header
       <p class="title">{{ person.title }}</p>
       <div class="social-links">
         {% if person.social.researchgate %}
-          <a href="{{ person.social.researchgate }}" target="_blank" class="researchgate" title="ResearchGate">
+          <a href="{{ person.social.researchgate }}" target="_blank" class="researchgate" title="ResearchGate" onclick="event.stopPropagation()">
             <i class="fab fa-researchgate"></i>
           </a>
         {% endif %}
         {% if person.social.linkedin %}
-          <a href="{{ person.social.linkedin }}" target="_blank" class="linkedin" title="LinkedIn">
+          <a href="{{ person.social.linkedin }}" target="_blank" class="linkedin" title="LinkedIn" onclick="event.stopPropagation()">
             <i class="fab fa-linkedin-in"></i>
           </a>
         {% endif %}
         {% if person.social.twitter %}
-          <a href="{{ person.social.twitter }}" target="_blank" class="twitter" title="Twitter">
+          <a href="{{ person.social.twitter }}" target="_blank" class="twitter" title="Twitter" onclick="event.stopPropagation()">
             <i class="fab fa-twitter"></i>
           </a>
         {% endif %}
         {% if person.social.website %}
-          <a href="{{ person.social.website }}" target="_blank" class="website" title="Website">
+          <a href="{{ person.social.website }}" target="_blank" class="website" title="Website" onclick="event.stopPropagation()">
             <i class="fas fa-globe"></i>
           </a>
         {% endif %}
@@ -106,22 +106,22 @@ style: header
       <p class="title">{{ person.title }}{% if person.supervisor %}<br><small>{{ person.supervisor }}</small>{% endif %}</p>
       <div class="social-links">
         {% if person.social.researchgate %}
-          <a href="{{ person.social.researchgate }}" target="_blank" class="researchgate" title="ResearchGate">
+          <a href="{{ person.social.researchgate }}" target="_blank" class="researchgate" title="ResearchGate" onclick="event.stopPropagation()">
             <i class="fab fa-researchgate"></i>
           </a>
         {% endif %}
         {% if person.social.linkedin %}
-          <a href="{{ person.social.linkedin }}" target="_blank" class="linkedin" title="LinkedIn">
+          <a href="{{ person.social.linkedin }}" target="_blank" class="linkedin" title="LinkedIn" onclick="event.stopPropagation()">
             <i class="fab fa-linkedin-in"></i>
           </a>
         {% endif %}
         {% if person.social.twitter %}
-          <a href="{{ person.social.twitter }}" target="_blank" class="twitter" title="Twitter">
+          <a href="{{ person.social.twitter }}" target="_blank" class="twitter" title="Twitter" onclick="event.stopPropagation()">
             <i class="fab fa-twitter"></i>
           </a>
         {% endif %}
         {% if person.social.website %}
-          <a href="{{ person.social.website }}" target="_blank" class="website" title="Website">
+          <a href="{{ person.social.website }}" target="_blank" class="website" title="Website" onclick="event.stopPropagation()">
             <i class="fas fa-globe"></i>
           </a>
         {% endif %}
