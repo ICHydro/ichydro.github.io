@@ -38,7 +38,22 @@ markdown: kramdown
 # Details: https://help.formspree.io/hc/en-us/articles/360017735154-How-to-prevent-spam
 # formspree_form_path: "f/a_form_id"
 
+
 scholar:
   style: _bibliography/myapa.csl
   order: descending
   bibliography_template: bib
+  bold_authors:
+    - Buytaert, W*
+    - Howard, B*
+    - Becker, R*
+    - Ross, A*
+    - Atkins, O*
+    - Cuadros-Adriazola, J*
+    - Quenta-Herrera, E*
+    - Quenta, E*
+    - Day, M*
+    - Tumelty, L*
+    - Sadeqi, D*
+    - Gimeno, C*
+
