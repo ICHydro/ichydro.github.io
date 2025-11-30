@@ -110,12 +110,15 @@
   background: rgba(0, 0, 0, 0.7);
   color: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: all 0.3s ease;
   font-weight: 600;
   font-size: 16px;
+  text-align: center;
+  padding: 10px;
 }
 
 .researcher-info {
@@ -365,7 +368,9 @@
     font-size: 10px;
   }
   
-  &.keyword-badge {
+  // Apply colors to any badge with data-keyword attribute
+  &.keyword-badge,
+  &[data-keyword] {
     // Climate-related keywords - Red shades
     &[data-keyword*="climate"],
     &[data-keyword*="Climate"] {
