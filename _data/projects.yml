@@ -4,7 +4,7 @@ active:
     funding: "UK NERC (£675k)"
     role: "Co-PI"
     lead: "Tom Coulthard, University of Hull"
-    logo: "floodtwin-logo.png"
+    logo: "placeholder.jpg"
     website: "https://gotw.nerc.ac.uk/list_full.asp?pcode=NE%2FZ50340X%2F1"
     description: "FLOODTWIN develops digital twin technology for flood forecasting and management, integrating real-time data and advanced modeling to improve flood prediction and response capabilities."
 
@@ -22,7 +22,7 @@ active:
     funding: "£2M"
     role: "Co-PI"
     lead: "Jeremy Ely, University of Sheffield"
-    logo: "deplete-retreat-logo.png"
+    logo: "DepleteandRetreat_logo.png"
     website: "https://www.antarcticglaciers.org/andes-water-towers/"
     description: "Investigating the future of Andean water towers as glaciers retreat due to climate change. This project examines the impacts of glacier loss on water security for millions of people dependent on mountain water resources."
 
@@ -31,7 +31,7 @@ active:
     funding: "UK NERC (£38.0M)"
     role: "Co-PI"
     lead: "Gareth Old, UKCEH"
-    logo: "fdri-logo.png"
+    logo: "FDRI_Logo.png"
     website: "https://www.ceh.ac.uk/our-science/projects/floods-and-droughts-research-infrastructure-fdri"
     description: "A Floods and Droughts Research Infrastructure providing the UK research community with access to state-of-the-art facilities, data, and expertise to advance understanding of hydrological extremes and build national resilience."
 
@@ -41,7 +41,7 @@ past:
     funding: "Wellcome Trust (£4M)"
     role: "Co-I"
     lead: "Majid Ezzati, Imperial College London"
-    logo: "equitable-cities-logo.png"
+    logo: "placeholder.jpg"
     website: "https://equitablehealthycities.org/"
     description: "Understanding and addressing health inequalities in urban environments, focusing on how environmental and social factors interact to affect health outcomes in cities across the globe."
 
@@ -50,7 +50,7 @@ past:
     funding: "NERC / CONCYTEC Peru (£950k)"
     role: "Lead PI"
     lead: "Dr Pedro Rau, UTEC Peru"
-    logo: "rahu-logo.png"
+    logo: "placeholder.jpg"
     website: ""
     description: "Water security and climate change adaptation in Peruvian glacier-fed river basins. Developing strategies to manage water resources in the face of accelerating glacier retreat in the tropical Andes."
 
@@ -59,7 +59,7 @@ past:
     funding: "UK NERC/DFID (£2M)"
     role: "Lead PI"
     lead: ""
-    logo: "landslide-evo-logo.png"
+    logo: "landslide_evo.png"
     website: "/projects/landslide-evo"
     description: "Citizen science for landslide risk reduction and disaster resilience building in mountain regions. Empowering communities with tools and knowledge to monitor and respond to landslide hazards."
 
@@ -68,7 +68,7 @@ past:
     funding: "UK NERC/ESRC/DFID (£1.8M)"
     role: "Lead PI"
     lead: ""
-    logo: "mountain-evo-logo.png"
+    logo: "placeholder.jpg"
     website: "/projects/mountain-evo/"
     description: "Adaptive governance of mountain ecosystem services for poverty alleviation enabled by environmental virtual observatories. Combining citizen science and advanced monitoring to support sustainable mountain livelihoods."
 

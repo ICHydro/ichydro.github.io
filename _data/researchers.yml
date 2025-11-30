@@ -184,6 +184,7 @@ phd_students:
     locations:
       - "Kuwait"
     social:
+      orcid: "https://orcid.org/0000-0003-0286-9802"
 
 past_phd_students:
   - name: "Alison Prior"
