@@ -3,11 +3,6 @@ staff:
     title: "Group Lead"
     image: "Wouter.jpg"
     bio: "Professor Wouter Buytaert is a Professor of Hydrology at Imperial College London and the lead of the ICHydro research group. His research focuses on water resources in mountain environments, particularly in the Andes, with interests in climate change impacts, ecosystem services, and water security."
-    social:
-      researchgate: "https://www.researchgate.net/profile/Wouter_Buytaert"
-      linkedin: "https://www.linkedin.com/in/wouter-buytaert/"
-      twitter: "https://twitter.com/WouterBuytaert"
-      website: "https://www.imperial.ac.uk/people/w.buytaert"
 
 researchers:
   - name: "Dr Rike Becker"
