@@ -32,6 +32,11 @@ style: header
             <i class="fab fa-twitter"></i>
           </a>
         {% endif %}
+        {% if person.social.orcid %}
+          <a href="{{ person.social.orcid }}" target="_blank" class="orcid" title="ORCID">
+            <i class="fab fa-orcid"></i>
+          </a>
+        {% endif %}
         {% if person.social.website %}
           <a href="{{ person.social.website }}" target="_blank" class="website" title="Website">
             <i class="fas fa-globe"></i>
@@ -118,6 +123,11 @@ style: header
         {% if person.social.twitter %}
           <a href="{{ person.social.twitter }}" target="_blank" class="twitter" title="Twitter">
             <i class="fab fa-twitter"></i>
+          </a>
+        {% endif %}
+        {% if person.social.orcid %}
+          <a href="{{ person.social.orcid }}" target="_blank" class="orcid" title="ORCID">
+            <i class="fab fa-orcid"></i>
           </a>
         {% endif %}
         {% if person.social.website %}
@@ -285,6 +295,11 @@ style: header
         {% if person.social.twitter %}
           <a href="{{ person.social.twitter }}" target="_blank" class="twitter">
             <i class="fab fa-twitter"></i> Twitter
+          </a>
+        {% endif %}
+        {% if person.social.orcid %}
+          <a href="{{ person.social.orcid }}" target="_blank" class="orcid">
+            <i class="fab fa-orcid"></i> ORCID
           </a>
         {% endif %}
         {% if person.social.website %}
