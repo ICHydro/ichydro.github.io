@@ -96,6 +96,29 @@ style: header
       <p class="funding"><strong>Funding:</strong> {{ project.funding }}</p>
       <p class="role"><strong>Role:</strong> {{ project.role }}{% if project.lead %} (led by {{ project.lead }}){% endif %}</p>
       <p class="description">{{ project.description }}</p>
+      
+      {% if project.keywords %}
+      <div class="project-keywords" style="margin-top: 15px;">
+        <strong>Keywords:</strong>
+        <div style="margin-top: 8px;">
+          {% for keyword in project.keywords %}
+          <span class="badge" data-keyword="{{ keyword }}">{{ keyword }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      
+      {% if project.locations %}
+      <div class="project-locations" style="margin-top: 15px;">
+        <strong>Locations:</strong>
+        <div style="margin-top: 8px;">
+          {% for location in project.locations %}
+          <span class="badge location-badge">{{ location }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      
       {% if project.website %}
       <p class="website">
         <a href="{{ project.website }}" target="_blank" class="btn-link">
