@@ -22,12 +22,12 @@ active:
       - "Kigali"
       - "Musanze"
 
-  - name: "Caribbean Flood Resilience Framework"
+  - name: "CARICOM - Caribbean Flood Resilience Framework"
     period: "2024 - 2029"
     funding: "New Frontiers Research Fund of Canada / US NSF / UKRI"
     role: "Co-I"
     lead: "Professor Chandra Madramootoo, McGill University"
-    logo: "placeholder.jpg"
+    logo: "CARICOM.png"
     website: "https://www.mcgill.ca/caribbeanfloodresilienceframework/"
     description: "Building flood resilience in CARICOM countries (Guyana, Trinidad and Tobago, and St. Lucia) through understanding connectivity between terrestrial, freshwater and coastal systems. The project focuses on coastal and riverine flooding due to sea level rise, developing improved policy and governance structures to reduce social, economic and environmental damages from climate change. Co-designed with communities and agencies, the project includes hydrological modelling, data systems for decision-making, capacity development, and citizen science observatories to create a CARICOM Flood Resilience Framework."
     keywords:
@@ -99,6 +99,22 @@ active:
       - "Wales"
 
 past:
+  - name: "FLOODTWIN"
+    period: "2024 - 2025"
+    funding: "UK NERC (£675k)"
+    role: "Co-PI"
+    lead: "Tom Coulthard, University of Hull"
+    icon: "fas fa-project-diagram"
+    website: "https://www.imperial.ac.uk/news/258873/major-research-project-boost-climate-change"
+    description: "FLOODTWIN develops digital twin technology for flood forecasting and management, integrating real-time data and advanced modeling to improve flood prediction and response capabilities."
+    keywords:
+      - "Digital Twin"
+      - "Flood risk"
+      - "Forecasting"
+      - "Real-time monitoring"
+    locations:
+      - "UK"
+
   - name: "Pathways to Equitable Cities"
     period: "2018 - 2022"
     funding: "Wellcome Trust (£4M)"
