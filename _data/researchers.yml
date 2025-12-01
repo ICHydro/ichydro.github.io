@@ -149,7 +149,7 @@ phd_students:
   - name: "Dan Bartley"
     short_name: "Dan"
     title: "PhD Student"
-    image: "placeholder.jpg"
+    image: "Dan.png"
     bio: "PhD student at Imperial College London."
     social:
 
@@ -187,6 +187,30 @@ phd_students:
       linkedin: "https://www.linkedin.com/in/martha-day-91318718b"
       orcid: "https://orcid.org/0009-0006-9205-7806"
 
+  - name: "Ruiqi Gu"
+    short_name: "Ruiqi"
+    title: "PhD Student"
+    image: "Ruiqi.png"
+    bio: "Ruiqi is a PhD Student"
+    keywords:
+      - "Mountain hydrology"
+      - "Glacier melt"
+      - "Climate Science"
+      - "Resources and Pollution"
+    social:
+      linkedin: "https://www.linkedin.com/in/ruiqi-gu-3a9968235/?originalSubdomain=uk"
+
+  - name: "Tom Gribbin"
+    short_name: "Tom"
+    title: "PhD Student"
+    image: "Gribbin.png"
+    bio: "Tom is a PhD Student, cohosted with BGS"
+    keywords:
+      - "Mountain hydrology"
+    locations:
+      - "Peru"
+    social:
+      linkedin: "https://www.linkedin.com/in/tom-gribbin-340b3917a/"
 
   - name: "Anthony C. Ross"
     short_name: "Anthony"
