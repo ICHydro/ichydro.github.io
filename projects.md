@@ -98,24 +98,30 @@ style: header
       <p class="description">{{ project.description }}</p>
       
       {% if project.keywords %}
-      <div class="project-keywords" style="margin-top: 15px;">
-        <strong>Keywords:</strong>
-        <div style="margin-top: 8px;">
-          {% for keyword in project.keywords %}
-          <span class="badge" data-keyword="{{ keyword }}">{{ keyword }}</span>
-          {% endfor %}
-        </div>
+      <div class="badges keywords">
+        {% for keyword in project.keywords %}
+          <span class="badge keyword-badge" data-keyword="{{ keyword }}">{{ keyword }}</span>
+        {% endfor %}
       </div>
       {% endif %}
       
       {% if project.locations %}
-      <div class="project-locations" style="margin-top: 15px;">
-        <strong>Locations:</strong>
-        <div style="margin-top: 8px;">
-          {% for location in project.locations %}
-          <span class="badge location-badge">{{ location }}</span>
-          {% endfor %}
-        </div>
+      <div class="badges locations">
+        {% for location in project.locations %}
+          <span class="badge location-badge">
+            {% assign loc_lower = location | downcase %}
+            {% if loc_lower contains 'andes' or loc_lower contains 'rwenzori' or loc_lower contains 'mountain' %}
+              <i class="fas fa-mountain"></i>
+            {% elsif loc_lower == 'africa' or loc_lower == 'south america' or loc_lower == 'asia' or loc_lower == 'europe' or loc_lower == 'caribbean' %}
+              <i class="fas fa-globe-americas"></i>
+            {% elsif loc_lower == 'peru' or loc_lower == 'bolivia' or loc_lower == 'ecuador' or loc_lower == 'uganda' or loc_lower == 'ghana' or loc_lower == 'rwanda' or loc_lower == 'kuwait' or loc_lower == 'cameroon' or loc_lower == 'uk' or loc_lower == 'scotland' or loc_lower == 'england' or loc_lower == 'wales' or loc_lower == 'guyana' or loc_lower == 'trinidad and tobago' or loc_lower == 'st. lucia' %}
+              <i class="fas fa-flag"></i>
+            {% else %}
+              <i class="fas fa-map-marker-alt"></i>
+            {% endif %}
+            {{ location }}
+          </span>
+        {% endfor %}
       </div>
       {% endif %}
       
