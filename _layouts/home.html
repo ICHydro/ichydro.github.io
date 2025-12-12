@@ -60,38 +60,19 @@ layout: default
       <!-- World Map -->
       <div class="map-section mb-4">
         <h4>Where We Work</h4>
-        <div id="world-map" class="mb-3" style="height: 250px; background-color: #f8f9fa; border-radius: 5px; position: relative;">
-          <!-- Simple map placeholder - we'll add SVG map styling -->
-          <svg viewBox="0 0 800 400" style="width: 100%; height: 100%;">
-            <rect width="800" height="400" fill="#e3f2fd"/>
-            <text x="400" y="200" text-anchor="middle" fill="#666" font-size="14">World Map</text>
-            <text x="400" y="220" text-anchor="middle" fill="#999" font-size="12">Highlighting our research locations</text>
-          </svg>
-        </div>
         <div class="country-list">
-          <small class="text-muted">
-            {% for country in site.data.countries.countries %}
-              <span class="badge badge-primary mr-1 mb-1">{{ country.name }}</span>
-            {% endfor %}
-          </small>
+          {% for country in site.data.countries.countries %}
+            <span class="country-badge">{{ country.name }}</span>
+          {% endfor %}
         </div>
       </div>
 
-      <!-- Tag Cloud -->
+      <!-- Research Themes -->
       <div class="tag-cloud-section">
         <h4>Research Themes</h4>
-        <div class="tag-cloud p-3" style="background-color: #f8f9fa; border-radius: 5px; text-align: center;">
+        <div class="research-tags">
           {% for tag in site.data.tags.tags %}
-            {% assign size = tag.weight | times: 0.2 | plus: 0.8 %}
-            {% assign randomRotation = tag.weight | modulo: 7 | minus: 3 | times: 5 %}
-            <span class="tag-item" style="
-              font-size: {{ size }}rem; 
-              color: hsl({{ tag.weight | times: 25 }}, 70%, 45%);
-              display: inline-block;
-              margin: 0.3rem;
-              transform: rotate({{ randomRotation }}deg);
-              font-weight: {{ tag.weight | times: 100 }};
-            ">{{ tag.name }}</span>
+            <span class="research-badge">{{ tag.name }}</span>
           {% endfor %}
         </div>
       </div>
@@ -122,18 +103,73 @@ layout: default
   background-color: #f8f9fa;
 }
 
-.tag-cloud .tag-item {
-  transition: all 0.3s ease;
-  cursor: default;
+/* Country badges */
+.country-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.tag-cloud .tag-item:hover {
-  transform: scale(1.1) !important;
-}
-
-.badge-primary {
+.country-badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
   background-color: #003e79;
+  color: white;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background-color 0.2s;
 }
+
+.country-badge:hover {
+  background-color: #00294d;
+}
+
+/* Research theme badges */
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.research-badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  background-color: #0366d6;
+  color: white;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.research-badge:hover {
+  background-color: #0256c7;
+}
+
+/* Specific research theme colors */
+.research-badge:nth-child(1) { background-color: #1e88e5; } /* Water Security */
+.research-badge:nth-child(2) { background-color: #43a047; } /* Climate Change */
+.research-badge:nth-child(3) { background-color: #0366d6; } /* Hydrology */
+.research-badge:nth-child(4) { background-color: #00acc1; } /* Glacier */
+.research-badge:nth-child(5) { background-color: #8e24aa; } /* Mountain Ecosystems */
+.research-badge:nth-child(6) { background-color: #fb8c00; } /* Citizen Science */
+.research-badge:nth-child(7) { background-color: #3f51b5; } /* Data Science */
+.research-badge:nth-child(8) { background-color: #00897b; } /* Uncertainty */
+.research-badge:nth-child(9) { background-color: #5e35b1; } /* Ecosystem Services */
+.research-badge:nth-child(10) { background-color: #1976d2; } /* Modelling */
+.research-badge:nth-child(11) { background-color: #00796b; } /* Adaptation */
+.research-badge:nth-child(12) { background-color: #6a1b9a; } /* Monitoring */
+.research-badge:nth-child(13) { background-color: #e64a19; } /* Sensors */
+.research-badge:nth-child(14) { background-color: #0288d1; } /* Flood Risk */
+.research-badge:nth-child(15) { background-color: #f57c00; } /* Drought */
+.research-badge:nth-child(16) { background-color: #7b1fa2; } /* Landslides */
+.research-badge:nth-child(17) { background-color: #0097a7; } /* Water Quality */
+.research-badge:nth-child(18) { background-color: #388e3c; } /* Tropical Andes */
+.research-badge:nth-child(19) { background-color: #512da8; } /* Policy Support */
+.research-badge:nth-child(20) { background-color: #1565c0; } /* Decision Making */
 
 @media (max-width: 991px) {
   .mission-statement {
