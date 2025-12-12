@@ -60,9 +60,12 @@ layout: default
       <!-- World Map -->
       <div class="map-section mb-4">
         <h4>Where We Work</h4>
+        <div id="globe-container" style="width: 100%; height: 300px; position: relative; margin-bottom: 1rem;">
+          <svg id="globe" width="100%" height="300"></svg>
+        </div>
         <div class="country-list">
           {% for country in site.data.countries.countries %}
-            <span class="country-badge">{{ country.name }}</span>
+            <span class="country-badge" data-country="{{ country.code }}">{{ country.name }}</span>
           {% endfor %}
         </div>
       </div>
@@ -171,10 +174,208 @@ layout: default
 .research-badge:nth-child(19) { background-color: #512da8; } /* Policy Support */
 .research-badge:nth-child(20) { background-color: #1565c0; } /* Decision Making */
 
+/* Globe styling */
+#globe-container {
+  background: linear-gradient(to bottom, #e3f2fd 0%, #bbdefb 100%);
+  border-radius: 5px;
+  cursor: grab;
+}
+
+#globe-container:active {
+  cursor: grabbing;
+}
+
+.globe-country {
+  fill: #ccc;
+  stroke: #fff;
+  stroke-width: 0.5;
+  transition: fill 0.3s;
+}
+
+.globe-country:hover {
+  fill: #999;
+}
+
+.globe-country.highlight {
+  fill: #003e79;
+  cursor: pointer;
+}
+
+.globe-country.highlight:hover {
+  fill: #00529e;
+}
+
 @media (max-width: 991px) {
   .mission-statement {
     padding: 1rem;
   }
+  
+  #globe-container {
+    height: 250px;
+  }
+  
+  #globe {
+    height: 250px;
+  }
 }
 </style>
+
+<!-- D3.js and TopoJSON libraries -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://unpkg.com/topojson@3"></script>
+
+<script>
+// Country code mapping for our research locations
+const researchCountries = new Set([
+  'PER', 'ECU', 'COL', 'VEN', 'CHL', 'BOL', 'ETH', 'IND', 'NPL', 'GBR'
+]);
+
+// Country links mapping
+const countryLinks = {
+  'PER': '/ichydro.github.io/projects.html#peru',
+  'ECU': '/ichydro.github.io/projects.html#ecuador',
+  'COL': '/ichydro.github.io/projects.html#colombia',
+  'VEN': '/ichydro.github.io/projects.html#venezuela',
+  'CHL': '/ichydro.github.io/projects.html#chile',
+  'BOL': '/ichydro.github.io/projects.html#bolivia',
+  'ETH': '/ichydro.github.io/projects.html#ethiopia',
+  'IND': '/ichydro.github.io/projects.html#india',
+  'NPL': '/ichydro.github.io/projects.html#nepal',
+  'GBR': '/ichydro.github.io/projects.html#uk'
+};
+
+// Initialize globe
+function initGlobe() {
+  const container = d3.select('#globe-container');
+  const width = container.node().getBoundingClientRect().width;
+  const height = 300;
+  
+  const svg = d3.select('#globe')
+    .attr('width', width)
+    .attr('height', height);
+  
+  // Clear any existing content
+  svg.selectAll('*').remove();
+  
+  const projection = d3.geoOrthographic()
+    .scale(Math.min(width, height) / 2.5)
+    .translate([width / 2, height / 2])
+    .clipAngle(90);
+  
+  const path = d3.geoPath().projection(projection);
+  
+  // Add ocean background
+  svg.append('circle')
+    .attr('cx', width / 2)
+    .attr('cy', height / 2)
+    .attr('r', projection.scale())
+    .attr('fill', '#4fc3f7')
+    .attr('opacity', 0.3);
+  
+  // Load world data
+  d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(world => {
+    const countries = topojson.feature(world, world.objects.countries);
+    
+    // Draw countries
+    svg.append('g')
+      .selectAll('path')
+      .data(countries.features)
+      .join('path')
+      .attr('class', d => {
+        const code = d.id;
+        return researchCountries.has(code) ? 'globe-country highlight' : 'globe-country';
+      })
+      .attr('d', path)
+      .on('click', function(event, d) {
+        const code = d.id;
+        if (researchCountries.has(code) && countryLinks[code]) {
+          window.location.href = countryLinks[code];
+        }
+      })
+      .append('title')
+      .text(d => {
+        const code = d.id;
+        if (researchCountries.has(code)) {
+          return 'Click to see projects in this region';
+        }
+        return '';
+      });
+    
+    // Auto-rotation
+    let rotation = 0;
+    let autoRotate = true;
+    
+    function rotate() {
+      if (autoRotate) {
+        rotation += 0.5;
+        projection.rotate([rotation, -10]);
+        svg.selectAll('path').attr('d', path);
+      }
+    }
+    
+    const rotateInterval = setInterval(rotate, 50);
+    
+    // Drag functionality
+    const drag = d3.drag()
+      .on('start', function() {
+        autoRotate = false;
+      })
+      .on('drag', function(event) {
+        const rotate = projection.rotate();
+        projection.rotate([
+          rotate[0] + event.dx * 0.5,
+          rotate[1] - event.dy * 0.5
+        ]);
+        svg.selectAll('path').attr('d', path);
+      })
+      .on('end', function() {
+        setTimeout(() => {
+          autoRotate = true;
+        }, 2000);
+      });
+    
+    svg.call(drag);
+  });
+}
+
+// Initialize on page load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initGlobe);
+} else {
+  initGlobe();
+}
+
+// Re-initialize on window resize
+let resizeTimeout;
+window.addEventListener('resize', function() {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(initGlobe, 250);
+});
+
+// Badge click functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const countryCodeToLink = {
+    'PE': '/ichydro.github.io/projects.html#peru',
+    'EC': '/ichydro.github.io/projects.html#ecuador',
+    'CO': '/ichydro.github.io/projects.html#colombia',
+    'VE': '/ichydro.github.io/projects.html#venezuela',
+    'CL': '/ichydro.github.io/projects.html#chile',
+    'BO': '/ichydro.github.io/projects.html#bolivia',
+    'ET': '/ichydro.github.io/projects.html#ethiopia',
+    'IN': '/ichydro.github.io/projects.html#india',
+    'NP': '/ichydro.github.io/projects.html#nepal',
+    'GB': '/ichydro.github.io/projects.html#uk'
+  };
+  
+  document.querySelectorAll('.country-badge').forEach(badge => {
+    const code = badge.getAttribute('data-country');
+    if (countryCodeToLink[code]) {
+      badge.style.cursor = 'pointer';
+      badge.addEventListener('click', function() {
+        window.location.href = countryCodeToLink[code];
+      });
+    }
+  });
+});
+</script>
 
