@@ -227,22 +227,34 @@ layout: default
 
 <script>
 // Country code mapping for our research locations
+// Using numeric country IDs from world-atlas
 const researchCountries = new Set([
-  'PER', 'ECU', 'COL', 'VEN', 'CHL', 'BOL', 'ETH', 'IND', 'NPL', 'GBR'
+  604,  // Peru
+  218,  // Ecuador
+  170,  // Colombia
+  862,  // Venezuela
+  152,  // Chile
+  68,   // Bolivia
+  231,  // Ethiopia
+  356,  // India
+  524,  // Nepal
+  826,  // United Kingdom
+  840   // United States
 ]);
 
-// Country links mapping
+// Country links mapping (using numeric IDs)
 const countryLinks = {
-  'PER': '/ichydro.github.io/projects.html#peru',
-  'ECU': '/ichydro.github.io/projects.html#ecuador',
-  'COL': '/ichydro.github.io/projects.html#colombia',
-  'VEN': '/ichydro.github.io/projects.html#venezuela',
-  'CHL': '/ichydro.github.io/projects.html#chile',
-  'BOL': '/ichydro.github.io/projects.html#bolivia',
-  'ETH': '/ichydro.github.io/projects.html#ethiopia',
-  'IND': '/ichydro.github.io/projects.html#india',
-  'NPL': '/ichydro.github.io/projects.html#nepal',
-  'GBR': '/ichydro.github.io/projects.html#uk'
+  604: '/ichydro.github.io/projects.html#peru',      // Peru
+  218: '/ichydro.github.io/projects.html#ecuador',   // Ecuador
+  170: '/ichydro.github.io/projects.html#colombia',  // Colombia
+  862: '/ichydro.github.io/projects.html#venezuela', // Venezuela
+  152: '/ichydro.github.io/projects.html#chile',     // Chile
+  68: '/ichydro.github.io/projects.html#bolivia',    // Bolivia
+  231: '/ichydro.github.io/projects.html#ethiopia',  // Ethiopia
+  356: '/ichydro.github.io/projects.html#india',     // India
+  524: '/ichydro.github.io/projects.html#nepal',     // Nepal
+  826: '/ichydro.github.io/projects.html#uk',        // United Kingdom
+  840: '/ichydro.github.io/projects.html#usa'        // United States
 };
 
 // Initialize globe
@@ -265,13 +277,14 @@ function initGlobe() {
   
   const path = d3.geoPath().projection(projection);
   
-  // Add ocean background (light blue water)
+  // Add ocean background (brighter blue water)
   svg.append('circle')
     .attr('cx', width / 2)
     .attr('cy', height / 2)
     .attr('r', projection.scale())
-    .attr('fill', '#d4e9f7')
-    .attr('opacity', 0.5);
+    .attr('fill', '#4a90e2')
+    .attr('stroke', '#ffffff')
+    .attr('stroke-width', 2);
   
   // Load world data
   d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(world => {
@@ -392,7 +405,8 @@ document.addEventListener('DOMContentLoaded', function() {
     'ET': '/ichydro.github.io/projects.html#ethiopia',
     'IN': '/ichydro.github.io/projects.html#india',
     'NP': '/ichydro.github.io/projects.html#nepal',
-    'GB': '/ichydro.github.io/projects.html#uk'
+    'GB': '/ichydro.github.io/projects.html#uk',
+    'US': '/ichydro.github.io/projects.html#usa'
   };
   
   document.querySelectorAll('.country-badge').forEach(badge => {
