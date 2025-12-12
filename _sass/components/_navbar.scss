@@ -43,15 +43,17 @@
 }
 @media(min-width:992px) {
   #mainNav {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s, background-color 0.3s;
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s, background-color 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s, background-color 0.3s;
     border: none;
-    background-color: $gray-900;
+    background-color: transparent;
     .navbar-brand {
       font-size: 2em;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s;
@@ -70,6 +72,7 @@
       .navbar-brand {
         font-size: 1.5em;
         padding: 8px 0;
+        text-shadow: none;
       }
     }
   }
