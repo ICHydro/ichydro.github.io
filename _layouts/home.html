@@ -60,13 +60,8 @@ layout: default
       <!-- World Map -->
       <div class="map-section mb-4">
         <h4>Where We Work</h4>
-        <div id="globe-container" style="width: 100%; height: 300px; position: relative; margin-bottom: 1rem;">
+        <div id="globe-container" style="width: 100%; height: 300px; position: relative;">
           <svg id="globe" width="100%" height="300"></svg>
-        </div>
-        <div class="country-list">
-          {% for country in site.data.countries.countries %}
-            <span class="country-badge" data-country="{{ country.code }}">{{ country.name }}</span>
-          {% endfor %}
         </div>
       </div>
 
@@ -75,7 +70,12 @@ layout: default
         <h4>Research Themes</h4>
         <div class="research-tags">
           {% for tag in site.data.tags.tags %}
-            <span class="research-badge">{{ tag.name }}</span>
+            {% assign size_scale = tag.weight | times: 0.05 | plus: 0.75 %}
+            <span class="research-badge" style="
+              background-color: {{ tag.color }};
+              font-size: {{ size_scale }}rem;
+              padding: {{ size_scale | times: 0.4 }}rem {{ size_scale | times: 0.9 }}rem;
+            ">{{ tag.name }}</span>
           {% endfor %}
         </div>
       </div>
@@ -106,73 +106,28 @@ layout: default
   background-color: #f8f9fa;
 }
 
-/* Country badges */
-.country-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.country-badge {
-  display: inline-block;
-  padding: 0.35rem 0.85rem;
-  background-color: #003e79;
-  color: white;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  white-space: nowrap;
-  transition: background-color 0.2s;
-}
-
-.country-badge:hover {
-  background-color: #00294d;
-}
-
 /* Research theme badges */
 .research-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  align-items: center;
 }
 
 .research-badge {
   display: inline-block;
-  padding: 0.35rem 0.85rem;
-  background-color: #0366d6;
   color: white;
   border-radius: 12px;
-  font-size: 0.85rem;
   font-weight: 500;
   white-space: nowrap;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
+  cursor: default;
 }
 
 .research-badge:hover {
-  background-color: #0256c7;
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
-
-/* Specific research theme colors */
-.research-badge:nth-child(1) { background-color: #1e88e5; } /* Water Security */
-.research-badge:nth-child(2) { background-color: #43a047; } /* Climate Change */
-.research-badge:nth-child(3) { background-color: #0366d6; } /* Hydrology */
-.research-badge:nth-child(4) { background-color: #00acc1; } /* Glacier */
-.research-badge:nth-child(5) { background-color: #8e24aa; } /* Mountain Ecosystems */
-.research-badge:nth-child(6) { background-color: #fb8c00; } /* Citizen Science */
-.research-badge:nth-child(7) { background-color: #3f51b5; } /* Data Science */
-.research-badge:nth-child(8) { background-color: #00897b; } /* Uncertainty */
-.research-badge:nth-child(9) { background-color: #5e35b1; } /* Ecosystem Services */
-.research-badge:nth-child(10) { background-color: #1976d2; } /* Modelling */
-.research-badge:nth-child(11) { background-color: #00796b; } /* Adaptation */
-.research-badge:nth-child(12) { background-color: #6a1b9a; } /* Monitoring */
-.research-badge:nth-child(13) { background-color: #e64a19; } /* Sensors */
-.research-badge:nth-child(14) { background-color: #0288d1; } /* Flood Risk */
-.research-badge:nth-child(15) { background-color: #f57c00; } /* Drought */
-.research-badge:nth-child(16) { background-color: #7b1fa2; } /* Landslides */
-.research-badge:nth-child(17) { background-color: #0097a7; } /* Water Quality */
-.research-badge:nth-child(18) { background-color: #388e3c; } /* Tropical Andes */
-.research-badge:nth-child(19) { background-color: #512da8; } /* Policy Support */
-.research-badge:nth-child(20) { background-color: #1565c0; } /* Decision Making */
 
 /* Globe styling */
 #globe-container {
@@ -387,31 +342,5 @@ window.addEventListener('resize', function() {
   resizeTimeout = setTimeout(initGlobe, 250);
 });
 
-// Badge click functionality
-document.addEventListener('DOMContentLoaded', function() {
-  const countryCodeToLink = {
-    'PE': '/ichydro.github.io/projects.html#peru',
-    'EC': '/ichydro.github.io/projects.html#ecuador',
-    'CO': '/ichydro.github.io/projects.html#colombia',
-    'VE': '/ichydro.github.io/projects.html#venezuela',
-    'CL': '/ichydro.github.io/projects.html#chile',
-    'BO': '/ichydro.github.io/projects.html#bolivia',
-    'ET': '/ichydro.github.io/projects.html#ethiopia',
-    'IN': '/ichydro.github.io/projects.html#india',
-    'NP': '/ichydro.github.io/projects.html#nepal',
-    'GB': '/ichydro.github.io/projects.html#uk',
-    'US': '/ichydro.github.io/projects.html#usa'
-  };
-  
-  document.querySelectorAll('.country-badge').forEach(badge => {
-    const code = badge.getAttribute('data-country');
-    if (countryCodeToLink[code]) {
-      badge.style.cursor = 'pointer';
-      badge.addEventListener('click', function() {
-        window.location.href = countryCodeToLink[code];
-      });
-    }
-  });
-});
 </script>
 
