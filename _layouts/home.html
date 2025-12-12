@@ -10,7 +10,6 @@ layout: default
       <a id="main content">
         <!-- Mission Statement -->
         <div class="mission-statement mb-4">
-          <h2>Our Mission</h2>
           <p class="lead">
             We are a research group at Imperial College London, focusing on sustainable water resources management. 
             We work across the entire toolchain from data collection and process understanding to simulation, prediction, 
@@ -59,7 +58,6 @@ layout: default
     <aside class="col-lg-4" role="complementary">
       <!-- World Map -->
       <div class="map-section mb-4">
-        <h4>Where We Work</h4>
         <div id="globe-container" style="width: 100%; height: 300px; position: relative;">
           <svg id="globe" width="100%" height="300"></svg>
         </div>
@@ -67,7 +65,7 @@ layout: default
 
       <!-- Image Gallery -->
       <div class="image-gallery mb-4">
-        <h4>Field Work Gallery</h4>
+        <h4>Field Work</h4>
         <div class="gallery-container">
           <img src="{{ '/assets/img/slideshow/2023_bolivia.jpg' | relative_url }}" alt="Deplete project visit Bolivia" class="gallery-image active">
           <img src="{{ '/assets/img/slideshow/2019_peru.jpg' | relative_url }}" alt="RAHU project field work, Peru" class="gallery-image">
@@ -207,7 +205,6 @@ layout: default
   background: #ffffff;
   border-radius: 5px;
   cursor: grab;
-  border: 1px solid #e0e0e0;
 }
 
 #globe-container:active {
@@ -300,9 +297,7 @@ function initGlobe() {
     .attr('cx', width / 2)
     .attr('cy', height / 2)
     .attr('r', projection.scale())
-    .attr('fill', '#4a90e2')
-    .attr('stroke', '#ffffff')
-    .attr('stroke-width', 2);
+    .attr('fill', '#4a90e2');
   
   // Load world data
   d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(world => {
