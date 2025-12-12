@@ -1,0 +1,44 @@
+# Research topic tags with weights (for tag cloud)
+# Weight represents frequency/importance (1-10)
+
+tags:
+  - name: "Water Security"
+    weight: 10
+  - name: "Climate Change"
+    weight: 9
+  - name: "Hydrology"
+    weight: 10
+  - name: "Glacier"
+    weight: 7
+  - name: "Mountain Ecosystems"
+    weight: 8
+  - name: "Citizen Science"
+    weight: 6
+  - name: "Data Science"
+    weight: 8
+  - name: "Uncertainty"
+    weight: 6
+  - name: "Ecosystem Services"
+    weight: 7
+  - name: "Modelling"
+    weight: 9
+  - name: "Adaptation"
+    weight: 7
+  - name: "Monitoring"
+    weight: 7
+  - name: "Sensors"
+    weight: 6
+  - name: "Flood Risk"
+    weight: 8
+  - name: "Drought"
+    weight: 6
+  - name: "Landslides"
+    weight: 5
+  - name: "Water Quality"
+    weight: 7
+  - name: "Tropical Andes"
+    weight: 8
+  - name: "Policy Support"
+    weight: 6
+  - name: "Decision Making"
+    weight: 7

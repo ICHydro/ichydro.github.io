@@ -1,0 +1,20 @@
+# News feed items
+# Add new items to the top of the list
+# Format: date, title, description (optional), link (optional)
+
+- date: 2025-12-10
+  title: "New publication on water security in glacier-fed basins"
+  description: "Latest research published in Nature Water"
+  link: "/publications.html"
+
+- date: 2025-11-15
+  title: "FLOODTWIN project launched"
+  description: "Digital twin technology for flood forecasting begins"
+  link: "/projects.html"
+
+- date: 2025-10-20
+  title: "Welcome new PhD students"
+  description: "Three new students join the group"
+  link: "/people.html"
+
+# Add more news items here

@@ -5,17 +5,140 @@ layout: default
 
 <div class="main-container container">
   <div class="row">
-    <section class="col-sm-9">
+    <!-- Main Content Area -->
+    <section class="col-lg-8">
       <a id="main content">
-                {{ content }}
+        <!-- Mission Statement -->
+        <div class="mission-statement mb-4">
+          <h2>Our Mission</h2>
+          <p class="lead">
+            We are a research group at Imperial College London, focusing on sustainable water resources management. 
+            We work across the entire toolchain from data collection and process understanding to simulation, prediction, 
+            and decision-support. Our research addresses critical challenges including climate change impacts, land-use changes, 
+            ecosystem services, and uncertainty analysis.
+          </p>
+          <p>
+            We work predominantly in tropical regions such as the South-American Andes, the African rift, and South Asia, 
+            as well as in the UK and Europe. We collaborate extensively with universities worldwide, policy institutes, 
+            governments, NGOs, and local stakeholders.
+          </p>
+        </div>
+
+        <!-- News Feed -->
+        <div class="news-feed">
+          <h3>Latest News</h3>
+          <div class="list-group">
+            {% for item in site.data.news limit:5 %}
+            <div class="list-group-item">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">
+                  {% if item.link %}
+                    <a href="{{ item.link }}">{{ item.title }}</a>
+                  {% else %}
+                    {{ item.title }}
+                  {% endif %}
+                </h5>
+                <small class="text-muted">{{ item.date | date: "%b %d, %Y" }}</small>
+              </div>
+              {% if item.description %}
+              <p class="mb-1">{{ item.description }}</p>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Additional Content -->
+        <div class="mt-4">
+          {{ content }}
+        </div>
       </a>
     </section>
-    <aside class="col-sm-3" role = "complementary">
-      <img src="{{ '/assets/img/2023_bolivia.jpg' | relative_url }}" alt="Deplete project visit Bolivia", class="img-fluid">
-      <br/>
-      <br/>
-      <img src="{{ '/assets/img/2019_peru.jpg' | relative_url }}" alt="RAHU project field work, Peru", class="img-fluid">
+
+    <!-- Right Sidebar -->
+    <aside class="col-lg-4" role="complementary">
+      <!-- World Map -->
+      <div class="map-section mb-4">
+        <h4>Where We Work</h4>
+        <div id="world-map" class="mb-3" style="height: 250px; background-color: #f8f9fa; border-radius: 5px; position: relative;">
+          <!-- Simple map placeholder - we'll add SVG map styling -->
+          <svg viewBox="0 0 800 400" style="width: 100%; height: 100%;">
+            <rect width="800" height="400" fill="#e3f2fd"/>
+            <text x="400" y="200" text-anchor="middle" fill="#666" font-size="14">World Map</text>
+            <text x="400" y="220" text-anchor="middle" fill="#999" font-size="12">Highlighting our research locations</text>
+          </svg>
+        </div>
+        <div class="country-list">
+          <small class="text-muted">
+            {% for country in site.data.countries.countries %}
+              <span class="badge badge-primary mr-1 mb-1">{{ country.name }}</span>
+            {% endfor %}
+          </small>
+        </div>
+      </div>
+
+      <!-- Tag Cloud -->
+      <div class="tag-cloud-section">
+        <h4>Research Themes</h4>
+        <div class="tag-cloud p-3" style="background-color: #f8f9fa; border-radius: 5px; text-align: center;">
+          {% for tag in site.data.tags.tags %}
+            {% assign size = tag.weight | times: 0.2 | plus: 0.8 %}
+            {% assign randomRotation = tag.weight | modulo: 7 | minus: 3 | times: 5 %}
+            <span class="tag-item" style="
+              font-size: {{ size }}rem; 
+              color: hsl({{ tag.weight | times: 25 }}, 70%, 45%);
+              display: inline-block;
+              margin: 0.3rem;
+              transform: rotate({{ randomRotation }}deg);
+              font-weight: {{ tag.weight | times: 100 }};
+            ">{{ tag.name }}</span>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Field Photos -->
+      <div class="field-photos mt-4">
+        <img src="{{ '/assets/img/2023_bolivia.jpg' | relative_url }}" alt="Deplete project visit Bolivia" class="img-fluid rounded mb-2">
+        <img src="{{ '/assets/img/2019_peru.jpg' | relative_url }}" alt="RAHU project field work, Peru" class="img-fluid rounded">
+      </div>
     </aside>
   </div>
 </div>
+
+<style>
+.mission-statement {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 5px;
+  border-left: 4px solid #003e79;
+}
+
+.news-feed .list-group-item {
+  border-left: 3px solid #003e79;
+  margin-bottom: 0.5rem;
+}
+
+.news-feed .list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+.tag-cloud .tag-item {
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tag-cloud .tag-item:hover {
+  transform: scale(1.1) !important;
+}
+
+.badge-primary {
+  background-color: #003e79;
+}
+
+@media (max-width: 991px) {
+  .mission-statement {
+    padding: 1rem;
+  }
+}
+</style>
 
