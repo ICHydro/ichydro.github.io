@@ -187,23 +187,13 @@ layout: default
 }
 
 .globe-country {
-  fill: #e0e0e0;
   stroke: #fff;
   stroke-width: 0.5;
   transition: fill 0.3s;
 }
 
-.globe-country:hover {
-  fill: #d0d0d0;
-}
-
 .globe-country.highlight {
-  fill: #003e79;
   cursor: pointer;
-}
-
-.globe-country.highlight:hover {
-  fill: #00529e;
 }
 
 @media (max-width: 991px) {
@@ -301,7 +291,7 @@ function initGlobe() {
         return researchCountries.has(code) ? 'globe-country highlight' : 'globe-country';
       })
       .attr('d', path)
-      .attr('fill', d => {
+      .style('fill', d => {
         const code = d.id;
         return researchCountries.has(code) ? '#003e79' : '#e0e0e0';
       })
@@ -314,13 +304,17 @@ function initGlobe() {
       .on('mouseover', function(event, d) {
         const code = d.id;
         if (researchCountries.has(code)) {
-          d3.select(this).attr('fill', '#00529e');
+          d3.select(this).style('fill', '#00529e');
+        } else {
+          d3.select(this).style('fill', '#d0d0d0');
         }
       })
       .on('mouseout', function(event, d) {
         const code = d.id;
         if (researchCountries.has(code)) {
-          d3.select(this).attr('fill', '#003e79');
+          d3.select(this).style('fill', '#003e79');
+        } else {
+          d3.select(this).style('fill', '#e0e0e0');
         }
       })
       .append('title')
@@ -342,7 +336,7 @@ function initGlobe() {
         projection.rotate([rotation, -10]);
         countriesGroup.selectAll('path')
           .attr('d', path)
-          .attr('fill', d => {
+          .style('fill', d => {
             const code = d.id;
             return researchCountries.has(code) ? '#003e79' : '#e0e0e0';
           });
@@ -364,7 +358,7 @@ function initGlobe() {
         ]);
         countriesGroup.selectAll('path')
           .attr('d', path)
-          .attr('fill', d => {
+          .style('fill', d => {
             const code = d.id;
             return researchCountries.has(code) ? '#003e79' : '#e0e0e0';
           });
