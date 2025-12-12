@@ -65,25 +65,29 @@ layout: default
         </div>
       </div>
 
+      <!-- Image Gallery -->
+      <div class="image-gallery mb-4">
+        <h4>Field Work Gallery</h4>
+        <div class="gallery-container">
+          <img src="{{ '/assets/img/slideshow/2023_bolivia.jpg' | relative_url }}" alt="Deplete project visit Bolivia" class="gallery-image active">
+          <img src="{{ '/assets/img/slideshow/2019_peru.jpg' | relative_url }}" alt="RAHU project field work, Peru" class="gallery-image">
+          <img src="{{ '/assets/img/slideshow/hydroflux.jpg' | relative_url }}" alt="Hydroflux project" class="gallery-image">
+          <img src="{{ '/assets/img/slideshow/tienshan.jpg' | relative_url }}" alt="Tien Shan field work" class="gallery-image">
+        </div>
+      </div>
+
       <!-- Research Themes -->
       <div class="tag-cloud-section">
         <h4>Research Themes</h4>
         <div class="research-tags">
           {% for tag in site.data.tags.tags %}
             {% assign size_scale = tag.weight | times: 0.05 | plus: 0.75 %}
-            <span class="research-badge" style="
-              background-color: {{ tag.color }};
+            <span class="research-badge badge" data-tag="{{ tag.name }}" style="
               font-size: {{ size_scale }}rem;
-              padding: {{ size_scale | times: 0.4 }}rem {{ size_scale | times: 0.9 }}rem;
+              padding: {{ size_scale | times: 0.3 }}rem {{ size_scale | times: 0.8 }}rem;
             ">{{ tag.name }}</span>
           {% endfor %}
         </div>
-      </div>
-
-      <!-- Field Photos -->
-      <div class="field-photos mt-4">
-        <img src="{{ '/assets/img/2023_bolivia.jpg' | relative_url }}" alt="Deplete project visit Bolivia" class="img-fluid rounded mb-2">
-        <img src="{{ '/assets/img/2019_peru.jpg' | relative_url }}" alt="RAHU project field work, Peru" class="img-fluid rounded">
       </div>
     </aside>
   </div>
@@ -110,23 +114,92 @@ layout: default
 .research-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 6px;
   align-items: center;
 }
 
 .research-badge {
-  display: inline-block;
-  color: white;
+  display: inline-flex;
+  align-items: center;
   border-radius: 12px;
   font-weight: 500;
   white-space: nowrap;
-  transition: all 0.2s;
-  cursor: default;
+  transition: all 0.2s ease;
+  text-transform: capitalize;
 }
 
 .research-badge:hover {
   transform: scale(1.05);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* Color coding based on tag categories - matching projects.md badges */
+.research-badge[data-tag*="Water"],
+.research-badge[data-tag*="Hydrology"],
+.research-badge[data-tag*="Flood"] {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.research-badge[data-tag*="Climate"],
+.research-badge[data-tag*="Ecosystem"],
+.research-badge[data-tag*="Tropical"],
+.research-badge[data-tag*="Mountain"] {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.research-badge[data-tag*="Drought"],
+.research-badge[data-tag*="Landslide"],
+.research-badge[data-tag*="Glacier"] {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.research-badge[data-tag*="Modelling"],
+.research-badge[data-tag*="Data Science"],
+.research-badge[data-tag*="Sensors"],
+.research-badge[data-tag*="Monitoring"] {
+  background: #f3e5f5;
+  color: #6a1b9a;
+}
+
+.research-badge[data-tag*="Citizen"],
+.research-badge[data-tag*="Uncertainty"],
+.research-badge[data-tag*="Adaptation"] {
+  background: #e8eaf6;
+  color: #283593;
+}
+
+.research-badge[data-tag*="Policy"],
+.research-badge[data-tag*="Decision"] {
+  background: #e0f2f1;
+  color: #00695c;
+}
+
+/* Image Gallery */
+.gallery-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.gallery-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.gallery-image.active {
+  opacity: 1;
 }
 
 /* Globe styling */
@@ -341,6 +414,32 @@ window.addEventListener('resize', function() {
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(initGlobe, 250);
 });
+
+// Image Gallery Auto-fade
+function initGallery() {
+  const images = document.querySelectorAll('.gallery-image');
+  if (images.length === 0) return;
+  
+  let currentIndex = 0;
+  
+  setInterval(() => {
+    // Remove active class from current image
+    images[currentIndex].classList.remove('active');
+    
+    // Move to next image
+    currentIndex = (currentIndex + 1) % images.length;
+    
+    // Add active class to next image
+    images[currentIndex].classList.add('active');
+  }, 4000); // Change image every 4 seconds
+}
+
+// Initialize gallery on page load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initGallery);
+} else {
+  initGallery();
+}
 
 </script>
 
