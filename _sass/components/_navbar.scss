@@ -71,3 +71,42 @@
     }
   }
 }
+
+// Dropdown menu styling
+#mainNav {
+  .dropdown-menu {
+    background-color: $gray-900;
+    border: none;
+    border-radius: 0;
+    margin-top: 0;
+    .dropdown-item {
+      color: white;
+      font-size: 90%;
+      font-weight: 400;
+      letter-spacing: 1px;
+      padding: 0.75rem 1.5rem;
+      @include heading-font;
+      &:hover,
+      &:focus {
+        background-color: darken($gray-900, 5%);
+        color: $primary;
+      }
+    }
+  }
+  &.navbar-shrink .dropdown-menu {
+    background-color: #003e79;
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+      background-color: darken(#003e79, 5%);
+    }
+  }
+}
+
+@media(max-width:991px) {
+  #mainNav .dropdown-menu {
+    border: none;
+    .dropdown-item {
+      padding-left: 2rem;
+    }
+  }
+}

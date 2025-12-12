@@ -15,6 +15,18 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase">
 		  {%- for link in site.data.navigation[site.locale].nav -%}
+		  {%- if link.dropdown -%}
+		  <li class="nav-item dropdown">
+		    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown{{ forloop.index }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		      {{ link.title }}
+		    </a>
+		    <div class="dropdown-menu" aria-labelledby="navbarDropdown{{ forloop.index }}">
+		      {%- for item in link.dropdown -%}
+		      <a class="dropdown-item" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+		      {%- endfor -%}
+		    </div>
+		  </li>
+		  {%- else -%}
 		  <li class="nav-item">
 		  {%- if link.url -%}
 		    <a class="nav-link js-scroll-trigger" href="{{ link.url | relative_url }}">{{ link.title }}</a>
@@ -24,8 +36,8 @@
 		    <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
 		  {%- endif -%}
           </li>
+          {%- endif -%}
 		  {% endfor %}
-          </li>
         </ul>
       </div>
     </div>
