@@ -105,9 +105,18 @@
   }
 }
 
+// Show dropdown on hover for desktop
+@media(min-width:992px) {
+  #mainNav .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
+
 @media(max-width:991px) {
   #mainNav .dropdown-menu {
     border: none;
+    background-color: transparent;
     .dropdown-item {
       padding-left: 2rem;
     }
