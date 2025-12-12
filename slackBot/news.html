@@ -1,0 +1,288 @@
+---
+layout: default
+title: News & Updates
+---
+
+<div class="news-feed">
+  <header class="news-header">
+    <h1>News & Updates</h1>
+    <p class="news-subtitle">Latest updates from the ICHydro team</p>
+  </header>
+  
+  <div class="posts-grid">
+    {% for post in site.posts %}
+      <article class="post-card">
+        {% if post.image %}
+        <a href="{{ post.url | relative_url }}" class="post-card-image">
+          <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+        </a>
+        {% endif %}
+        
+        <div class="post-card-content">
+          <h2 class="post-card-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h2>
+          
+          <div class="post-card-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+              {{ post.date | date: "%b %d, %Y" }}
+            </time>
+            {% if post.author %}
+              <span class="post-card-author">{{ post.author }}</span>
+            {% endif %}
+          </div>
+          
+          {% if post.tags %}
+          <div class="post-card-tags">
+            {% for tag in post.tags limit:3 %}
+              <span class="tag-badge tag-{{ tag | slugify }}">{{ tag }}</span>
+            {% endfor %}
+            {% if post.tags.size > 3 %}
+              <span class="tag-more">+{{ post.tags.size | minus: 3 }}</span>
+            {% endif %}
+          </div>
+          {% endif %}
+          
+          <p class="post-card-excerpt">
+            {{ post.excerpt | strip_html | truncatewords: 30 }}
+          </p>
+          
+          <a href="{{ post.url | relative_url }}" class="read-more-btn">
+            Read more →
+          </a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+  
+  {% if site.posts.size == 0 %}
+  <div class="no-posts">
+    <p>No news posts yet. Check back soon!</p>
+  </div>
+  {% endif %}
+</div>
+
+<style>
+/* News feed styling */
+.news-feed {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.news-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #e1e4e8;
+}
+
+.news-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #24292e;
+}
+
+.news-subtitle {
+  font-size: 1.25rem;
+  color: #586069;
+}
+
+/* Grid layout */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Post cards */
+.post-card {
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.post-card-image {
+  display: block;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #f6f8fa;
+}
+
+.post-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.post-card:hover .post-card-image img {
+  transform: scale(1.05);
+}
+
+.post-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.post-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.post-card-title a {
+  color: #24292e;
+  text-decoration: none;
+}
+
+.post-card-title a:hover {
+  color: #0366d6;
+}
+
+.post-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #586069;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.post-card-author::before {
+  content: "•";
+  margin-right: 0.5rem;
+}
+
+.post-card-tags {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.tag-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: #0366d6;
+  color: white;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Specific tag colors */
+.tag-water-quality { background-color: #1e88e5; }
+.tag-smartwater { background-color: #43a047; }
+.tag-sensor-deployment { background-color: #fb8c00; }
+.tag-research { background-color: #8e24aa; }
+.tag-lorawan { background-color: #00acc1; }
+.tag-thingsboard { background-color: #3f51b5; }
+.tag-buoy { background-color: #00897b; }
+.tag-river-chess { background-color: #5e35b1; }
+.tag-data-analysis { background-color: #e53935; }
+.tag-fieldwork { background-color: #6d4c41; }
+.tag-collaboration { background-color: #546e7a; }
+.tag-equipment { background-color: #757575; }
+.tag-maintenance { background-color: #f4511e; }
+.tag-news { background-color: #0366d6; }
+.tag-announcement { background-color: #d32f2f; }
+
+.tag-more {
+  padding: 0.25rem 0.5rem;
+  background-color: #f6f8fa;
+  color: #586069;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.post-card-excerpt {
+  color: #586069;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.read-more-btn {
+  display: inline-block;
+  color: #0366d6;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: auto;
+}
+
+.read-more-btn:hover {
+  text-decoration: underline;
+}
+
+.no-posts {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #586069;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .news-feed {
+    padding: 1rem;
+  }
+  
+  .news-header h1 {
+    font-size: 2rem;
+  }
+  
+  .news-subtitle {
+    font-size: 1rem;
+  }
+  
+  .posts-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .post-card-image {
+    height: 180px;
+  }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  .post-card {
+    background: #1e1e1e;
+    border-color: #333;
+  }
+  
+  .post-card-title a {
+    color: #e1e4e8;
+  }
+  
+  .post-card-title a:hover {
+    color: #58a6ff;
+  }
+  
+  .post-card-meta,
+  .post-card-excerpt {
+    color: #8b949e;
+  }
+  
+  .tag-more {
+    background-color: #333;
+    color: #8b949e;
+  }
+}
+</style>

@@ -26,13 +26,13 @@ layout: default
         <!-- News Feed -->
         <div class="news-feed">
           <h3>Latest News</h3>
-          <div class="list-group">
-            {% for item in site.data.news limit:5 %}
+          <div class="news-feed-scroll list-group">
+            {% for item in site.data.news %}
             <div class="list-group-item">
               <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1">
                   {% if item.link %}
-                    <a href="{{ item.link }}">{{ item.title }}</a>
+                    <a href="{{ item.link }}" target="_blank">{{ item.title }}</a>
                   {% else %}
                     {{ item.title }}
                   {% endif %}
@@ -97,6 +97,31 @@ layout: default
   padding: 2rem;
   border-radius: 5px;
   border-left: 4px solid #003e79;
+}
+
+.news-feed-scroll {
+  max-height: 500px;
+  overflow-y: auto;
+  border-radius: 5px;
+  padding-right: 5px;
+}
+
+.news-feed-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.news-feed-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.news-feed-scroll::-webkit-scrollbar-thumb {
+  background: #003e79;
+  border-radius: 4px;
+}
+
+.news-feed-scroll::-webkit-scrollbar-thumb:hover {
+  background: #00529e;
 }
 
 .news-feed .list-group-item {
