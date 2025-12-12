@@ -315,22 +315,22 @@ function initGlobe() {
       .data(countries.features)
       .join('path')
       .attr('class', d => {
-        const code = d.id;
+        const code = parseInt(d.id);
         return researchCountries.has(code) ? 'globe-country highlight' : 'globe-country';
       })
       .attr('d', path)
       .style('fill', d => {
-        const code = d.id;
+        const code = parseInt(d.id);
         return researchCountries.has(code) ? '#003e79' : '#e0e0e0';
       })
       .on('click', function(event, d) {
-        const code = d.id;
+        const code = parseInt(d.id);
         if (researchCountries.has(code) && countryLinks[code]) {
           window.location.href = countryLinks[code];
         }
       })
       .on('mouseover', function(event, d) {
-        const code = d.id;
+        const code = parseInt(d.id);
         if (researchCountries.has(code)) {
           d3.select(this).style('fill', '#00529e');
         } else {
@@ -338,7 +338,7 @@ function initGlobe() {
         }
       })
       .on('mouseout', function(event, d) {
-        const code = d.id;
+        const code = parseInt(d.id);
         if (researchCountries.has(code)) {
           d3.select(this).style('fill', '#003e79');
         } else {
@@ -347,7 +347,7 @@ function initGlobe() {
       })
       .append('title')
       .text(d => {
-        const code = d.id;
+        const code = parseInt(d.id);
         if (researchCountries.has(code)) {
           return 'Click to see projects in this region';
         }
@@ -365,7 +365,7 @@ function initGlobe() {
         countriesGroup.selectAll('path')
           .attr('d', path)
           .style('fill', d => {
-            const code = d.id;
+            const code = parseInt(d.id);
             return researchCountries.has(code) ? '#003e79' : '#e0e0e0';
           });
       }
@@ -387,7 +387,7 @@ function initGlobe() {
         countriesGroup.selectAll('path')
           .attr('d', path)
           .style('fill', d => {
-            const code = d.id;
+            const code = parseInt(d.id);
             return researchCountries.has(code) ? '#003e79' : '#e0e0e0';
           });
       })
