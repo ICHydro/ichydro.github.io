@@ -62,6 +62,7 @@ researchers:
     locations:
       - "Ghana"
       - "Rwanda"
+      - "Uganda"
       - "Africa"
     social:
       researchgate: "https://www.researchgate.net/profile/Ben-Howard-4?ev=hdr_xprf"
@@ -69,11 +70,27 @@ researchers:
       website: "https://www.benchoward.co.uk/"
       orcid: "https://orcid.org/0000-0003-4010-8131"
 
+  - name: "Dr Uswah Khairuddin"
+    short_name: "Uswah"
+    title: "Visiting Researcher"
+    image: "Uswah.png"
+    bio: "Uswah is a visiting researcher from Universiti Teknologi Malaysia. She is looking at applying artificial intelligence in rainfall downscaling modeling and forecasting."
+    keywords:
+      - "Downscaling"
+      - "Forecasting"
+    locations:
+      - "London"
+    social:
+      researchgate: "https://www.researchgate.net/profile/Uswah-Khairuddin-3?ev=hdr_xprf"
+      linkedin: "https://www.linkedin.com/in/uswah-khairuddin-81a6947b/"
+      google_scholar: "https://scholar.google.com/citations?hl=en&user=TVHcYsgAAAAJ"
+      orcid: "https://orcid.org/0000-0002-1035-3745"
+
   - name: "Dr Estefania Quenta Herrera"
     short_name: "Estefania"
     title: "Sponsored Researcher"
     image: "Estefania.png"
-    bio: "Estefania Quenta is a Postdoctoral Fellow at Imperial College London, broadly interested in how freshwater ecosystems respond to environmental changes to inform water conservation measures. She is currently investigating how climate change is reshaping water quality in the Andes through systematic assessments and numerical analyses. She is also examining the potential effects of glacier retreat on water quality and ecosystem health, including the analysis of diatoms, algae, cyanobacteria, and trace metals in glacier-fed streams that may pose risks to both human and ecological health by performing intensive fieldwork and laboratory analyses. She has collaborated with international students and scientific experts working in the Andes from both Andean and UK universities."
+    bio: "Estefania Quenta is a Postdoctoral Fellow at Imperial College London, broadly interested in how freshwater ecosystems respond to environmental changes to inform water conservation measures. She is currently investigating how climate change is reshaping water quality in the Andes through systematic assessment and numerical analyses. She is also examining the potential effects of glacier retreat on water quality, including the analyses of diatoms, algae, cyanobacteria, and trace metals in glacier-fed streams that may pose risks to both human and ecosystem health. She has conducted field campaigns and laboratory analyses and has collaborated with students and scientific experts working in the Andes from both Andean and UK universities."
     keywords:
       - "Mountains"
       - "Climate Change"
@@ -146,12 +163,22 @@ phd_students:
       linkedin: "https://www.linkedin.com/in/olivia-atkins-5618a1202/"
       orcid: "https://orcid.org/0009-0003-3988-6275"
 
-  - name: "Dan Bartley"
+  - name: "Daniel Bartley"
     short_name: "Dan"
     title: "PhD Student"
     image: "Dan.png"
-    bio: "PhD student at Imperial College London."
+    bio: "Dan is a PhD student in ecohydrology studying agricultural soil health. He is interested in land surface modelling, and his work explores the interactions between climate, hydrology and management practices to support sustainable farming. Prior to his PhD project, he completed an MPhil research degree in physical oceanography, and also holds an MEng degree in civil engineering."
+    keywords:
+      - "Regenerative agriculture"
+      - "Ecohydrology"
+    locations:
+      - "Oxfordshire"
+      - "London"
     social:
+      linkedin: "https://www.linkedin.com/in/dpb-hydro/"
+      website: "https://dpb-hydro.github.io/"
+      imperial: "https://profiles.imperial.ac.uk/d.bartley24"
+      orcid: "https://orcid.org/0009-0006-2231-9081"
 
   - name: "Jose Cuadros Adriazola"
     short_name: "Jose"
@@ -216,7 +243,7 @@ phd_students:
     short_name: "Anthony"
     title: "PhD Student"
     image: "Anthony.png"
-    bio: "Anthony is PhD student at Imperial College London studying high mountain hydrology and water resources. His research employs data from low-cost monitoring networks and field experiments, such as fluorescent tracing, to understand the movement and timing of water through mountain wetlands and their contributions to streamflow. He combines field observations with conceptual and regional modelling to advance knowledge of local wetland processes and their impact on catchment-scale hydrology and water resources."
+    bio: "Anthony is a PhD student at Imperial College London studying high mountain hydrology and water resources. His research employs data from low-cost monitoring networks and field experiments, such as fluorescent tracing, to understand the movement and timing of water through mountain wetlands and their contributions to streamflow. He combines field observations with conceptual and regional modelling to advance knowledge of local wetland processes and their impact on catchment-scale hydrology and water resources."
     keywords:
       - "Mountain hydrology"
       - "Wetlands"

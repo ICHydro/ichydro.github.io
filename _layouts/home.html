@@ -31,20 +31,23 @@ layout: default
             <div class="list-group-item news-item">
               {% if item.image %}
               <div class="news-image">
-                <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
+                <img src="{{ item.image }}" alt="{{ item.short_title | default: item.title }}" loading="lazy">
               </div>
               {% endif %}
               <div class="news-content">
-                <h5 class="news-title">{{ item.title }}</h5>
+                <h5 class="news-title">{{ item.short_title | default: item.title }}</h5>
+                <div class="news-meta mb-2">
+                  <small class="text-muted">{{ item.date | date: "%b %d, %Y" }}</small>
+                  {% if item.author %}
+                  <small class="text-muted"> • {{ item.author }}</small>
+                  {% endif %}
+                </div>
                 {% if item.description %}
                 <p class="news-description">{{ item.description }}</p>
                 {% endif %}
-                <div class="news-meta">
-                  <small class="text-muted">{{ item.date | date: "%b %d, %Y" }}</small>
-                  {% if item.link %}
-                  <a href="{{ item.link }}" target="_blank" class="news-link">Read more →</a>
-                  {% endif %}
-                </div>
+                {% if item.link %}
+                <a href="{{ item.link }}" target="_blank" class="news-link">Read more →</a>
+                {% endif %}
               </div>
             </div>
             {% endfor %}
@@ -83,7 +86,7 @@ layout: default
         <h4>Research Themes</h4>
         <div class="research-tags">
           {% for tag in site.data.tags.tags %}
-            {% assign size_scale = tag.weight | times: 0.05 | plus: 0.75 %}
+            {% assign size_scale = tag.weight | times: 0.03 | plus: 0.65 %}
             <span class="research-badge badge" data-tag="{{ tag.name }}" style="
               font-size: {{ size_scale }}rem;
               padding: {{ size_scale | times: 0.3 }}rem {{ size_scale | times: 0.8 }}rem;
@@ -133,6 +136,7 @@ layout: default
   margin-bottom: 0.5rem;
   padding: 0;
   overflow: hidden;
+  min-height: 180px;
 }
 
 .news-feed .list-group-item:hover {
@@ -142,13 +146,16 @@ layout: default
 .news-item {
   display: flex;
   gap: 1rem;
+  min-height: 180px;
 }
 
 .news-image {
   flex-shrink: 0;
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   overflow: hidden;
+  margin: 1rem 0 1rem 1rem;
+  border-radius: 4px;
 }
 
 .news-image img {
@@ -161,36 +168,35 @@ layout: default
   flex: 1;
   padding: 1rem;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .news-title {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
   color: #003e79;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-
-.news-description {
-  font-size: 0.875rem;
-  color: #666;
-  margin-bottom: 0.5rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  line-height: 1.3;
 }
 
 .news-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.news-description {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  flex-grow: 1;
 }
 
 .news-link {
@@ -317,6 +323,20 @@ layout: default
   cursor: pointer;
 }
 
+.globe-tooltip {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.globe-tooltip img {
+  transition: transform 0.2s;
+}
+
+.globe-tooltip img:hover {
+  transform: scale(1.1);
+}
+
 @media (max-width: 991px) {
   .mission-statement {
     padding: 1rem;
@@ -353,6 +373,156 @@ const researchCountries = new Set([
   840   // United States
 ]);
 
+// Country name mapping
+const countryNames = {
+  604: 'Peru',
+  218: 'Ecuador',
+  170: 'Colombia',
+  862: 'Venezuela',
+  152: 'Chile',
+  68: 'Bolivia',
+  231: 'Ethiopia',
+  356: 'India',
+  524: 'Nepal',
+  826: 'United Kingdom',
+  840: 'United States'
+};
+
+// Location to country code mapping (maps various location names to country codes)
+// Note: Some locations map to multiple countries
+const locationToCountry = {
+  // Peru and related
+  'peru': [604],
+  'lima': [604],
+  'vilcanota': [604],
+  'peruvian andes': [604],
+  
+  // Andes region (multiple countries)
+  'andes': [604, 218, 68, 152, 170], // Peru, Ecuador, Bolivia, Chile, Colombia
+  'south america': [604, 218, 68, 152, 170, 862], // All SA countries
+  
+  // Ecuador
+  'ecuador': [218],
+  'quito': [218],
+  
+  // Colombia
+  'colombia': [170],
+  'bogota': [170],
+  
+  // Venezuela
+  'venezuela': [862],
+  
+  // Chile
+  'chile': [152],
+  
+  // Bolivia
+  'bolivia': [68],
+  
+  // Africa (using Ethiopia as representative)
+  'ethiopia': [231],
+  'africa': [231],
+  'ghana': [231],
+  'accra': [231],
+  'tamale': [231],
+  'rwanda': [231],
+  'kigali': [231],
+  'musanze': [231],
+  
+  // Asia
+  'india': [356],
+  'nepal': [524],
+  
+  // UK
+  'united kingdom': [826],
+  'uk': [826],
+  'england': [826],
+  'scotland': [826],
+  'wales': [826],
+  'tweed': [826],
+  'chess': [826],
+  'upper severn': [826],
+  
+  // US and Caribbean
+  'united states': [840],
+  'usa': [840],
+  'caribbean': [840],
+  'guyana': [840],
+  'trinidad and tobago': [840],
+  'st. lucia': [840]
+};
+
+// Data from YAML files
+const projectsData = {{ site.data.projects.active | jsonify }};
+const researchersData = {
+  staff: {{ site.data.researchers.staff | jsonify }},
+  researchers: {{ site.data.researchers.researchers | jsonify }},
+  phd: {{ site.data.researchers.phd | jsonify }}
+};
+
+// Build country-based data
+const countryData = {};
+
+// Initialize country data objects
+Object.keys(countryNames).forEach(code => {
+  countryData[code] = { projects: [], people: [] };
+});
+
+// Process projects
+projectsData.forEach(project => {
+  if (project.locations) {
+    project.locations.forEach(loc => {
+      const normalizedLoc = loc.toLowerCase();
+      const countryCodes = locationToCountry[normalizedLoc];
+      if (countryCodes) {
+        // Handle array of country codes (some locations map to multiple countries)
+        countryCodes.forEach(countryCode => {
+          if (countryData[countryCode]) {
+            // Check if project already added to avoid duplicates
+            if (!countryData[countryCode].projects.find(p => p.name === project.name)) {
+              countryData[countryCode].projects.push({
+                name: project.name,
+                logo: project.logo,
+                period: project.period
+              });
+            }
+          }
+        });
+      }
+    });
+  }
+});
+
+// Process researchers (all categories)
+['staff', 'researchers', 'phd'].forEach(category => {
+  if (researchersData[category]) {
+    researchersData[category].forEach(person => {
+      if (person.locations) {
+        person.locations.forEach(loc => {
+          const normalizedLoc = loc.toLowerCase();
+          const countryCodes = locationToCountry[normalizedLoc];
+          if (countryCodes) {
+            // Handle array of country codes
+            countryCodes.forEach(countryCode => {
+              if (countryData[countryCode]) {
+                // Check if person already added to avoid duplicates
+                if (!countryData[countryCode].people.find(p => p.name === (person.short_name || person.name))) {
+                  countryData[countryCode].people.push({
+                    name: person.short_name || person.name,
+                    image: person.image,
+                    title: person.title
+                  });
+                }
+              }
+            });
+          }
+        });
+      }
+    });
+  }
+});
+
+console.log('Country data built:', countryData);
+
 // Country links mapping (using numeric IDs)
 const countryLinks = {
   604: '/ichydro.github.io/projects.html#peru',      // Peru
@@ -368,8 +538,80 @@ const countryLinks = {
   840: '/ichydro.github.io/projects.html#usa'        // United States
 };
 
+// Get data for a country
+function getCountryData(countryCode) {
+  const countryName = countryNames[countryCode];
+  if (!countryName) {
+    console.log('No country name for code:', countryCode);
+    return null;
+  }
+  
+  const data = countryData[countryCode];
+  if (!data) {
+    console.log('No data found for country code:', countryCode);
+    return null;
+  }
+  
+  console.log('Found data for', countryName, ':', data);
+  
+  // Only return if there's actual content
+  if (data.projects.length === 0 && data.people.length === 0) {
+    console.log('No projects or people for:', countryName);
+    return null;
+  }
+  
+  return { name: countryName, projects: data.projects, people: data.people };
+}
+
+// Build tooltip HTML
+function buildTooltipHTML(data) {
+  const baseUrl = '{{ "/assets/img/" | relative_url }}';
+  
+  let html = `<div style="font-weight: 600; color: #003e79; margin-bottom: 10px; font-size: 1.1rem; border-bottom: 2px solid #003e79; padding-bottom: 5px;">${data.name}</div>`;
+  
+  // Projects section
+  if (data.projects && data.projects.length > 0) {
+    html += '<div style="margin-bottom: 8px;"><strong style="font-size: 0.85rem; color: #666;">Projects:</strong></div>';
+    html += '<div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px;">';
+    data.projects.slice(0, 6).forEach(project => {
+      if (project.logo) {
+        html += `<div style="width: 50px; height: 50px; border: 1px solid #ddd; border-radius: 4px; overflow: hidden; background: white; flex-shrink: 0;" title="${project.name}">
+          <img src="${baseUrl}${project.logo}" style="width: 100%; height: 100%; object-fit: contain; padding: 2px;" alt="${project.name}" onerror="this.style.display='none'">
+        </div>`;
+      }
+    });
+    html += '</div>';
+  }
+  
+  // People section
+  if (data.people && data.people.length > 0) {
+    html += '<div style="margin-bottom: 6px;"><strong style="font-size: 0.85rem; color: #666;">Researchers:</strong></div>';
+    html += '<div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px;">';
+    data.people.slice(0, 8).forEach(person => {
+      if (person.image) {
+        html += `<div style="width: 45px; height: 45px; border-radius: 50%; overflow: hidden; border: 2px solid #003e79; flex-shrink: 0;" title="${person.name}">
+          <img src="${baseUrl}${person.image}" style="width: 100%; height: 100%; object-fit: cover;" alt="${person.name}" onerror="this.style.display='none'">
+        </div>`;
+      }
+    });
+    html += '</div>';
+  }
+  
+  html += '<div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid #ddd; font-size: 0.75rem; color: #003e79; font-weight: 500;">Click to see all projects →</div>';
+  
+  return html;
+}
+
 // Initialize globe
 function initGlobe() {
+  console.log('=== Initializing globe ===');
+  console.log('Country data available:', countryData);
+  
+  // Test data for Peru (604)
+  if (countryData[604]) {
+    console.log('Peru data:', countryData[604]);
+  }
+  
   const container = d3.select('#globe-container');
   const width = container.node().getBoundingClientRect().width;
   const height = 300;
@@ -380,6 +622,28 @@ function initGlobe() {
   
   // Clear any existing content
   svg.selectAll('*').remove();
+  
+  // Remove any existing tooltips
+  d3.selectAll('.globe-tooltip').remove();
+  
+  // Create tooltip with explicit styles
+  const tooltip = d3.select('body')
+    .append('div')
+    .attr('class', 'globe-tooltip')
+    .style('opacity', 0)
+    .style('position', 'absolute')
+    .style('pointer-events', 'none')
+    .style('background', 'white')
+    .style('border', '2px solid #003e79')
+    .style('border-radius', '8px')
+    .style('padding', '12px')
+    .style('box-shadow', '0 4px 12px rgba(0,0,0,0.15)')
+    .style('max-width', '320px')
+    .style('z-index', '10000')
+    .style('font-family', '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif')
+    .style('display', 'none');
+  
+  console.log('Tooltip element created:', tooltip.node());
   
   const projection = d3.geoOrthographic()
     .scale(Math.min(width, height) / 2.5)
@@ -416,16 +680,57 @@ function initGlobe() {
       })
       .on('click', function(event, d) {
         const code = parseInt(d.id);
+        console.log('Clicked country code:', code);
         if (researchCountries.has(code) && countryLinks[code]) {
           window.location.href = countryLinks[code];
         }
       })
       .on('mouseover', function(event, d) {
         const code = parseInt(d.id);
+        console.log('=== MOUSEOVER EVENT ===');
+        console.log('Country code:', code);
+        console.log('Is research country?', researchCountries.has(code));
+        
         if (researchCountries.has(code)) {
           d3.select(this).style('fill', '#00529e');
+          
+          // Show tooltip
+          const data = getCountryData(code);
+          console.log('Data retrieved:', data);
+          
+          if (data && (data.projects.length > 0 || data.people.length > 0)) {
+            const tooltipHTML = buildTooltipHTML(data);
+            console.log('Tooltip HTML length:', tooltipHTML.length);
+            console.log('Mouse position:', event.pageX, event.pageY);
+            
+            tooltip
+              .html(tooltipHTML)
+              .style('display', 'block')
+              .style('left', (event.pageX + 15) + 'px')
+              .style('top', (event.pageY - 10) + 'px')
+              .style('opacity', 0)
+              .transition()
+              .duration(200)
+              .style('opacity', 1);
+            
+            console.log('Tooltip should now be visible!');
+          } else {
+            console.log('No valid data - not showing tooltip');
+            console.log('Data was:', data);
+          }
         } else {
           d3.select(this).style('fill', '#d0d0d0');
+        }
+      })
+      .on('mousemove', function(event, d) {
+        const code = parseInt(d.id);
+        if (researchCountries.has(code)) {
+          const data = getCountryData(code);
+          if (data && (data.projects.length > 0 || data.people.length > 0)) {
+            tooltip
+              .style('left', (event.pageX + 15) + 'px')
+              .style('top', (event.pageY - 10) + 'px');
+          }
         }
       })
       .on('mouseout', function(event, d) {
@@ -435,14 +740,15 @@ function initGlobe() {
         } else {
           d3.select(this).style('fill', '#e0e0e0');
         }
-      })
-      .append('title')
-      .text(d => {
-        const code = parseInt(d.id);
-        if (researchCountries.has(code)) {
-          return 'Click to see projects in this region';
-        }
-        return '';
+        
+        // Hide tooltip
+        tooltip
+          .transition()
+          .duration(200)
+          .style('opacity', 0)
+          .on('end', function() {
+            tooltip.style('display', 'none');
+          });
       });
     
     // Auto-rotation

@@ -159,3 +159,10 @@ past:
     logo: "hydroflux.jpg"
     website: "/projects/hydroflux/"
     description: "Hydrometeorological feedbacks and changes in water storage and fluxes in Northern India. Investigating how land use change and climate variability affect water resources in the Indo-Gangetic Plain."
+    keywords:
+      - "Water security"
+      - "Climate change"
+      - "Hydrology"
+      - "Land use change"
+    locations:
+      - "India"
