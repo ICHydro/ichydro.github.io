@@ -3,6 +3,7 @@ import json
 import base64
 import re
 import yaml
+import threading
 from datetime import datetime
 from flask import Flask, request, jsonify
 from slack_sdk import WebClient
@@ -536,6 +537,13 @@ def handle_news_submission(payload):
         )
         return "", 200
     
+    # Acknowledge immediately to prevent timeout
+    threading.Thread(target=process_news_submission, args=(user_id, values, content_type, url)).start()
+    return "", 200
+
+def process_news_submission(user_id, values, content_type, url):
+    """Process news submission in background thread"""
+    
     # Scrape content
     try:
         if 'linkedin.com' in url.lower():
@@ -548,7 +556,7 @@ def handle_news_submission(payload):
             channel=user_id,
             text=f"❌ Error scraping URL: {str(e)}"
         )
-        return "", 200
+        return
     
     # Extract form values
     short_title_value = values.get("short_title_block", {}).get("short_title_input", {}).get("value")
@@ -631,13 +639,18 @@ def handle_news_submission(payload):
             channel=user_id,
             text=f"❌ Error publishing: {str(e)}"
         )
-    
-    return "", 200
 
 def handle_paper_submission(payload):
     """Handle paper submission"""
     user_id = payload["user"]["id"]
     values = payload["view"]["state"]["values"]
+    
+    # Acknowledge immediately to prevent timeout
+    threading.Thread(target=process_paper_submission, args=(user_id, values)).start()
+    return "", 200
+
+def process_paper_submission(user_id, values):
+    """Process paper submission in background thread"""
     
     # Extract paper details
     doi_url = values["paper_doi_block"]["paper_doi_input"]["value"].strip()
@@ -687,8 +700,6 @@ def handle_paper_submission(payload):
             channel=user_id,
             text=f"❌ Error publishing paper: {str(e)}"
         )
-    
-    return "", 200
 
 def handle_remove_news_submission(payload):
     """Handle news item removal"""
