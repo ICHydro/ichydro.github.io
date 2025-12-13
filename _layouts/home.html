@@ -28,20 +28,24 @@ layout: default
           <h3>Latest News</h3>
           <div class="news-feed-scroll list-group">
             {% for item in site.data.news %}
-            <div class="list-group-item">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">
-                  {% if item.link %}
-                    <a href="{{ item.link }}" target="_blank">{{ item.title }}</a>
-                  {% else %}
-                    {{ item.title }}
-                  {% endif %}
-                </h5>
-                <small class="text-muted">{{ item.date | date: "%b %d, %Y" }}</small>
+            <div class="list-group-item news-item">
+              {% if item.image %}
+              <div class="news-image">
+                <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
               </div>
-              {% if item.description %}
-              <p class="mb-1">{{ item.description }}</p>
               {% endif %}
+              <div class="news-content">
+                <h5 class="news-title">{{ item.title }}</h5>
+                {% if item.description %}
+                <p class="news-description">{{ item.description }}</p>
+                {% endif %}
+                <div class="news-meta">
+                  <small class="text-muted">{{ item.date | date: "%b %d, %Y" }}</small>
+                  {% if item.link %}
+                  <a href="{{ item.link }}" target="_blank" class="news-link">Read more →</a>
+                  {% endif %}
+                </div>
+              </div>
             </div>
             {% endfor %}
           </div>
@@ -127,10 +131,77 @@ layout: default
 .news-feed .list-group-item {
   border-left: 3px solid #003e79;
   margin-bottom: 0.5rem;
+  padding: 0;
+  overflow: hidden;
 }
 
 .news-feed .list-group-item:hover {
   background-color: #f8f9fa;
+}
+
+.news-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.news-image {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+}
+
+.news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-content {
+  flex: 1;
+  padding: 1rem;
+  min-width: 0;
+}
+
+.news-title {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #003e79;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.news-description {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.news-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.news-link {
+  color: #003e79;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.news-link:hover {
+  color: #00529e;
+  text-decoration: underline;
 }
 
 /* Research theme badges */
