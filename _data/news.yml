@@ -1,77 +1,26 @@
-- id: 10
+- id: 1
+  short_title: "Reflections from the IPCC Meeting"
+  title: "IPCC First Lead Author Meeting in Paris"
+  date: 2025-12-13
+  description: "Last week, experts from diverse backgrounds in climate change gathered in Paris for the IPCC First Lead Author Meeting. It was invaluable to connect, share perspectives, and explore links across the world's climate challenges."
+  link: "https://www.linkedin.com/posts/estefaniaquentaherrera_last-week-experts-from-diverse-backgrounds-activity-7404462304563609600-f1wY"
+  author: "Estefania Quenta Herrera"
+  image: "https://media.licdn.com/dms/image/v2/D4E22AQEVBy2fO1b6bg/feedshare-shrink_800/B4EZsHvOcmIwAg-/0/1765361379973?e=2147483647&v=beta&t=6jwwTiPDdAgk1HiVDUXAd7EY3Svve0XV2nCWhZkDBJc"
+
+- id: 2
+  short_title: "Congratulations Clara!"
+  title: "Clara Gimeno Jésus successfully defends PhD"
+  date: 2025-12-13
+  description: "PhD Defence Successfully Completed! Clara successfully defended her PhD dissertation on understanding and quantifying the impacts of nature-based solutions on water security and climate adaptation."
+  link: "https://www.linkedin.com/posts/clara-gimeno-j%C3%A9sus_naturebasedsolutions-watersecurity-climateadaptation-activity-7402383635905028096-eXNJ"
+  author: "ICHydro Team"
+  image: "https://media.licdn.com/dms/image/v2/D4E22AQHZd9ehEyByBg/feedshare-shrink_800/B4EZrqMrM1KMAg-/0/1764865786619?e=2147483647&v=beta&t=UDhOO56voUi6mKMEpN6PI05ogcmBzYHhv3ifQCppZh8"
+
+- id: 3
   short_title: "Multi Moisture Update"
-  title: "#mountainhydrology #watersecurity #openscience #openhardware #fieldresearch #ecuador #climateresearch #arduino | Martha Day"
+  title: "Martha Day builds soil moisture sensors"
   date: 2025-12-01
-  description: "I spent the best part of summer building these soil moisture sensors under the close guidance and support from Tom Rowan in the Sensing Lab at Imperial. We assembled 36 sensors using Arduino boards an..."
-  link: "https://www.linkedin.com/posts/martha-day-91318718b_mountainhydrology-watersecurity-openscience-activity-7398337282480697344-mFCd?utm_source=share&utm_medium=member_desktop&rcm=ACoAABomsAkBIh1yXrGYsiNLdAli9PtVquvr8lU"
+  description: "I spent the best part of summer building these soil moisture sensors under the close guidance and support from Tom Rowan in the Sensing Lab at Imperial. We assembled 36 sensors using Arduino boards and custom PCBs for deployment in Ecuador."
+  link: "https://www.linkedin.com/posts/martha-day-91318718b_mountainhydrology-watersecurity-openscience-activity-7398337282480697344-mFCd"
   author: "Martha Day"
   image: "https://media.licdn.com/dms/image/v2/D4E22AQHGxdO56e2vsw/feedshare-shrink_2048_1536/B4EZqwsjAWHcAw-/0/1763901060502?e=2147483647&v=beta&t=SJye0ZTBfSJ0U2Cim6CZTOoQe1FdT5I9aQ3XpbAhIws"
-- short_title: "Congratulations Clara!"
-  title: "#naturebasedsolutions #watersecurity #climateadaptation #mountainhydrology #scienceforsolutions #sustainabledevelopmentgoals | Clara Gimeno Jésus | 42 comments"
-  date: 2025-12-13
-  description: "🎉 PhD Defence Successfully Completed 🎉
-
-🎓 I’m very happy to share that I successfully defended my PhD dissertation, titled “Understanding and quantifying the impacts of nature-based solutions on water..."
-  link: "https://www.linkedin.com/posts/clara-gimeno-j%C3%A9sus_naturebasedsolutions-watersecurity-climateadaptation-activity-7402383635905028096-eXNJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAABomsAkBIh1yXrGYsiNLdAli9PtVquvr8lU"
-  author: "ICHydro Team"
-  image: "https://media.licdn.com/dms/image/v2/D4E22AQHZd9ehEyByBg/feedshare-shrink_800/B4EZrqMrM1KMAg-/0/1764865786619?e=2147483647&v=beta&t=UDhOO56voUi6mKMEpN6PI05ogcmBzYHhv3ifQCppZh8"
-- short_title: "Congratulations Clara!"
-  title: "#naturebasedsolutions #watersecurity #climateadaptation #mountainhydrology #scienceforsolutions #sustainabledevelopmentgoals | Clara Gimeno Jésus | 42 comments"
-  date: 2025-12-13
-  description: "🎉 PhD Defence Successfully Completed 🎉
-
-🎓 I’m very happy to share that I successfully defended my PhD dissertation, titled “Understanding and quantifying the impacts of nature-based solutions on water..."
-  link: "https://www.linkedin.com/posts/clara-gimeno-j%C3%A9sus_naturebasedsolutions-watersecurity-climateadaptation-activity-7402383635905028096-eXNJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAABomsAkBIh1yXrGYsiNLdAli9PtVquvr8lU"
-  author: "ICHydro Team"
-  image: "https://media.licdn.com/dms/image/v2/D4E22AQHZd9ehEyByBg/feedshare-shrink_800/B4EZrqMrM1KMAg-/0/1764865786619?e=2147483647&v=beta&t=UDhOO56voUi6mKMEpN6PI05ogcmBzYHhv3ifQCppZh8"
-- title: "Last week, experts from diverse backgrounds in climate change gathered in Paris for the IPCC First Lead Author Meeting🌎.
-It was invaluable to connect, share perspectives, and explore links across… | Estefania Quenta Herrera"
-  date: 2025-12-13
-  description: "Last week, experts from diverse backgrounds in climate change gathered in Paris for the IPCC First Lead Author Meeting🌎.
-It was invaluable to connect, share perspectives, and explore links across the ..."
-  link: "https://www.linkedin.com/posts/estefaniaquentaherrera_last-week-experts-from-diverse-backgrounds-activity-7404462304563609600-f1wY"
-  author: "ICHydro Team"
-  image: "https://media.licdn.com/dms/image/v2/D4E22AQEVBy2fO1b6bg/feedshare-shrink_800/B4EZsHvOcmIwAg-/0/1765361379973?e=2147483647&v=beta&t=6jwwTiPDdAgk1HiVDUXAd7EY3Svve0XV2nCWhZkDBJc"
-- title: "Last week, experts from diverse backgrounds in climate change gathered in Paris for the IPCC First Lead Author Meeting🌎.
-It was invaluable to connect, share perspectives, and explore links across… | Estefania Quenta Herrera"
-  date: 2025-12-13
-  description: "Last week, experts from diverse backgrounds in climate change gathered in Paris for the IPCC First Lead Author Meeting🌎.
-It was invaluable to connect, share perspectives, and explore links across the ..."
-  link: "https://www.linkedin.com/posts/estefaniaquentaherrera_last-week-experts-from-diverse-backgrounds-activity-7404462304563609600-f1wY"
-  author: "ICHydro Team"
-  image: "https://media.licdn.com/dms/image/v2/D4E22AQEVBy2fO1b6bg/feedshare-shrink_800/B4EZsHvOcmIwAg-/0/1765361379973?e=2147483647&v=beta&t=6jwwTiPDdAgk1HiVDUXAd7EY3Svve0XV2nCWhZkDBJc"
-- title: "Last week, experts from diverse backgrounds in climate change gathered in Paris for the IPCC First Lead Author Meeting🌎.
-It was invaluable to connect, share perspectives, and explore links across… | Estefania Quenta Herrera"
-  date: 2025-12-13
-  description: "Last week, experts from diverse backgrounds in climate change gathered in Paris for the IPCC First Lead Author Meeting🌎.
-It was invaluable to connect, share perspectives, and explore links across the ..."
-  link: "https://www.linkedin.com/posts/estefaniaquentaherrera_last-week-experts-from-diverse-backgrounds-activity-7404462304563609600-f1wY"
-  author: "ICHydro Team"
-  image: "https://media.licdn.com/dms/image/v2/D4E22AQEVBy2fO1b6bg/feedshare-shrink_800/B4EZsHvOcmIwAg-/0/1765361379973?e=2147483647&v=beta&t=6jwwTiPDdAgk1HiVDUXAd7EY3Svve0XV2nCWhZkDBJc"
-- title: "Last week, experts from diverse backgrounds in climate change gathered in Paris for the IPCC First Lead Author Meeting🌎.
-It was invaluable to connect, share perspectives, and explore links across… | Estefania Quenta Herrera"
-  date: 2025-12-13
-  description: "Last week, experts from diverse backgrounds in climate change gathered in Paris for the IPCC First Lead Author Meeting🌎.
-It was invaluable to connect, share perspectives, and explore links across the ..."
-  link: "https://www.linkedin.com/posts/estefaniaquentaherrera_last-week-experts-from-diverse-backgrounds-activity-7404462304563609600-f1wY"
-  author: "Estefania"
-# News feed items
-# Add new items to the top of the list
-# Format: date, title, description (optional), link (optional)
-
-- date: 2025-12-10
-  title: "New publication on water security in glacier-fed basins"
-  description: "Latest research published in Nature Water"
-  link: "/publications.html"
-
-- date: 2025-11-15
-  title: "FLOODTWIN project launched"
-  description: "Digital twin technology for flood forecasting begins"
-  link: "/projects.html"
-
-- date: 2025-10-20
-  title: "Welcome new PhD students"
-  description: "Three new students join the group"
-  link: "/people.html"
-
-# Add more news items here
