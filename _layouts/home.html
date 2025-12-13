@@ -22,7 +22,8 @@ layout: default
         <div class="news-feed">
           <h3>Latest News</h3>
           <div class="news-feed-scroll list-group">
-            {% for item in site.data.news %}
+            {% assign sorted_news = site.data.news | sort: "date" | reverse %}
+            {% for item in sorted_news %}
             <div class="list-group-item news-item">
               {% if item.image %}
               <div class="news-image">
