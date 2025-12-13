@@ -105,7 +105,14 @@ def handle_interactivity():
         elif callback_id == "remove_news_modal":
             return handle_remove_news_submission(payload)
         else:
-            return handle_modal_submission(payload)  # legacy
+            # Unknown callback_id
+            user_id = payload.get("user", {}).get("id")
+            if user_id:
+                slack_client.chat_postMessage(
+                    channel=user_id,
+                    text=f"❌ Unknown modal type: {callback_id}"
+                )
+            return "", 200
     
     return "", 200
 
@@ -801,70 +808,10 @@ def scrape_linkedin_post(url):
     except Exception as e:
         raise Exception(f"Failed to scrape LinkedIn post: {str(e)}")
 
-def handle_modal_submission(payload):
-    """Process the modal submission and create GitHub post"""
-    
-    user_id = payload["user"]["id"]
-    values = payload["view"]["state"]["values"]
-    
-    # Extract LinkedIn URL
-    linkedin_url = values["linkedin_url_block"]["linkedin_url_input"]["value"].strip()
-    
-    # Validate LinkedIn URL
-    if not linkedin_url or 'linkedin.com' not in linkedin_url.lower():
-        slack_client.chat_postMessage(
-            channel=user_id,
-            text="❌ Please provide a valid LinkedIn post URL"
-        )
-        return "", 200
-    
-    # Scrape LinkedIn content
-    try:
-        linkedin_data = scrape_linkedin_post(linkedin_url)
-    except Exception as e:
-        slack_client.chat_postMessage(
-            channel=user_id,
-            text=f"❌ Error scraping LinkedIn post: {str(e)}"
-        )
-        return "", 200
-    
-    # Extract form values - use LinkedIn data as fallback
-    title_value = values["title_block"]["title_input"].get("value")
-    title = (title_value.strip() if title_value else "") or linkedin_data['title']
-    content = linkedin_data['content']
-    image_url = linkedin_data['image_url']
-    link = linkedin_data['link']
-    
-    # Get selected tags
-    tags = []
-    if values.get("tags_block") and values["tags_block"]["tags_input"].get("selected_options"):
-        tags = [option["value"] for option in values["tags_block"]["tags_input"]["selected_options"]]
-    
-    # Get author name or use Slack username
-    author_value = values.get("author_block", {}).get("author_input", {}).get("value")
-    author = author_value.strip() if author_value else ""
-    if not author:
-        user_info = slack_client.users_info(user=user_id)
-        author = user_info["user"]["real_name"]
-    
-    try:
-        # Create the news entry with image
-        create_news_entry(title, content, link, author, image_url)
-        
-        # Send success message
-        slack_client.chat_postMessage(
-            channel=user_id,
-            text=f"✅ News published successfully! It will appear on the site shortly.\n\nTitle: {title}\nLinkedIn: {link}\nImage: {'✓' if image_url else '✗'}"
-        )
-        
-    except Exception as e:
-        # Send error message
-        slack_client.chat_postMessage(
-            channel=user_id,
-            text=f"❌ Error publishing post: {str(e)}"
-        )
-    
-    return "", 200
+# LEGACY FUNCTION - NO LONGER USED - Replaced by handle_news_submission and handle_paper_submission
+# def handle_modal_submission(payload):
+#     """[DEPRECATED] Old modal submission handler - kept for reference only"""
+#     pass
 
 def create_news_entry(title, description, link, author, image_url=None):
     """Add a new entry to the news.yml file"""
