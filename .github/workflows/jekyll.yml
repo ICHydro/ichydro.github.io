@@ -3,10 +3,10 @@ name: Build and Deploy Jekyll Site
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 permissions:
   contents: read
@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
 
   deploy:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
