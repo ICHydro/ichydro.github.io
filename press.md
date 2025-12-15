@@ -6,7 +6,13 @@ style: header
 
 ## Press coverage
 
-<ul><li>El Comercio, Ecuador, July 2018. <a href="https://www.elcomercio.com/tendencias/potencial-ciencia-ciudadana-lagunas-rios.html">Hay un gran potencial en uso de ciencia ciudadana</a></li>
+<ul>
+<li>Global Water Forum, November 2024. <a href="https://www.globalwaterforum.org/2024/11/28/chiefs-and-floods-hybrid-governance-and-flood-risk-adaptation-in-tamale-ghana/">Chiefs and floods: Hybrid governance and flood risk adaptation in Tamale, Ghana</a></li>
+<li>Modern Ghana, December 2024. <a href="https://www.modernghana.com/news/1333325/community-flood-risk-and-adaptation-project-unveil.html">Community flood risk and adaptation project unveiled in Tamale</a></li>
+<li>Diamond FM Online, July 2024. <a href="https://diamondfmonline.com/six-communities-in-tamale-including-nalung-fong-benefit-from-flood-risk-and-adaption-project/">Six communities in Tamale including Nalung, Fong benefit from flood risk and adaption project</a></li>
+<li>Ghana News Agency, July 2024. <a href="https://gna.org.gh/2024/07/nalung-gets-weather-station-under-enabling-flood-adaptation-project/">Nalung gets weather station under Enabling Flood Adaptation Project</a></li>
+<li>Inside Infrastructure (ICE), 2024. <a href="https://www.ice.org.uk/news-views-insights/inside-infrastructure/martha-day-quest-travel-water-in-cameroon">Martha Day: quest to travel for water in Cameroon</a></li>
+<li>El Comercio, Ecuador, July 2018. <a href="https://www.elcomercio.com/tendencias/potencial-ciencia-ciudadana-lagunas-rios.html">Hay un gran potencial en uso de ciencia ciudadana</a></li>
 <li>Mongabay, February 2016. <a href="http://news.mongabay.com/2016/02/peruvian-amazon-will-get-wetter-and-experience-more-severe-floods-threatening-wildlife/">Peruvian Amazon will get wetter and experience more severe floods, threatening wildlife</a></li>
 <li>Huffington Post, August 2014. <a href="http://www.huffingtonpost.com/megan-taylor-morrison/a-healers-last-journey-do_b_5652047.html">A Healer's Last Journey: Documenting Endangered Knowledge in the Colombian Andes</a></li>
 <li>BBC website, September 2013. <a href="http://www.bbc.co.uk/mundo/noticias/2013/09/130905_ciencia_verde_paramos_andinos_cambio_climatico_np.shtml">El futuro incierto de los páramos andinos</a></li>

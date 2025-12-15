@@ -1,0 +1,26 @@
+# Countries where ICHydro works
+# ISO country codes for map highlighting
+
+countries:
+  - name: "Peru"
+    code: "PE"
+  - name: "Ecuador"
+    code: "EC"
+  - name: "Colombia"
+    code: "CO"
+  - name: "Venezuela"
+    code: "VE"
+  - name: "Chile"
+    code: "CL"
+  - name: "Bolivia"
+    code: "BO"
+  - name: "Ethiopia"
+    code: "ET"
+  - name: "India"
+    code: "IN"
+  - name: "Nepal"
+    code: "NP"
+  - name: "United Kingdom"
+    code: "GB"
+  - name: "United States"
+    code: "US"

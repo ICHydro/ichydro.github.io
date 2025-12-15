@@ -17,18 +17,22 @@ en: &DEFAULT_EN
       url: /people.html
     - title: "Projects"
       url: /projects.html
-    - title: "Publications"
-      url: /publications.html
-    - title: "Policy support"
-      url: /policy_support.html
-    - title: "Press"
-      url: /press.html
-    - title: "Software"
-      url: /software.html
-    - title: "Sensors"
-      url: /sensors.html
-    - title: "Data"
-      url: /data.html
+    - title: "Outputs"
+      dropdown:
+        - title: "Publications"
+          url: /publications.html
+        - title: "Software"
+          url: /software.html
+        - title: "Sensors"
+          url: /sensors.html
+        - title: "Data"
+          url: /data.html
+    - title: "Impacts"
+      dropdown:
+        - title: "Policy Support"
+          url: /policy_support.html
+        - title: "Press"
+          url: /press.html
 en-US:
   <<: *DEFAULT_EN
 en-CA:

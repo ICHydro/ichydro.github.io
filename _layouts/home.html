@@ -5,17 +5,833 @@ layout: default
 
 <div class="main-container container">
   <div class="row">
-    <section class="col-sm-9">
+    <!-- Main Content Area -->
+    <section class="col-lg-8">
       <a id="main content">
-                {{ content }}
+        <!-- Mission Statement -->
+        <div class="mission-statement mb-4">
+          <p class="lead">
+            We are a research group at Imperial College London, focusing on sustainable water resources management. 
+            We work across the entire knowledge production workflow from data collection and process understanding to simulation, prediction, 
+            and decision-support. Our research addresses critical challenges including climate change impacts, land-use changes, 
+            ecosystem services, and uncertainty analysis.
+          </p>
+        </div>
+
+        <!-- News Feed -->
+        <div class="news-feed">
+          <h3>Latest News</h3>
+          <div class="news-feed-scroll list-group">
+            {% assign sorted_news = site.data.news | sort: "date" | reverse %}
+            {% for item in sorted_news %}
+            <div class="list-group-item news-item">
+              {% if item.image %}
+              <div class="news-image">
+                <img src="{{ item.image }}" alt="{{ item.short_title | default: item.title }}" loading="lazy">
+              </div>
+              {% endif %}
+              <div class="news-content">
+                <h5 class="news-title">{{ item.short_title | default: item.title }}</h5>
+                <div class="news-meta mb-2">
+                  <small class="text-muted">{{ item.date | date: "%b %d, %Y" }}</small>
+                  {% if item.author %}
+                  <small class="text-muted"> • {{ item.author }}</small>
+                  {% endif %}
+                </div>
+                {% if item.description %}
+                <p class="news-description">{{ item.description }}</p>
+                {% endif %}
+                {% if item.link %}
+                <a href="{{ item.link }}" target="_blank" class="news-link">Read more →</a>
+                {% endif %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Additional Content -->
+        <div class="mt-4">
+          {{ content }}
+        </div>
       </a>
     </section>
-    <aside class="col-sm-3" role = "complementary">
-      <img src="assets/img/2023_bolivia.jpg" alt="Deplete project visit Bolivia", class="img-fluid">
-      <br/>
-      <br/>
-      <img src="assets/img/2019_peru.jpg" alt="RAHU project field work, Peru", class="img-fluid">
+
+    <!-- Right Sidebar -->
+    <aside class="col-lg-4" role="complementary">
+      <!-- World Map -->
+      <div class="map-section mb-4">
+        <div id="globe-container" style="width: 100%; height: 300px; position: relative;">
+          <svg id="globe" width="100%" height="300"></svg>
+        </div>
+      </div>
+
+      <!-- Image Gallery -->
+      <div class="image-gallery mb-4">
+        <div class="gallery-container">
+          <img src="{{ '/assets/img/slideshow/2023_bolivia.jpg' | relative_url }}" alt="Deplete project visit Bolivia" class="gallery-image active">
+          <img src="{{ '/assets/img/slideshow/2019_peru.jpg' | relative_url }}" alt="RAHU project field work, Peru" class="gallery-image">
+          <img src="{{ '/assets/img/slideshow/hydroflux.jpg' | relative_url }}" alt="Hydroflux project" class="gallery-image">
+          <img src="{{ '/assets/img/slideshow/tienshan.jpg' | relative_url }}" alt="Tien Shan field work" class="gallery-image">
+        </div>
+      </div>
+
+      <!-- Research Themes -->
+      <div class="tag-cloud-section">
+        <h4>Research Themes</h4>
+        <div class="research-tags">
+          {% for tag in site.data.tags.tags %}
+            {% assign size_scale = tag.weight | times: 0.03 | plus: 0.65 %}
+            <span class="research-badge badge" data-tag="{{ tag.name }}" style="
+              font-size: {{ size_scale }}rem;
+              padding: {{ size_scale | times: 0.3 }}rem {{ size_scale | times: 0.8 }}rem;
+            ">{{ tag.name }}</span>
+          {% endfor %}
+        </div>
+      </div>
     </aside>
   </div>
 </div>
+
+<style>
+.mission-statement {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 5px;
+  border-left: 4px solid #003e79;
+}
+
+.news-feed-scroll {
+  max-height: 500px;
+  overflow-y: auto;
+  border-radius: 5px;
+  padding-right: 5px;
+}
+
+.news-feed-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.news-feed-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.news-feed-scroll::-webkit-scrollbar-thumb {
+  background: #003e79;
+  border-radius: 4px;
+}
+
+.news-feed-scroll::-webkit-scrollbar-thumb:hover {
+  background: #00529e;
+}
+
+.news-feed .list-group-item {
+  border-left: 3px solid #003e79;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  overflow: hidden;
+  min-height: 180px;
+}
+
+.news-feed .list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+.news-item {
+  display: flex;
+  gap: 1rem;
+  min-height: 180px;
+}
+
+.news-image {
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+  margin: 1rem 0 1rem 1rem;
+  border-radius: 4px;
+}
+
+.news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-content {
+  flex: 1;
+  padding: 1rem;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #003e79;
+  line-height: 1.3;
+}
+
+.news-meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.news-description {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  flex-grow: 1;
+}
+
+.news-link {
+  color: #003e79;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.news-link:hover {
+  color: #00529e;
+  text-decoration: underline;
+}
+
+/* Research theme badges */
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.research-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  text-transform: capitalize;
+}
+
+.research-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* Color coding based on tag categories - matching projects.md badges */
+.research-badge[data-tag*="Water"],
+.research-badge[data-tag*="Hydrology"],
+.research-badge[data-tag*="Flood"] {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.research-badge[data-tag*="Climate"],
+.research-badge[data-tag*="Ecosystem"],
+.research-badge[data-tag*="Tropical"],
+.research-badge[data-tag*="Mountain"] {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.research-badge[data-tag*="Drought"],
+.research-badge[data-tag*="Landslide"],
+.research-badge[data-tag*="Glacier"] {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.research-badge[data-tag*="Modelling"],
+.research-badge[data-tag*="Data Science"],
+.research-badge[data-tag*="Sensors"],
+.research-badge[data-tag*="Monitoring"] {
+  background: #f3e5f5;
+  color: #6a1b9a;
+}
+
+.research-badge[data-tag*="Citizen"],
+.research-badge[data-tag*="Uncertainty"],
+.research-badge[data-tag*="Adaptation"] {
+  background: #e8eaf6;
+  color: #283593;
+}
+
+.research-badge[data-tag*="Policy"],
+.research-badge[data-tag*="Decision"] {
+  background: #e0f2f1;
+  color: #00695c;
+}
+
+/* Image Gallery */
+.gallery-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.gallery-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.gallery-image.active {
+  opacity: 1;
+}
+
+/* Globe styling */
+#globe-container {
+  background: #ffffff;
+  border-radius: 5px;
+  cursor: grab;
+}
+
+#globe-container:active {
+  cursor: grabbing;
+}
+
+.globe-country {
+  stroke: #fff;
+  stroke-width: 0.5;
+  transition: fill 0.3s;
+}
+
+.globe-country.highlight {
+  cursor: pointer;
+}
+
+.globe-tooltip {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.globe-tooltip img {
+  transition: transform 0.2s;
+}
+
+.globe-tooltip img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 991px) {
+  .mission-statement {
+    padding: 1rem;
+  }
+  
+  #globe-container {
+    height: 250px;
+  }
+  
+  #globe {
+    height: 250px;
+  }
+}
+</style>
+
+<!-- D3.js and TopoJSON libraries -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://unpkg.com/topojson@3"></script>
+
+<script>
+// Country code mapping for our research locations
+// Using numeric country IDs from world-atlas
+const researchCountries = new Set([
+  604,  // Peru
+  218,  // Ecuador
+  170,  // Colombia
+  862,  // Venezuela
+  152,  // Chile
+  68,   // Bolivia
+  231,  // Ethiopia
+  356,  // India
+  524,  // Nepal
+  826,  // United Kingdom
+  840   // United States
+]);
+
+// Country name mapping
+const countryNames = {
+  604: 'Peru',
+  218: 'Ecuador',
+  170: 'Colombia',
+  862: 'Venezuela',
+  152: 'Chile',
+  68: 'Bolivia',
+  231: 'Ethiopia',
+  356: 'India',
+  524: 'Nepal',
+  826: 'United Kingdom',
+  840: 'United States'
+};
+
+// Location to country code mapping (maps various location names to country codes)
+// Note: Some locations map to multiple countries
+const locationToCountry = {
+  // Peru and related
+  'peru': [604],
+  'lima': [604],
+  'vilcanota': [604],
+  'peruvian andes': [604],
+  
+  // Andes region (multiple countries)
+  'andes': [604, 218, 68, 152, 170], // Peru, Ecuador, Bolivia, Chile, Colombia
+  'south america': [604, 218, 68, 152, 170, 862], // All SA countries
+  
+  // Ecuador
+  'ecuador': [218],
+  'quito': [218],
+  
+  // Colombia
+  'colombia': [170],
+  'bogota': [170],
+  
+  // Venezuela
+  'venezuela': [862],
+  
+  // Chile
+  'chile': [152],
+  
+  // Bolivia
+  'bolivia': [68],
+  
+  // Africa (using Ethiopia as representative)
+  'ethiopia': [231],
+  'africa': [231],
+  'ghana': [231],
+  'accra': [231],
+  'tamale': [231],
+  'rwanda': [231],
+  'kigali': [231],
+  'musanze': [231],
+  
+  // Asia
+  'india': [356],
+  'nepal': [524],
+  
+  // UK
+  'united kingdom': [826],
+  'uk': [826],
+  'england': [826],
+  'scotland': [826],
+  'wales': [826],
+  'tweed': [826],
+  'chess': [826],
+  'upper severn': [826],
+  
+  // US and Caribbean
+  'united states': [840],
+  'usa': [840],
+  'caribbean': [840],
+  'guyana': [840],
+  'trinidad and tobago': [840],
+  'st. lucia': [840]
+};
+
+// Data from YAML files
+const projectsData = {{ site.data.projects.active | jsonify }};
+const researchersData = {
+  staff: {{ site.data.researchers.staff | jsonify }},
+  researchers: {{ site.data.researchers.researchers | jsonify }},
+  phd: {{ site.data.researchers.phd | jsonify }}
+};
+
+// Build country-based data
+const countryData = {};
+
+// Initialize country data objects
+Object.keys(countryNames).forEach(code => {
+  countryData[code] = { projects: [], people: [] };
+});
+
+// Process projects
+projectsData.forEach(project => {
+  if (project.locations) {
+    project.locations.forEach(loc => {
+      const normalizedLoc = loc.toLowerCase();
+      const countryCodes = locationToCountry[normalizedLoc];
+      if (countryCodes) {
+        // Handle array of country codes (some locations map to multiple countries)
+        countryCodes.forEach(countryCode => {
+          if (countryData[countryCode]) {
+            // Check if project already added to avoid duplicates
+            if (!countryData[countryCode].projects.find(p => p.name === project.name)) {
+              countryData[countryCode].projects.push({
+                name: project.name,
+                logo: project.logo,
+                period: project.period
+              });
+            }
+          }
+        });
+      }
+    });
+  }
+});
+
+// Process researchers (all categories)
+['staff', 'researchers', 'phd'].forEach(category => {
+  if (researchersData[category]) {
+    researchersData[category].forEach(person => {
+      if (person.locations) {
+        person.locations.forEach(loc => {
+          const normalizedLoc = loc.toLowerCase();
+          const countryCodes = locationToCountry[normalizedLoc];
+          if (countryCodes) {
+            // Handle array of country codes
+            countryCodes.forEach(countryCode => {
+              if (countryData[countryCode]) {
+                // Check if person already added to avoid duplicates
+                if (!countryData[countryCode].people.find(p => p.name === (person.short_name || person.name))) {
+                  countryData[countryCode].people.push({
+                    name: person.short_name || person.name,
+                    image: person.image,
+                    title: person.title
+                  });
+                }
+              }
+            });
+          }
+        });
+      }
+    });
+  }
+});
+
+console.log('Country data built:', countryData);
+
+// Country links mapping (using numeric IDs)
+const countryLinks = {
+  604: '/ichydro.github.io/projects.html#peru',      // Peru
+  218: '/ichydro.github.io/projects.html#ecuador',   // Ecuador
+  170: '/ichydro.github.io/projects.html#colombia',  // Colombia
+  862: '/ichydro.github.io/projects.html#venezuela', // Venezuela
+  152: '/ichydro.github.io/projects.html#chile',     // Chile
+  68: '/ichydro.github.io/projects.html#bolivia',    // Bolivia
+  231: '/ichydro.github.io/projects.html#ethiopia',  // Ethiopia
+  356: '/ichydro.github.io/projects.html#india',     // India
+  524: '/ichydro.github.io/projects.html#nepal',     // Nepal
+  826: '/ichydro.github.io/projects.html#uk',        // United Kingdom
+  840: '/ichydro.github.io/projects.html#usa'        // United States
+};
+
+// Get data for a country
+function getCountryData(countryCode) {
+  const countryName = countryNames[countryCode];
+  if (!countryName) {
+    console.log('No country name for code:', countryCode);
+    return null;
+  }
+  
+  const data = countryData[countryCode];
+  if (!data) {
+    console.log('No data found for country code:', countryCode);
+    return null;
+  }
+  
+  console.log('Found data for', countryName, ':', data);
+  
+  // Only return if there's actual content
+  if (data.projects.length === 0 && data.people.length === 0) {
+    console.log('No projects or people for:', countryName);
+    return null;
+  }
+  
+  return { name: countryName, projects: data.projects, people: data.people };
+}
+
+// Build tooltip HTML
+function buildTooltipHTML(data) {
+  const baseUrl = '{{ "/assets/img/" | relative_url }}';
+  
+  let html = `<div style="font-weight: 600; color: #003e79; margin-bottom: 10px; font-size: 1.1rem; border-bottom: 2px solid #003e79; padding-bottom: 5px;">${data.name}</div>`;
+  
+  // Projects section
+  if (data.projects && data.projects.length > 0) {
+    html += '<div style="margin-bottom: 8px;"><strong style="font-size: 0.85rem; color: #666;">Projects:</strong></div>';
+    html += '<div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px;">';
+    data.projects.slice(0, 6).forEach(project => {
+      if (project.logo) {
+        html += `<div style="width: 50px; height: 50px; border: 1px solid #ddd; border-radius: 4px; overflow: hidden; background: white; flex-shrink: 0;" title="${project.name}">
+          <img src="${baseUrl}${project.logo}" style="width: 100%; height: 100%; object-fit: contain; padding: 2px;" alt="${project.name}" onerror="this.style.display='none'">
+        </div>`;
+      }
+    });
+    html += '</div>';
+  }
+  
+  // People section
+  if (data.people && data.people.length > 0) {
+    html += '<div style="margin-bottom: 6px;"><strong style="font-size: 0.85rem; color: #666;">Researchers:</strong></div>';
+    html += '<div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px;">';
+    data.people.slice(0, 8).forEach(person => {
+      if (person.image) {
+        html += `<div style="width: 45px; height: 45px; border-radius: 50%; overflow: hidden; border: 2px solid #003e79; flex-shrink: 0;" title="${person.name}">
+          <img src="${baseUrl}${person.image}" style="width: 100%; height: 100%; object-fit: cover;" alt="${person.name}" onerror="this.style.display='none'">
+        </div>`;
+      }
+    });
+    html += '</div>';
+  }
+  
+  html += '<div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid #ddd; font-size: 0.75rem; color: #003e79; font-weight: 500;">Click to see all projects →</div>';
+  
+  return html;
+}
+
+// Initialize globe
+function initGlobe() {
+  console.log('=== Initializing globe ===');
+  console.log('Country data available:', countryData);
+  
+  // Test data for Peru (604)
+  if (countryData[604]) {
+    console.log('Peru data:', countryData[604]);
+  }
+  
+  const container = d3.select('#globe-container');
+  const width = container.node().getBoundingClientRect().width;
+  const height = 300;
+  
+  const svg = d3.select('#globe')
+    .attr('width', width)
+    .attr('height', height);
+  
+  // Clear any existing content
+  svg.selectAll('*').remove();
+  
+  // Remove any existing tooltips
+  d3.selectAll('.globe-tooltip').remove();
+  
+  // Create tooltip with explicit styles
+  const tooltip = d3.select('body')
+    .append('div')
+    .attr('class', 'globe-tooltip')
+    .style('opacity', 0)
+    .style('position', 'absolute')
+    .style('pointer-events', 'none')
+    .style('background', 'white')
+    .style('border', '2px solid #003e79')
+    .style('border-radius', '8px')
+    .style('padding', '12px')
+    .style('box-shadow', '0 4px 12px rgba(0,0,0,0.15)')
+    .style('max-width', '320px')
+    .style('z-index', '10000')
+    .style('font-family', '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif')
+    .style('display', 'none');
+  
+  console.log('Tooltip element created:', tooltip.node());
+  
+  const projection = d3.geoOrthographic()
+    .scale(Math.min(width, height) / 2.5)
+    .translate([width / 2, height / 2])
+    .clipAngle(90);
+  
+  const path = d3.geoPath().projection(projection);
+  
+  // Add ocean background (brighter blue water)
+  svg.append('circle')
+    .attr('cx', width / 2)
+    .attr('cy', height / 2)
+    .attr('r', projection.scale())
+    .attr('fill', '#4a90e2');
+  
+  // Load world data
+  d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(world => {
+    const countries = topojson.feature(world, world.objects.countries);
+    
+    // Draw countries
+    const countriesGroup = svg.append('g');
+    
+    countriesGroup.selectAll('path')
+      .data(countries.features)
+      .join('path')
+      .attr('class', d => {
+        const code = parseInt(d.id);
+        return researchCountries.has(code) ? 'globe-country highlight' : 'globe-country';
+      })
+      .attr('d', path)
+      .style('fill', d => {
+        const code = parseInt(d.id);
+        return researchCountries.has(code) ? '#003e79' : '#e0e0e0';
+      })
+      .on('click', function(event, d) {
+        const code = parseInt(d.id);
+        console.log('Clicked country code:', code);
+        if (researchCountries.has(code) && countryLinks[code]) {
+          window.location.href = countryLinks[code];
+        }
+      })
+      .on('mouseover', function(event, d) {
+        const code = parseInt(d.id);
+        console.log('=== MOUSEOVER EVENT ===');
+        console.log('Country code:', code);
+        console.log('Is research country?', researchCountries.has(code));
+        
+        if (researchCountries.has(code)) {
+          d3.select(this).style('fill', '#00529e');
+          
+          // Show tooltip
+          const data = getCountryData(code);
+          console.log('Data retrieved:', data);
+          
+          if (data && (data.projects.length > 0 || data.people.length > 0)) {
+            const tooltipHTML = buildTooltipHTML(data);
+            console.log('Tooltip HTML length:', tooltipHTML.length);
+            console.log('Mouse position:', event.pageX, event.pageY);
+            
+            tooltip
+              .html(tooltipHTML)
+              .style('display', 'block')
+              .style('left', (event.pageX + 15) + 'px')
+              .style('top', (event.pageY - 10) + 'px')
+              .style('opacity', 0)
+              .transition()
+              .duration(200)
+              .style('opacity', 1);
+            
+            console.log('Tooltip should now be visible!');
+          } else {
+            console.log('No valid data - not showing tooltip');
+            console.log('Data was:', data);
+          }
+        } else {
+          d3.select(this).style('fill', '#d0d0d0');
+        }
+      })
+      .on('mousemove', function(event, d) {
+        const code = parseInt(d.id);
+        if (researchCountries.has(code)) {
+          const data = getCountryData(code);
+          if (data && (data.projects.length > 0 || data.people.length > 0)) {
+            tooltip
+              .style('left', (event.pageX + 15) + 'px')
+              .style('top', (event.pageY - 10) + 'px');
+          }
+        }
+      })
+      .on('mouseout', function(event, d) {
+        const code = parseInt(d.id);
+        if (researchCountries.has(code)) {
+          d3.select(this).style('fill', '#003e79');
+        } else {
+          d3.select(this).style('fill', '#e0e0e0');
+        }
+        
+        // Hide tooltip
+        tooltip
+          .transition()
+          .duration(200)
+          .style('opacity', 0)
+          .on('end', function() {
+            tooltip.style('display', 'none');
+          });
+      });
+    
+    // Auto-rotation
+    let rotation = 0;
+    let autoRotate = true;
+    
+    function rotate() {
+      if (autoRotate) {
+        rotation += 0.5;
+        projection.rotate([rotation, -10]);
+        countriesGroup.selectAll('path')
+          .attr('d', path)
+          .style('fill', d => {
+            const code = parseInt(d.id);
+            return researchCountries.has(code) ? '#003e79' : '#e0e0e0';
+          });
+      }
+    }
+    
+    const rotateInterval = setInterval(rotate, 50);
+    
+    // Drag functionality
+    const drag = d3.drag()
+      .on('start', function() {
+        autoRotate = false;
+      })
+      .on('drag', function(event) {
+        const rotate = projection.rotate();
+        projection.rotate([
+          rotate[0] + event.dx * 0.5,
+          rotate[1] - event.dy * 0.5
+        ]);
+        countriesGroup.selectAll('path')
+          .attr('d', path)
+          .style('fill', d => {
+            const code = parseInt(d.id);
+            return researchCountries.has(code) ? '#003e79' : '#e0e0e0';
+          });
+      })
+      .on('end', function() {
+        setTimeout(() => {
+          autoRotate = true;
+        }, 2000);
+      });
+    
+    svg.call(drag);
+  });
+}
+
+// Initialize on page load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initGlobe);
+} else {
+  initGlobe();
+}
+
+// Re-initialize on window resize
+let resizeTimeout;
+window.addEventListener('resize', function() {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(initGlobe, 250);
+});
+
+// Image Gallery Auto-fade
+function initGallery() {
+  const images = document.querySelectorAll('.gallery-image');
+  if (images.length === 0) return;
+  
+  let currentIndex = 0;
+  
+  setInterval(() => {
+    // Remove active class from current image
+    images[currentIndex].classList.remove('active');
+    
+    // Move to next image
+    currentIndex = (currentIndex + 1) % images.length;
+    
+    // Add active class to next image
+    images[currentIndex].classList.add('active');
+  }, 4000); // Change image every 4 seconds
+}
+
+// Initialize gallery on page load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initGallery);
+} else {
+  initGallery();
+}
+
+</script>
 

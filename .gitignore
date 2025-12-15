@@ -1,5 +1,48 @@
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# Jekyll
 _site
 .sass-cache
 .jekyll-metadata
 .jekyll-cache
+
+# Ruby/Bundler
+vendor/bundle/
+.bundle/
+Gemfile.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Slack Bot
+slackBot/.env
+slackBot/venv/
+slackBot/test_*.py
+
+# Temporary/Backup files
+*.backup
+*.bak
+*~
+*.swp
+*.swo
+
+# Bibliography working files
+_bibliography/missing_entries.txt
+_bibliography/scopus_*
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log

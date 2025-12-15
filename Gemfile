@@ -1,6 +1,15 @@
 source 'https://rubygems.org'
 
-gem "webrick"
-gem 'jekyll-scholar', group: :jekyll_plugins
+gem "jekyll", "~> 4.3.0"
+gem "webrick", "~> 1.8"
 gem "base64"
 gem "csv"
+gem "logger"
+gem "bigdecimal"
+
+group :jekyll_plugins do
+  gem 'jekyll-scholar'
+  gem 'jekyll-feed'
+  gem 'jekyll-sitemap'
+  gem 'jekyll-seo-tag'
+end

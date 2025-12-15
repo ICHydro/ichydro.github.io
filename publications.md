@@ -10,21 +10,15 @@ Note: nearly all publications are available as open access. Wherever we can affo
 
 #### 2025
 
-{% bibliography --bibliography_list_tag ul --query @*[year=2025]%}
+{% bibliography --bibliography_list_tag ul --query @*[year=2025] %}
 
 #### 2024
 
-{% bibliography --bibliography_list_tag ul --query @*[year=2024]%}
+{% bibliography --bibliography_list_tag ul --query @*[year=2024] %}
 
 #### 2023
 
-- Ross, A.C., Mendoza, M.M., Drenkhan, F., Montoya, N., Baiker, J.R., Mackay, J.D., Hannah, D.M., Buytaert, W., 2023. Seasonal water storage and release dynamics of bofedal wetlands in the Central Andes. Hydrological Processes 37, e14940 
-- Kreibich, H., Schröter, K., Di Baldassarre, G., Van Loon, A., Mazzoleni, M., Abeshu, G.W., Agafonova, S., AghaKouchak, A., Aksoy, H., Alvarez-Garreton, C., Aznar, B., Balkhi, L., Barendrecht, M.H., Biancamaria, S., Bos-Burgering, L., Bradley, C., Budiyono, Y., Buytaert, W., Capewell, L., Carlson, H., Cavus, Y., Couasnon, A., Coxon, G., Daliakopoulos, I., De Ruiter, M.C., Delus, C., Erfurt, M., Esposito, G., François, D., Frappart, F., Freer, J., Frolova, N., Gain, A.K., Grillakis, M., Grima, J.O., Guzmán, D.A., Huning, L.S., Ionita, M., Kharlamov, M., Nguyen Khoi, D., Kieboom, N., Kireeva, M., Koutroulis, A., Lavado-Casimiro, W., Li, H.-Y., LLasat, M.C., Macdonald, D., Mård, J., Mathew-Richards, H., McKenzie, A., Mejia, A., Mendiondo, E.M., Mens, M., Mobini, S., Samprogna Mohor, G., Nagavciuc, V., Ngo-Duc, T., Nguyen, H.T.T., Nhi, P.T.T., Petrucci, O., Hong Quan, N., Quintana-Seguí, P., Razavi, S., Ridolfi, E., Riegel, J., Shibly Sadik, M., Sairam, N., Savelli, E., Sazonov, A., Sharma, S., Sörensen, J., Arguello Souza, F.A., Stahl, K., Steinhausen, M., Stoelzle, M., Szalińska, W., Tang, Q., Tian, F., Tokarczyk, T., Tovar, C., Thu Tran, T.V., Van Huijgevoort, M.H.J., Van Vliet, M.T.H., Vorogushyn, S., Wagener, T., Wang, Y., Wendt, D.E., Wickham, W., Yang, L., Zambrano-Bigiarini, M., Ward, P.J., 2023. Panta Rhei benchmark dataset: socio-hydrological data of paired events of floods and droughts. Earth System Science Data 15, 2009–2023. 
-- Keir, D., Lieberman, B.S., Acocella, V., Buytaert, W., Forman, S.L., Grégoire, M., Kodama, K.P., Lentz, D.R., Sanchez-Valle, C. (2023). Editorial: Horizons in Earth science 2022. Frontiers in Earth Science, 11, 1321937.  
-- Goyburo, A., Rau, P., Lavado-Casimiro, W., ...Cuadros-Adriazola, J., Horna, D., 2023. Assessment of Present and Future Water Security under Anthropogenic and Climate Changes Using WEAP Model in the Vilcanota-Urubamba Catchment, Cusco, Peru. Water 15, 1439.
-- Yasmin, T., Khamis, K., Ross, A., Sen, S., Sharma, A., Sen, D., Sen, S., Buytaert, W., Hannah, D. M. (2023). [Brief communication: Inclusiveness in designing an early warning system for flood resilience](https://doi.org/10.5194/nhess-23-667-2023), Nat. Hazards Earth Syst. Sci., 23, 667–674, DOI: 10.5194/nhess-23-667-2023
-- Drenkhan, F., Buytaert, W., Mackay, J.D., Barrand, N.E., Hannah, D.M., Huggel, C. (2023). [Looking beyond glaciers to understand mountain water security](https://doi.org/10.1038/s41893-022-00996-4), Nature Sustainability 6, 130–138. DOI: 10.1038/s41893-022-00996-4
-- Jayaramu, V., Zulkafli, Z., De Stercke, S. Buytaert, W., Rahmat, F., Abdul Rahman, R. Z., Ishak, A. J., Tahir, W., Ab Rahman, J., Mohd Fuzi, N. M. H., 2023. [Leptospirosis modelling using hydrometeorological indices and random forest machine learning](https://doi.org/10.1007/s00484-022-02422-y), Int J Biometeorol 67, 423–437.
+{% bibliography --bibliography_list_tag ul --query @*[year=2023] %}
 
 #### 2022
 

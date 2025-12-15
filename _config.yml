@@ -13,8 +13,8 @@
 
 #theme: jekyll-agency
 
-url    : "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
+url    : "https://trowan92.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/ichydro.github.io" # the subpath of your site, e.g. /blog
 
 title      : ichydro
 email      : your-email@example.com #this is also the email contact forms will go to
@@ -38,7 +38,22 @@ markdown: kramdown
 # Details: https://help.formspree.io/hc/en-us/articles/360017735154-How-to-prevent-spam
 # formspree_form_path: "f/a_form_id"
 
+
 scholar:
   style: _bibliography/myapa.csl
   order: descending
   bibliography_template: bib
+  bold_authors:
+    - Buytaert, W*
+    - Howard, B*
+    - Becker, R*
+    - Ross, A*
+    - Atkins, O*
+    - Cuadros-Adriazola, J*
+    - Quenta-Herrera, E*
+    - Quenta, E*
+    - Day, M*
+    - Tumelty, L*
+    - Sadeqi, D*
+    - Gimeno, C*
+

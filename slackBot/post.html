@@ -1,0 +1,215 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%B %d, %Y" }}
+      </time>
+      {% if page.author %}
+        <span class="post-author">by {{ page.author }}</span>
+      {% endif %}
+    </div>
+    
+    {% if page.tags %}
+    <div class="post-tags">
+      {% for tag in page.tags %}
+        <span class="tag-badge tag-{{ tag | slugify }}">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+  
+  {% if page.image %}
+  <div class="post-image">
+    <img src="{{ page.image }}" alt="{{ page.title }}" loading="lazy">
+  </div>
+  {% endif %}
+  
+  <div class="post-content">
+    {{ content }}
+  </div>
+  
+  <footer class="post-footer">
+    <a href="{{ '/news' | relative_url }}" class="back-link">← Back to News</a>
+  </footer>
+</article>
+
+<style>
+/* Post page styling */
+.post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.post-header {
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e1e4e8;
+  padding-bottom: 1.5rem;
+}
+
+.post-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  color: #24292e;
+}
+
+.post-meta {
+  color: #586069;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.post-author {
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+
+.post-author::before {
+  content: "•";
+  margin-right: 0.5rem;
+}
+
+.post-tags {
+  margin-top: 1rem;
+}
+
+.tag-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  margin: 0.25rem 0.25rem 0.25rem 0;
+  background-color: #0366d6;
+  color: white;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.tag-badge:hover {
+  background-color: #0256c7;
+}
+
+/* Specific tag colors - customize as needed */
+.tag-water-quality { background-color: #1e88e5; }
+.tag-smartwater { background-color: #43a047; }
+.tag-sensor-deployment { background-color: #fb8c00; }
+.tag-research { background-color: #8e24aa; }
+.tag-lorawan { background-color: #00acc1; }
+.tag-thingsboard { background-color: #3f51b5; }
+.tag-buoy { background-color: #00897b; }
+.tag-river-chess { background-color: #5e35b1; }
+.tag-data-analysis { background-color: #e53935; }
+.tag-fieldwork { background-color: #6d4c41; }
+.tag-collaboration { background-color: #546e7a; }
+.tag-equipment { background-color: #757575; }
+.tag-maintenance { background-color: #f4511e; }
+.tag-news { background-color: #0366d6; }
+.tag-announcement { background-color: #d32f2f; }
+
+.post-image {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.post-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-content {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #24292e;
+}
+
+.post-content p {
+  margin-bottom: 1.5rem;
+}
+
+.post-content h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+.post-content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.post-content a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.post-content a:hover {
+  text-decoration: underline;
+}
+
+.post-content code {
+  background-color: #f6f8fa;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.post-content pre {
+  background-color: #f6f8fa;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.post-content pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.post-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e1e4e8;
+}
+
+.back-link {
+  color: #0366d6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .post {
+    padding: 1rem;
+  }
+  
+  .post-title {
+    font-size: 2rem;
+  }
+  
+  .post-content {
+    font-size: 1rem;
+  }
+}
+</style>
