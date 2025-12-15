@@ -3,9 +3,7 @@ name: Build and Deploy Jekyll Site
 on:
   push:
     branches:
-      - people-page-update
       - main
-  pull_request:
 
 permissions:
   contents: read
@@ -38,7 +36,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
 
   deploy:
-    if: github.ref == 'refs/heads/people-page-update' || github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
