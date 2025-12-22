@@ -294,3 +294,84 @@ past_phd_students:
     bio: "Will Veness is pursuing doctoral research in hydrology and water resources, contributing to the understanding of complex hydrological systems."
     social:
       linkedin: "https://www.linkedin.com/in/will-veness/"
+
+past_members:
+  - name: "Alison Prior"
+    social:
+      researchgate: "https://www.researchgate.net/profile/Alison_Prior"
+
+  - name: "Neeraj Sah"
+    social:
+      linkedin: "https://www.linkedin.com/in/neeraj-sah/"
+
+  - name: "Will Veness"
+    social:
+      linkedin: "https://www.linkedin.com/in/will-veness/"
+
+  - name: "Anna Twomlow"
+    social:
+      linkedin: ""
+
+  - name: "Charles Zogheib"
+    social:
+      linkedin: ""
+
+  - name: "Simon De Stercke"
+    social:
+      linkedin: ""
+
+  - name: "Hsi-Kai Chou"
+    social:
+      linkedin: ""
+
+  - name: "Boris Ochoa"
+    social:
+      linkedin: ""
+
+  - name: "Peter Blair"
+    social:
+      linkedin: ""
+
+  - name: "Sam Grainger"
+    social:
+      linkedin: ""
+
+  - name: "Tilashwork Chanie"
+    social:
+      linkedin: ""
+
+  - name: "Xi Liu"
+    social:
+      linkedin: ""
+
+  - name: "Jimmy O'Keeffe"
+    social:
+      linkedin: ""
+
+  - name: "Bastian Manz"
+    social:
+      linkedin: ""
+
+  - name: "Simon Moulds"
+    social:
+      linkedin: ""
+
+  - name: "Claudia Vitolo"
+    social:
+      linkedin: ""
+
+  - name: "Gina Tsarouchi"
+    social:
+      linkedin: ""
+
+  - name: "Susana Almeida"
+    social:
+      linkedin: ""
+
+  - name: "Zed Zulkafli"
+    social:
+      linkedin: ""
+
+  - name: "Emma Bergin"
+    social:
+      linkedin: ""
