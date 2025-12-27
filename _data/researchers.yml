@@ -272,25 +272,84 @@ phd_students:
     social:
       orcid: "https://orcid.org/0000-0003-0286-9802"
 
-past_phd_students:
+
+past_members:
   - name: "Alison Prior"
-    title: "Former PhD Student"
-    supervisor: "Colin Prentice (main supervisor)"
-    image: "placeholder.jpg"
-    bio: "Alison Prior is conducting research at the intersection of hydrology and ecosystem dynamics, under the main supervision of Colin Prentice."
     social:
-      researchgate: "https://www.researchgate.net/profile/Alison_Prior"
+      researchgate: "https://www.linkedin.com/in/alisonprior/"
 
   - name: "Neeraj Sah"
-    title: "Former PhD Student"
-    image: "placeholder.jpg"
-    bio: "Neeraj Sah is working on hydrological research with applications to water management and environmental sustainability."
     social:
-      linkedin: "https://www.linkedin.com/in/neeraj-sah/"
+      linkedin: "https://www.linkedin.com/in/neeraj-sah-74134862/"
 
   - name: "Will Veness"
-    title: "Former PhD Student"
-    image: "placeholder.jpg"
-    bio: "Will Veness is pursuing doctoral research in hydrology and water resources, contributing to the understanding of complex hydrological systems."
     social:
-      linkedin: "https://www.linkedin.com/in/will-veness/"
+      linkedin: "https://www.linkedin.com/in/william-veness-9512a6119/"
+
+  - name: "Anna Twomlow"
+    social:
+      linkedin: "https://www.linkedin.com/in/annatwomlow/"
+
+  - name: "Charles Zogheib"
+    social:
+      linkedin: "https://www.linkedin.com/in/charleszogheib/"
+
+  - name: "Simon De Stercke"
+    social:
+      linkedin: "https://www.linkedin.com/in/simondestercke/"
+
+  - name: "Hsi-Kai Chou"
+    social:
+      linkedin: ""
+
+  - name: "Boris Ochoa"
+    social:
+      linkedin: "https://www.linkedin.com/in/topicster/"
+
+  - name: "Peter Blair"
+    social:
+      linkedin: "https://www.linkedin.com/in/peter-denholm-blair-b740661a1/"
+
+  - name: "Sam Grainger"
+    social:
+      linkedin: "https://www.linkedin.com/in/sam-grainger-6a4a2239/"
+
+  - name: "Tilashwork Chanie"
+    social:
+      linkedin: ""
+
+  - name: "Xi Liu"
+    social:
+      linkedin: ""
+
+  - name: "Jimmy O'Keeffe"
+    social:
+      linkedin: "https://www.linkedin.com/in/jimmy-o-keeffe-08017458/"
+
+  - name: "Bastian Manz"
+    social:
+      linkedin: "https://www.linkedin.com/in/bastian-manz-b3271532/"
+
+  - name: "Simon Moulds"
+    social:
+      linkedin: "https://www.linkedin.com/in/simon-moulds-80ab06b8/"
+
+  - name: "Claudia Vitolo"
+    social:
+      linkedin: "https://www.linkedin.com/in/claudiavitolo/"
+
+  - name: "Gina Tsarouchi"
+    social:
+      linkedin: "https://www.linkedin.com/in/gina-tsarouchi-b5b71529/"
+
+  - name: "Susana Almeida"
+    social:
+      linkedin: "https://www.linkedin.com/in/susana-almeida-90591236/"
+
+  - name: "Zed Zulkafli"
+    social:
+      linkedin: "https://www.linkedin.com/in/zed-diyana-zulkafli-b215746b/"
+
+  - name: "Emma Bergin"
+    social:
+      linkedin: "https://www.linkedin.com/in/emma-bergin-52459687/"

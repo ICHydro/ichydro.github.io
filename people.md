@@ -340,33 +340,20 @@ style: header
 {% endfor %}
 
 <div class="section-title">
-  <h3>Former PhD Students</h3>
+  <h3>Former Group Members</h3>
   <div class="divider"></div>
 </div>
 
-<div style="max-width: 800px; margin: 0 auto 60px;">
-  <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
-    <li>Alison Prior (main supervisor: Colin Prentice)</li>
-    <li>Neeraj Sah (2022) - Now at CEH, UK</li>
-    <li>Will Veness (2023) - Research Consultant</li>
-    <li>Anna Twomlow (2021)</li>
-    <li>Charles Zogheib (2021)</li>
-    <li>Simon De Stercke (2020)</li>
-    <li>Hsi-Kai Chou (2020) - Next destination: University of Cardiff</li>
-    <li>Boris Ochoa (2019) - Next destination: ATUK, Ecuador</li>
-    <li>Peter Blair (2018) - Now at Thames Water, UK</li>
-    <li>Sam Grainger (2018) - Now at University of Leeds, UK</li>
-    <li>Tilashwork Chanie (2018)</li>
-    <li>Xi Liu (2018)</li>
-    <li>Jimmy O'Keeffe (2016)</li>
-    <li>Bastian Manz (2016) - Now at Willis Re, UK</li>
-    <li>Simon Moulds (2016) - Now at the University of Exeter, UK</li>
-    <li>Claudia Vitolo (2015) - Now at ECMWF, Reading, UK</li>
-    <li>Gina Tsarouchi (2015) - Now at HR Wallingford, UK</li>
-    <li>Susana Almeida (2014) - Now at University of Bristol, UK</li>
-    <li>Zed Zulkafli (2014) - Next destination: Universiti Putra Malaysia</li>
-    <li>Emma Bergin (2013) - Next destination: Flood Re, London, UK</li>
-  </ul>
+<div style="max-width: 800px; margin: 0 auto 60px; text-align: center;">
+  <p style="line-height: 2; font-size: 16px;">
+    {% for person in site.data.researchers.past_members %}
+      {% if person.social.linkedin %}
+        <a href="{{ person.social.linkedin }}" target="_blank" style="text-decoration: none; color: #333; border-bottom: 1px solid #ccc;">{{ person.name }}</a>{% unless forloop.last %}, {% endunless %}
+      {% else %}
+        <span style="color: #333;">{{ person.name }}</span>{% unless forloop.last %}, {% endunless %}
+      {% endif %}
+    {% endfor %}
+  </p>
 </div>
 
 <script>

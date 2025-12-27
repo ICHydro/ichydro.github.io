@@ -8,6 +8,33 @@ style: header
 
 Note: nearly all publications are available as open access. Wherever we can afford it, we have purchased open access through the publisher (so-called [gold open access](https://en.wikipedia.org/wiki/Open_access#Models). If an article is not available on the publisher's website, then please look in our <a href="https://spiral.imperial.ac.uk/handle/10044/1/10205/simple-search?filtername=composite&amp;filterquery=Buytaert&amp;filter_field_1=author&amp;filter_type_1=equals&amp;filter_value_1=Buytaert%2C+W&amp;sort_by=score&amp;order=desc&amp;rpp=10&amp;etal=5&amp;start=0">university repository</a> (<a href="https://en.wikipedia.org/wiki/Self-archiving"><i>green open access</i></a>) or follow the <i>pdf</i> link next to the reference.
 
+<div class="section-title">
+  <h3>Recent Highlights</h3>
+  <div class="divider"></div>
+</div>
+
+<div class="publication-gallery">
+  {% for pub in site.data.highlighted_publications.publications %}
+  <div class="publication-card">
+    <div class="publication-icon" style="background-image: url('{{ pub.image | relative_url }}');"></div>
+    <div class="publication-info">
+      <h4>{{ pub.title }}</h4>
+      <p class="authors">{{ pub.authors }}</p>
+      <p class="journal-info">{{ pub.journal }} ({{ pub.year }}){% if pub.volume %}, Vol. {{ pub.volume }}{% endif %}</p>
+      <p class="description">{{ pub.description }}</p>
+      <a href="{{ pub.url }}" target="_blank" class="publication-link">
+        Read Paper <i class="fas fa-external-link-alt"></i>
+      </a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="section-title" style="margin-top: 80px;">
+  <h3>All Publications</h3>
+  <div class="divider"></div>
+</div>
+
 #### 2025
 
 {% bibliography --bibliography_list_tag ul --query @*[year=2025] %}
