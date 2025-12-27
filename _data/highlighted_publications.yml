@@ -11,7 +11,7 @@ publications:
     doi: "10.1016/j.watres.2025.123987"
     url: "https://www.sciencedirect.com/science/article/pii/S0043135425008954"
     description: "Development of a comprehensive framework for assessing the ecological impacts of small hydropower installations on river systems."
-    icon: "fas fa-water"
+    image: "/assets/img/A framework.jpg"
     
   - title: "Hydrological impact of small hydropower development on mountain rivers in Southwest China"
     authors: "Li, X., Buytaert, W., Tang, Q., et al."
@@ -21,7 +21,7 @@ publications:
     doi: "10.1016/j.jhydrol.2025.133078"
     url: "https://www.sciencedirect.com/science/article/pii/S0022169425004160"
     description: "Analysis of hydrological impacts from small hydropower development and the role of environmental flows in mountain river systems."
-    icon: "fas fa-mountain"
+    image: "/assets/img/Hydrological.jpg"
     
   - title: "Assessing Mountain Soil Water Storage and Release in a Colombian Páramo With APSIS-InSAR Data"
     authors: "Bradley, A.V., Large, D.J., Naranjo, J.M.P., et al."
@@ -31,7 +31,7 @@ publications:
     doi: "10.1002/hyp.70214"
     url: "https://onlinelibrary.wiley.com/doi/10.1002/hyp.70214"
     description: "Novel application of satellite InSAR data to assess water storage dynamics in high-altitude páramo ecosystems."
-    icon: "fas fa-satellite"
+    image: "/assets/img/Assessing.jpg"
     
   - title: "Humanitarian management of drought needs better water security data"
     authors: "Veness, W.A., Balfour, N., O'Keeffe, J., Buytaert, W."
@@ -41,4 +41,4 @@ publications:
     doi: "10.1111/disa.12687"
     url: "https://onlinelibrary.wiley.com/doi/10.1111/disa.12687"
     description: "Critical analysis of water security data needs for effective humanitarian drought response and management."
-    icon: "fas fa-hand-holding-water"
+    image: "/assets/img/disa12687-fig-0004-m.jpg"

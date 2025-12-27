@@ -16,9 +16,7 @@ Note: nearly all publications are available as open access. Wherever we can affo
 <div class="publication-gallery">
   {% for pub in site.data.highlighted_publications.publications %}
   <div class="publication-card">
-    <div class="publication-icon">
-      <i class="{{ pub.icon }}"></i>
-    </div>
+    <div class="publication-icon" style="background-image: url('{{ pub.image | relative_url }}');"></div>
     <div class="publication-info">
       <h4>{{ pub.title }}</h4>
       <p class="authors">{{ pub.authors }}</p>
