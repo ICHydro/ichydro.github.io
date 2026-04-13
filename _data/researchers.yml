@@ -145,6 +145,19 @@ researchers:
       linkedin: "https://www.linkedin.com/in/luke-tumelty-a9949a1a1"
       orcid: "https://orcid.org/0009-0002-3554-2646"
 
+  - name: "Dr Steph Wills"
+    short_name: "Steph"
+    title: "Research Software Engineer"
+    image: "Steph.jpg"
+    bio: "Steph is a Research Software Engineer at Imperial College London, where she supports software development within the Hydrology and Water Resources research group."
+    keywords:
+      - "Research software"
+    locations:
+      - "UK"
+    social:
+      linkedin: "https://www.linkedin.com/in/steph-wills-989254143/"
+
+
 phd_students:
   - name: "Olivia Atkins"
     short_name: "Olivia"
