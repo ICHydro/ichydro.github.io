@@ -63,15 +63,17 @@ The website repository structure is shown below. Instructions on how to make rou
 News items are stored in [`_data/news.yml`](_data/news.yml) and written in the following format:
 
 ```yaml
-- id: [NEXT_NUMBER]
-  short_title: "[Brief Title]"
-  title: "[Full Title]"
-  date: YYYY-MM-DD
-  description: "[1-2 sentence summary]"
-  link: "[URL if applicable]"
-  author: "[Author name]"
-  image: "[Image URL or path]"
+- id: [NEXT_NUMBER]                       # Unique number; use the next available number
+  short_title: "[Brief Title]"            # Brief title used in listings
+  title: "[Full Title]"                   # Full title for news page
+  date: YYYY-MM-DD                        # Publication date
+  description: "[1-2 sentence summary]"   # Brief summary
+  link: "[URL if applicable]"             # Optional URL, e.g. LinkedIn post or article
+  author: "[Author name]"                 # Name of team member associated with news
+  image: "[Image URL or path]"            # Optional URL or path to image in assets/img folder
 ```
+
+**Note**: You can link directly to a LinkedIn image address (LinkedIn image URLs are long and may change over time, so consider downloading and hosting it instead).
 
 For example:
 
