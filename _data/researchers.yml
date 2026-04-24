@@ -30,25 +30,6 @@ researchers:
       linkedin: "https://www.linkedin.com/in/rike-becker-27475280/"
       orcid: "https://orcid.org/0000-0002-9040-1355"
 
-  - name: "Clara Gimeno Jésus"  
-    short_name: "Clara"
-    title: "Research Assistant"
-    image: "Clara.png"
-    bio: "Clara is a Research Assistant at Imperial College London, where she investigates the impacts of nature-based solutions on water security, with a particular focus on the Peruvian Andes. Her work combines hydrological modelling with systems thinking approaches to evaluate intervention impacts and develop decision-support tools for practitioners. She collaborates closely with policy-makers, water utilities, local communities and academic partners in Peru to co-produce knowledge and ensure that research insights are grounded in local evidence, ultimately informing sustainable, inclusive and resilient water management strategies."
-    keywords:
-      - "nature-based solutions"
-      - "water security"
-      - "mountain hydrology"
-      - "climate adaptation"
-      - "systems thinking"
-    locations:
-      - "Peru"
-      - "Lima"
-      - "Vilcanota"
-    social:
-      researchgate: "https://www.researchgate.net/profile/Clara_Gimeno_Jesus?ev=hdr_xprf"
-      linkedin: "https://www.linkedin.com/in/clara-gimeno-jésus/"
-
   - name: "Dr Ben Howard"
     short_name: "Ben"
     title: "Research Associate"
@@ -240,18 +221,6 @@ phd_students:
     social:
       linkedin: "https://www.linkedin.com/in/ruiqi-gu-3a9968235/?originalSubdomain=uk"
 
-  - name: "Tom Gribbin"
-    short_name: "Tom"
-    title: "PhD Student"
-    image: "Gribbin.png"
-    bio: "Tom is a PhD Student, cohosted with BGS"
-    keywords:
-      - "Mountain hydrology"
-    locations:
-      - "Peru"
-    social:
-      linkedin: "https://www.linkedin.com/in/tom-gribbin-340b3917a/"
-
   - name: "Anthony C. Ross"
     short_name: "Anthony"
     title: "PhD Student"
@@ -287,6 +256,14 @@ phd_students:
 
 
 past_members:
+  - name: "Clara Gimeno Jésus"
+    social:
+      linkedin: "https://www.linkedin.com/in/clara-gimeno-jésus/"
+
+  - name: "Tom Gribbin"
+    social:
+      linkedin: "https://www.linkedin.com/in/tom-gribbin-340b3917a/"
+
   - name: "Alison Prior"
     social:
       researchgate: "https://www.linkedin.com/in/alisonprior/"
