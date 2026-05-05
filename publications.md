@@ -35,6 +35,10 @@ Note: nearly all publications are available as open access. Wherever we can affo
   <div class="divider"></div>
 </div>
 
+#### 2026
+
+{% bibliography --bibliography_list_tag ul --query @*[year=2026] %}
+
 #### 2025
 
 {% bibliography --bibliography_list_tag ul --query @*[year=2025] %}
