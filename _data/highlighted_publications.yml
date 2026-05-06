@@ -10,9 +10,9 @@ publications:
     volume: "13"
     doi: "10.1038/s41597-026-07020-w"
     url: "https://doi.org/10.1038/s41597-026-07020-w"
-    description: ""
+    description: "A first global high-resolution map of high-altitude wetlands for detecting wetland occurrences in remote mountain regions."
     image: "/assets/img/highlights/Becker2026.jpg"
-    
+
   - title: "Integrating SMART principles in flood early warning system design in the Himalayas"
     authors: "Dixit, S., Sen, S., Yasmin, T., et al."
     year: 2026
@@ -20,9 +20,9 @@ publications:
     volume: "26"
     doi: "10.5194/nhess-26-1251-2026"
     url: "https://nhess.copernicus.org/articles/26/1251/2026/"
-    description: ""
+    description: "A low-cost, community-led hydrometeorological monitoring network using SMART principles to improve urban flood early warning systems in data-scarce mountain regions."
     image: "/assets/img/highlights/Dixit2026.png"
-    
+
   - title: "Quantifying and Regionalizing Land Use Impacts on Catchment Response Times With High-Frequency Observations"
     authors: "Ross, A.C., Ochoa-Tocachi, B., Bonnesoeur, V., et al."
     year: 2026
@@ -30,9 +30,9 @@ publications:
     volume: "62"
     doi: "https://doi.org/10.1029/2025WR040922"
     url: "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2025WR040922"
-    description: ""
+    description: "Leveraging participatory monitoring to produce quantitative evidence for land and water management."
     image: "/assets/img/highlights/Ross2026.jpg"
-    
+
   - title: "Palaeoglacier reconstruction and dynamics of Cordillera Vilcanota in the tropical high Peruvian Andes"
     authors: "Davies, B., Gribbin, T., King, O., et al."
     year: 2026
@@ -40,5 +40,6 @@ publications:
     volume: "51"
     doi: "https://doi.org/10.1002/esp.70246"
     url: "https://onlinelibrary.wiley.com/doi/abs/10.1002/esp.70246"
-    description: ""
+    description: "A geomorphological analysis of the Cordillera Vilcanota in the high Peruvian Andes to understand the dynamics and behaviour of tropical palaeoglaciers."
     image: "/assets/img/highlights/Davies2026.jpg"
+  
