@@ -138,6 +138,18 @@ researchers:
     social:
       linkedin: "https://www.linkedin.com/in/steph-wills-989254143/"
 
+  - name: "Dr Amir Massoumian"
+    short_name: "Amir"
+    title: "Project Manager"
+    image: "Amir.jpg"
+    bio: "Amir is a Project Manager at Imperial. He has managed a variety of grants across ERC, AHRC, and UKRI-funded projects. "
+    keywords:
+      - "Project Management"
+      - "Research Infrastructure"
+    locations:
+      - "UK"
+    social:
+
 
 phd_students:
   - name: "Olivia Atkins"
