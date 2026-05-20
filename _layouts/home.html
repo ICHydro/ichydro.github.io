@@ -183,15 +183,13 @@ layout: default
 
 .news-description {
   font-size: 0.9rem;
+  height: 4.05rem;
+  overflow-y: auto;
   color: #444;
   margin-bottom: 0.75rem;
   line-height: 1.5;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  flex-grow: 1;
+  overflow-wrap: break-word;
+  flex-grow: 0;
 }
 
 .news-link {

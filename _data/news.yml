@@ -1,3 +1,21 @@
+- id: 6
+  short_title: "Schmidt Sciences project kickoff"
+  title: "Schmidt Sciences Project Kickoff: Unlocking Local Knowledge Production for Global Water Reanalysis"
+  date: 2026-05-19
+  description: "Last week, we held the kickoff meeting for the Schmidt Sciences project (Unlocking Local Knowledge Production for Global Water Reanalysis) at Imperial College London. Our international team of researchers gathered to connect across disciplines and begin shaping the work ahead. Over the course of the meetings, we explored how local knowledge and hydrological modelling can be brought together to better understand water systems. Excited for the research collaboration that lies ahead!"
+  link: https://www.imperial.ac.uk/news/articles/engineering/civil-engineering/2026/bridging-water-data-gaps-new-project-unites-global-scientists-and-local-communities/
+  author: "ICHydro Team"
+  image: assets/img/news/2026.05.18_schmidt_kickoff.jpg
+
+- id: 5
+  short_title: "New paper in Scientific Data"
+  title: "New paper: A map of high-altitude wetlands in the world's major mountain regions"
+  date: 2026-05-18
+  description: "Our new paper, 'A map of high-altitude wetlands in the world's major mountain regions', by Rike Becker et al., was recently published in Scientific Data. The paper provides a first global high-resolution map of high-altitude wetlands for detecting wetland occurrences in remote mountain regions."
+  link: https://www.nature.com/articles/s41597-026-07020-w
+  author: "ICHydro Team"
+  image: assets/img/highlights/Becker2026.png
+
 - id: 4
   short_title: "Zhurucay Ecohydrological Observatory Update"
   title: "#páramoresearch #fieldwork #fieldscience #climatescience #ecosystemservices #andeanecosystems | Martha Day"
@@ -6,7 +24,8 @@
   link: "https://www.linkedin.com/posts/martha-day-91318718b_paerramoresearch-fieldwork-fieldscience-activity-7400926441191788544-czX5?utm_source=share&utm_medium=member_desktop&rcm=ACoAABomsAkBIh1yXrGYsiNLdAli9PtVquvr8lU"
   author: "Martha Day"
   image: "https://media.licdn.com/dms/image/v2/D4E22AQF-XN4JzLtzSw/feedshare-shrink_800/B4EZrVTzw9KMAg-/0/1764515560478?e=2147483647&v=beta&t=Wgf-6Ph44VjKytloqZfAGFQEFVF_tfpQV2BqrKWvOaw"
-- id: 1
+
+- id: 3
   short_title: "Reflections from the IPCC Meeting"
   title: "IPCC First Lead Author Meeting in Paris"
   date: 2025-12-13
@@ -24,7 +43,7 @@
   author: "ICHydro Team"
   image: "https://media.licdn.com/dms/image/v2/D4E22AQHZd9ehEyByBg/feedshare-shrink_800/B4EZrqMrM1KMAg-/0/1764865786619?e=2147483647&v=beta&t=UDhOO56voUi6mKMEpN6PI05ogcmBzYHhv3ifQCppZh8"
 
-- id: 3
+- id: 1
   short_title: "Multi Moisture Update"
   title: "Martha Day builds soil moisture sensors"
   date: 2025-12-01
