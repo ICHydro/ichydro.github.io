@@ -1,16 +1,16 @@
 - id: 6
   short_title: "Schmidt Sciences project kickoff"
   title: "Schmidt Sciences Project Kickoff: Unlocking Local Knowledge Production for Global Water Reanalysis"
-  date: 2026-05-18
+  date: 2026-05-19
   description: "Last week, we held the kickoff meeting for the Schmidt Sciences project (Unlocking Local Knowledge Production for Global Water Reanalysis) at Imperial College London. Our international team of researchers gathered to connect across disciplines and begin shaping the work ahead. Over the course of the meetings, we explored how local knowledge and hydrological modelling can be brought together to better understand water systems. Excited for the research collaboration that lies ahead!"
   link: https://www.imperial.ac.uk/news/articles/engineering/civil-engineering/2026/bridging-water-data-gaps-new-project-unites-global-scientists-and-local-communities/
   author: "ICHydro Team"
-  image:
+  image: assets/img/news/2026.05.18_schmidt_kickoff.jpg
 
 - id: 5
   short_title: "New paper in Scientific Data"
   title: "New paper: A map of high-altitude wetlands in the world's major mountain regions"
-  date: 2026-05-19
+  date: 2026-05-18
   description: "Our new paper, 'A map of high-altitude wetlands in the world's major mountain regions', by Rike Becker et al., was recently published in Scientific Data. The paper provides a first global high-resolution map of high-altitude wetlands for detecting wetland occurrences in remote mountain regions."
   link: https://www.nature.com/articles/s41597-026-07020-w
   author: "ICHydro Team"
