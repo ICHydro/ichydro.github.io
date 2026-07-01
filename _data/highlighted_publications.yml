@@ -3,6 +3,16 @@
 # Add new publications at the top of this list
 
 publications:
+  - title: "The long-term hazard cascade of an unprecedented wildfire in a tropical mountain ecosystem"
+    authors: "Veness, W., Day, M., Ross, A.C., et al."
+    year: 2026
+    journal: "Natural Hazards and Earth System Sciences"
+    volume: "26"
+    doi: "https://doi.org/10.5194/nhess-26-3045-2026"
+    url: "https://nhess.copernicus.org/articles/26/3045/2026/"
+    description: "Communities in the lowlands of the Rwenzori Mountains have been exposed to a series of cascading hazards including flooding, landslides, erosion and water pollution following an unprecedented 2012 wildfire in the high mountains. Here, our team analyses the long-term cascade which followed the wildfire, highlighting the emergent risk of high-mountain tropical fires as a priority for disaster management."
+    image: "/assets/img/highlights/Veness2026.jpg"
+  
   - title: "Spatial Patterns of Glacier-Wetland Hydrological Connectivity in the Rapidly Deglaciating Peruvian Andes"
     authors: "Xuan, D., Becker, R., Vargas Valverde, M., et al."
     year: 2026
@@ -32,14 +42,4 @@ publications:
     url: "https://nhess.copernicus.org/articles/26/1251/2026/"
     description: "A low-cost, community-led hydrometeorological monitoring network using SMART principles to improve urban flood early warning systems in data-scarce mountain regions."
     image: "/assets/img/highlights/Dixit2026.png"
-
-  - title: "Quantifying and Regionalizing Land Use Impacts on Catchment Response Times With High-Frequency Observations"
-    authors: "Ross, A.C., Ochoa-Tocachi, B., Bonnesoeur, V., et al."
-    year: 2026
-    journal: "Water Resources Research"
-    volume: "62"
-    doi: "https://doi.org/10.1029/2025WR040922"
-    url: "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2025WR040922"
-    description: "Leveraging participatory monitoring to produce quantitative evidence for land and water management."
-    image: "/assets/img/highlights/Ross2026.jpg"
   
