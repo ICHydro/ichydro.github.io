@@ -1,3 +1,21 @@
+- id: 11
+  short_title: "Paint Lab 2026"
+  title: "Paint Lab: Great Exhibition Road Festival"
+  date: 2026-06-10
+  description: "As part of this year's Great Exhibition Road Festival, our group's research was brought to life as part of Paint Lab. Over the weekend, artist Raman Uppal painted an impactful mural, titled Common Ground, that highlights the importance of working with local communities throughout the research cycle."
+  link: https://www.greatexhibitionroadfestival.co.uk/about-us/explore/paint-lab-2026/
+  author: "ICHydro Team"
+  image: assets/img/news/2026.06.10_paintlab.jpg
+
+- id: 10
+  short_title: "The Great Exhibition Road Festival"
+  title: "Great Exhibition Road Festival 2026"
+  date: 2026-06-08
+  description: "I had a great time at the Great Exhibition Road Festival this weekend talking all things wild swimming, water quality, and low-cost environmental sensing! Our exhibit explored where people can find information on safe wild swimming spots in London, while also showcasing some of the low-cost sensors our research group is developing to monitor soil moisture, river levels, and water quality..."
+  link: "https://www.linkedin.com/posts/olivia-atkins-5618a1202_i-had-a-great-time-at-the-great-exhibition-ugcPost-7470135036126576641-N9go/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADO-s9kBU_rqV3JLlVP0lmI69A0YgR6bQ2U"
+  author: "Olivia Atkins"
+  image: assets/img/news/2026.06.08_exhibitionroad.jpeg
+
 - id: 9
   short_title: "New paper in Environmental Research Letters"
   title: "New paper: Coproduced assessments of climate change adaptation reveal equity challenges in locally led approaches"
