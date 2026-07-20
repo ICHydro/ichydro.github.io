@@ -3,6 +3,16 @@
 # Add new publications at the top of this list
 
 publications:
+  - title: "Coproduced assessments of climate change adaptation reveal equity challenges in locally led approaches"
+    authors: "Howard, B.C., Awuni, C., Agyei-Mensah, S., et al."
+    year: 2026
+    journal: "Environmental Research Letters"
+    volume: "21"
+    doi: "10.1088/1748-9326/ae63e5"
+    url: "https://doi.org/10.1088/1748-9326/ae63e5"
+    description: "Researchers from ICHydro, working closely in international and interdisciplinary teams, have developed a new co-produced approach to quantitatively assess climate change adaptation using local knowledge and priorities, applying it to flood risk in Tamale, Ghana. The study found that community-led and behavioural measures, such as collective action and tree planting, were the most effective at reducing flood risk overall, while also highlighting that current locally led adaptation efforts do not fully address existing inequalities."
+    image: "/assets/img/highlights/Howard2026.jpg"
+
   - title: "The long-term hazard cascade of an unprecedented wildfire in a tropical mountain ecosystem"
     authors: "Veness, W., Day, M., Ross, A.C., et al."
     year: 2026
@@ -32,14 +42,3 @@ publications:
     url: "https://doi.org/10.1038/s41597-026-07020-w"
     description: "A first global high-resolution map of high-altitude wetlands for detecting wetland occurrences in remote mountain regions."
     image: "/assets/img/highlights/Becker2026.png"
-
-  - title: "Integrating SMART principles in flood early warning system design in the Himalayas"
-    authors: "Dixit, S., Sen, S., Yasmin, T., et al."
-    year: 2026
-    journal: "Natural Hazards and Earth System Sciences"
-    volume: "26"
-    doi: "10.5194/nhess-26-1251-2026"
-    url: "https://nhess.copernicus.org/articles/26/1251/2026/"
-    description: "A low-cost, community-led hydrometeorological monitoring network using SMART principles to improve urban flood early warning systems in data-scarce mountain regions."
-    image: "/assets/img/highlights/Dixit2026.png"
-  
