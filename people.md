@@ -37,6 +37,11 @@ style: header
             <i class="fas fa-globe"></i>
           </a>
         {% endif %}
+        {% if person.social.github %}
+          <a href="{{ person.social.github }}" target="_blank" class="github" title="GitHub" onclick="event.stopPropagation()">
+            <i class="fab fa-github"></i>
+          </a>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -81,6 +86,11 @@ style: header
             <i class="fas fa-globe"></i>
           </a>
         {% endif %}
+        {% if person.social.github %}
+          <a href="{{ person.social.github }}" target="_blank" class="github" title="GitHub" onclick="event.stopPropagation()">
+            <i class="fab fa-github"></i>
+          </a>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -123,6 +133,11 @@ style: header
         {% if person.social.website %}
           <a href="{{ person.social.website }}" target="_blank" class="website" title="Website" onclick="event.stopPropagation()">
             <i class="fas fa-globe"></i>
+          </a>
+        {% endif %}
+        {% if person.social.github %}
+          <a href="{{ person.social.github }}" target="_blank" class="github" title="GitHub" onclick="event.stopPropagation()">
+            <i class="fab fa-github"></i>
           </a>
         {% endif %}
       </div>
@@ -195,6 +210,11 @@ style: header
             <i class="fas fa-globe"></i> Website
           </a>
         {% endif %}
+        {% if person.social.github %}
+          <a href="{{ person.social.github }}" target="_blank" class="github">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -264,6 +284,11 @@ style: header
             <i class="fas fa-globe"></i> Website
           </a>
         {% endif %}
+        {% if person.social.github %}
+          <a href="{{ person.social.github }}" target="_blank" class="github">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -331,6 +356,11 @@ style: header
         {% if person.social.website %}
           <a href="{{ person.social.website }}" target="_blank" class="website">
             <i class="fas fa-globe"></i> Website
+          </a>
+        {% endif %}
+        {% if person.social.github %}
+          <a href="{{ person.social.github }}" target="_blank" class="github">
+            <i class="fab fa-github"></i> GitHub
           </a>
         {% endif %}
       </div>

@@ -130,13 +130,14 @@ researchers:
     short_name: "Steph"
     title: "Research Software Engineer"
     image: "Steph.jpg"
-    bio: "Steph is a Research Software Engineer at Imperial College London, where she supports software development within the Hydrology and Water Resources research group."
+    bio: "Steph is a Research Software Engineer, working to support the development and maintenance of the group's software outputs, with a focus on the Schmidt Sciences-funded project, 'Unlocking local knowledge production for global water reanalysis'. Prior to this role, she worked within Imperial's central RSE team, and holds a DPhil in computational drug discovery."
     keywords:
       - "Research software"
     locations:
       - "UK"
     social:
       linkedin: "https://www.linkedin.com/in/steph-wills-989254143/"
+      github: "https://github.com/stephwills"
 
   - name: "Dr Amir Massoumian"
     short_name: "Amir"
@@ -152,6 +153,21 @@ researchers:
 
 
 phd_students:
+  - name: "Kayode Adeniyi"
+    short_name: "Kayode"
+    title: "PhD Student"
+    image: "kayode.png"
+    bio: "Kayode is a PhD student at Imperial College London, joining the Schmidt Sciences project Unlocking local knowledge production for global water reanalysis. He is interested in modelling and machine learning for global water systems. He led flood risk projects in Nigeria and Ghana since 2021, and was an AI Research Engineer at The London School of Economics."
+    keywords:
+      - "Hydrological modelling"
+      - "Machine learning"
+      - "Global water reanalysis"
+      - "Local knowledge"
+    social:
+      linkedin: "https://www.linkedin.com/in/kadeniyi/"
+      orcid: "https://orcid.org/0009-0000-5444-2240"
+      github: "https://github.com/Adeniyikayodee"
+
   - name: "Olivia Atkins"
     short_name: "Olivia"
     title: "PhD Student"
@@ -233,25 +249,6 @@ phd_students:
     social:
       linkedin: "https://www.linkedin.com/in/ruiqi-gu-3a9968235/?originalSubdomain=uk"
 
-  - name: "Anthony C. Ross"
-    short_name: "Anthony"
-    title: "PhD Student"
-    image: "Anthony.png"
-    bio: "Anthony is a PhD student at Imperial College London studying high mountain hydrology and water resources. His research employs data from low-cost monitoring networks and field experiments, such as fluorescent tracing, to understand the movement and timing of water through mountain wetlands and their contributions to streamflow. He combines field observations with conceptual and regional modelling to advance knowledge of local wetland processes and their impact on catchment-scale hydrology and water resources."
-    keywords:
-      - "Mountain hydrology"
-      - "Wetlands"
-      - "Nature-based solutions"
-      - "Natural infrastructure"
-    locations:
-      - "Ecuador"
-      - "Peru"
-      - "Uganda"
-    social:
-      researchgate: "https://www.researchgate.net/profile/Anthony-Ross-12"
-      linkedin: "https://www.linkedin.com/in/anthony-c-ross-3935a6244/"
-      orcid: "https://orcid.org/0000-0003-3106-8131"
-
   - name: "Dalal Sadeqi"
     short_name: "Dalal"
     title: "PhD Student"
@@ -268,6 +265,10 @@ phd_students:
 
 
 past_members:
+  - name: "Anthony C. Ross"
+    social:
+      linkedin: "https://www.linkedin.com/in/anthony-c-ross-3935a6244/"
+
   - name: "Clara Gimeno Jésus"
     social:
       linkedin: "https://www.linkedin.com/in/clara-gimeno-jésus/"
