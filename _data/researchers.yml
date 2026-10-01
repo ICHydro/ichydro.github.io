@@ -130,13 +130,14 @@ researchers:
     short_name: "Steph"
     title: "Research Software Engineer"
     image: "Steph.jpg"
-    bio: "Steph is a Research Software Engineer at Imperial College London, where she supports software development within the Hydrology and Water Resources research group."
+    bio: "Steph is a Research Software Engineer, working to support the development and maintenance of the group's software outputs, with a focus on the Schmidt Sciences-funded project, 'Unlocking local knowledge production for global water reanalysis'. Prior to this role, she worked within Imperial's central RSE team, and holds a DPhil in computational drug discovery."
     keywords:
       - "Research software"
     locations:
       - "UK"
     social:
       linkedin: "https://www.linkedin.com/in/steph-wills-989254143/"
+      github: "https://github.com/stephwills"
 
   - name: "Dr Amir Massoumian"
     short_name: "Amir"
