@@ -233,25 +233,6 @@ phd_students:
     social:
       linkedin: "https://www.linkedin.com/in/ruiqi-gu-3a9968235/?originalSubdomain=uk"
 
-  - name: "Anthony C. Ross"
-    short_name: "Anthony"
-    title: "PhD Student"
-    image: "Anthony.png"
-    bio: "Anthony is a PhD student at Imperial College London studying high mountain hydrology and water resources. His research employs data from low-cost monitoring networks and field experiments, such as fluorescent tracing, to understand the movement and timing of water through mountain wetlands and their contributions to streamflow. He combines field observations with conceptual and regional modelling to advance knowledge of local wetland processes and their impact on catchment-scale hydrology and water resources."
-    keywords:
-      - "Mountain hydrology"
-      - "Wetlands"
-      - "Nature-based solutions"
-      - "Natural infrastructure"
-    locations:
-      - "Ecuador"
-      - "Peru"
-      - "Uganda"
-    social:
-      researchgate: "https://www.researchgate.net/profile/Anthony-Ross-12"
-      linkedin: "https://www.linkedin.com/in/anthony-c-ross-3935a6244/"
-      orcid: "https://orcid.org/0000-0003-3106-8131"
-
   - name: "Dalal Sadeqi"
     short_name: "Dalal"
     title: "PhD Student"
@@ -268,6 +249,10 @@ phd_students:
 
 
 past_members:
+  - name: "Anthony C. Ross"
+    social:
+      linkedin: "https://www.linkedin.com/in/anthony-c-ross-3935a6244/"
+
   - name: "Clara Gimeno Jésus"
     social:
       linkedin: "https://www.linkedin.com/in/clara-gimeno-jésus/"
