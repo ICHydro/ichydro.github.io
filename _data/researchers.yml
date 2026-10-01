@@ -152,6 +152,21 @@ researchers:
 
 
 phd_students:
+  - name: "Kayode Adeniyi"
+    short_name: "Kayode"
+    title: "PhD Student"
+    image: "kayode.png"
+    bio: "Kayode is a PhD student at Imperial College London, joining the Schmidt Sciences project Unlocking local knowledge production for global water reanalysis. He is interested in modelling and machine learning for global water systems. He led flood risk projects in Nigeria and Ghana since 2021, and was an AI Research Engineer at The London School of Economics."
+    keywords:
+      - "Hydrological modelling"
+      - "Machine learning"
+      - "Global water reanalysis"
+      - "Local knowledge"
+    social:
+      linkedin: "https://www.linkedin.com/in/kadeniyi/"
+      orcid: "https://orcid.org/0009-0000-5444-2240"
+      github: "https://github.com/Adeniyikayodee"
+
   - name: "Olivia Atkins"
     short_name: "Olivia"
     title: "PhD Student"
