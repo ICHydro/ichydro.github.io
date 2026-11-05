@@ -3,6 +3,16 @@
 # Add new publications at the top of this list
 
 publications:
+  - title: "Adaptation Potential of Local Water Management Practices to Glacier Loss"
+    authors: "Gimeno Jésus, C., Cuadros-Adriazola, J., Moulds, S., et al."
+    year: 2026
+    journal: "Earth's Future"
+    volume: "14"
+    doi: "10.1029/2026EF008697"
+    url: "https://doi.org/10.1029/2026EF008697"
+    description: "As glaciers shrink, mountain catchments and the livelihoods that depend on them are losing an important source of water storage. This paper explores how local water management practices can complement large-scale infrastructure to support climate adaptation across Peru's Vilcanota-Urubamba basin."
+    image: "/assets/img/highlights/GimenoJesus2026.jpg"
+
   - title: "Coproduced assessments of climate change adaptation reveal equity challenges in locally led approaches"
     authors: "Howard, B.C., Awuni, C., Agyei-Mensah, S., et al."
     year: 2026
@@ -32,13 +42,3 @@ publications:
     url: "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2026EF008149"
     description: "A study to investigate the role of glacier-wetland hydrological connectivity in sustaining high-altitude wetlands in the Peruvian Andes."
     image: "/assets/img/highlights/Xuan2026.jpeg"
-
-  - title: "A map of high-altitude wetlands in the world's major mountain regions"
-    authors: "Becker, R., Kropáček, J., Ross, A.C., et al."
-    year: 2026
-    journal: "Scientific Data"
-    volume: "13"
-    doi: "10.1038/s41597-026-07020-w"
-    url: "https://doi.org/10.1038/s41597-026-07020-w"
-    description: "A first global high-resolution map of high-altitude wetlands for detecting wetland occurrences in remote mountain regions."
-    image: "/assets/img/highlights/Becker2026.png"
