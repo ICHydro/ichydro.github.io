@@ -85,27 +85,6 @@ researchers:
       website: "https://estefaniaquenta.weebly.com/"
       orcid: "https://orcid.org/0000-0002-2724-5804"
 
-  - name: "Dr Tom Rowan"
-    short_name: "Tom"
-    title: "Research Fellow"
-    image: "Rowan.jpg"
-    bio: "Tom is a Research Fellow at Imperial College London, where he researches hydrological processes and contamination problems through the development of innovative instrumentation. His research advances environmental monitoring through AI-enhanced sensor networks that replace expensive traditional equipment with affordable, reliable alternatives. By combining expertise in machine learning, embedded systems, and IoT technology, he develops intelligent monitoring solutions deployed across UK waterways in collaboration with water utilities, environmental organizations, and government agencies."
-    keywords:
-      - "Machine Learning"
-      - "Catchment Modelling"
-      - "Pollution Monitoring"
-      - "Water Quality"
-      - "Floods and Droughts"
-    locations:
-      - "UK"
-      - "Tweed"
-      - "Chess"
-      - "Upper Severn"
-    social:
-      researchgate: "https://www.researchgate.net/profile/Thomas-Rowan"
-      linkedin: "https://www.linkedin.com/in/tom-rowan-289b26102/"
-      orcid: "https://orcid.org/0000-0002-9106-2375"
-
   - name: "Luke Tumelty"
     short_name: "Luke"
     title: "Innovation Manager"
@@ -280,6 +259,10 @@ phd_students:
 
 
 past_members:
+  - name: "Tom Rowan"
+    social:
+      linkedin: "https://www.linkedin.com/in/tom-rowan-289b26102/"
+
   - name: "Anthony C. Ross"
     social:
       linkedin: "https://www.linkedin.com/in/anthony-c-ross-3935a6244/"
