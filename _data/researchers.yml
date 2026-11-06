@@ -151,6 +151,21 @@ researchers:
       - "UK"
     social:
 
+  - name: "Dr Dina Gomez"
+    short_name: "Dina"
+    title: "Research Associate"
+    image: "Dina.JPG"
+    bio: "Dina is a civil engineer working on the Schmidt Sciences-funded project 'Unlocking Local Knowledge Production for Global Water Reanalysis'. Her research focuses on community-based hydrological monitoring and the integration of local observations and knowledge into hydrological models. Previously, her PhD research examined compound hazards through statistical and numerical modelling of flooding."
+    keywords:
+      - "Compound hazards"
+      - "Hydrological modelling"
+      - "Citizen science"
+      - "Local knowledge"
+    social:
+      linkedin: "https://www.linkedin.com/in/dvgrave/"
+      orcid: "https://orcid.org/0000-0002-9446-4177"
+      website: "https://divagora.github.io/"
+      github: "https://github.com/divagora/"
 
 phd_students:
   - name: "Kayode Adeniyi"
